@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  .light {
+    color: hsl(var(--color-neutral-12));
+    background-color: hsl(0deg 0% 100%);
+
+    --color-panel: 0deg 0% 100%;
+
+    --color-neutral-1: 206deg 30% 98.8%;
+    --color-neutral-2: 210deg 16.7% 97.6%;
+    --color-neutral-3: 209deg 13.3% 95.3%;
+    --color-neutral-4: 209deg 12.2% 93.2%;
+    --color-neutral-5: 208deg 11.7% 91.1%;
+    --color-neutral-6: 208deg 11.3% 88.9%;
+    --color-neutral-7: 207deg 11.1% 85.9%;
+    --color-neutral-8: 205deg 10.7% 78%;
+    --color-neutral-9: 206deg 6% 56.1%;
+    --color-neutral-10: 206deg 5.8% 52.3%;
+    --color-neutral-11: 206deg 6% 43.5%;
+    --color-neutral-12: 206deg 24% 9%;
+
+    --color-primary-1: 206deg 100% 99.2%;
+    --color-primary-2: 210deg 100% 98%;
+    --color-primary-3: 209deg 100% 96.5%;
+    --color-primary-4: 210deg 98.8% 94%;
+    --color-primary-5: 209deg 95% 90.1%;
+    --color-primary-6: 209deg 81.2% 84.5%;
+    --color-primary-7: 208deg 77.5% 76.9%;
+    --color-primary-8: 206deg 81.9% 65.3%;
+    --color-primary-9: 206deg 100% 50%;
+    --color-primary-10: 208deg 100% 47.3%;
+    --color-primary-11: 211deg 100% 43.2%;
+    --color-primary-12: 211deg 100% 15%;
+
+    --color-success-1: 116deg 50% 98.9%;
+    --color-success-2: 120deg 60% 97.1%;
+    --color-success-3: 120deg 53.6% 94.8%;
+    --color-success-4: 121deg 47.5% 91.4%;
+    --color-success-5: 122deg 42.6% 86.5%;
+    --color-success-6: 124deg 39% 79.7%;
+    --color-success-7: 126deg 37.1% 70.2%;
+    --color-success-8: 131deg 38.1% 56.3%;
+    --color-success-9: 131deg 41% 46.5%;
+    --color-success-10: 132deg 43.1% 42.2%;
+    --color-success-11: 133deg 50% 32.5%;
+    --color-success-12: 130deg 30% 14.9%;
+
+    --color-warning-1: 39deg 70% 99%;
+    --color-warning-2: 40deg 100% 96.5%;
+    --color-warning-3: 44deg 100% 91.7%;
+    --color-warning-4: 43deg 100% 86.8%;
+    --color-warning-5: 42deg 100% 81.8%;
+    --color-warning-6: 38deg 99.7% 76.3%;
+    --color-warning-7: 36deg 86.1% 67.1%;
+    --color-warning-8: 35deg 85.2% 55.1%;
+    --color-warning-9: 39deg 100% 57%;
+    --color-warning-10: 35deg 100% 55.5%;
+    --color-warning-11: 30deg 100% 34%;
+    --color-warning-12: 20deg 80% 17%;
+
+    --color-error-1: 332deg 100% 99.4%;
+    --color-error-2: 330deg 100% 98.4%;
+    --color-error-3: 331deg 85.6% 96.6%;
+    --color-error-4: 331deg 78.1% 94.2%;
+    --color-error-5: 332deg 72.1% 91.1%;
+    --color-error-6: 333deg 67% 86.7%;
+    --color-error-7: 335deg 63.5% 80.4%;
+    --color-error-8: 336deg 62.3% 72.9%;
+    --color-error-9: 336deg 80% 57.8%;
+    --color-error-10: 336deg 73.7% 53.5%;
+    --color-error-11: 336deg 75% 47.2%;
+    --color-error-12: 340deg 65% 14.5%;
+  }
+
+  .dark {
+    color: hsl(var(--color-neutral-12));
+    background-color: hsl(var(--color-neutral-1));
+
+    --color-panel: var(--color-neutral-3);
+
+    --color-neutral-1: 200deg 7% 8.8%;
+    --color-neutral-2: 195deg 7.1% 11%;
+    --color-neutral-3: 197deg 6.8% 13.6%;
+    --color-neutral-4: 198deg 6.6% 15.8%;
+    --color-neutral-5: 199deg 6.4% 17.9%;
+    --color-neutral-6: 201deg 6.2% 20.5%;
+    --color-neutral-7: 203deg 6% 24.3%;
+    --color-neutral-8: 207deg 5.6% 31.6%;
+    --color-neutral-9: 206deg 6% 43.9%;
+    --color-neutral-10: 206deg 5.2% 49.5%;
+    --color-neutral-11: 206deg 6% 63%;
+    --color-neutral-12: 210deg 6% 93%;
+
+    --color-primary-1: 212deg 35% 9.2%;
+    --color-primary-2: 216deg 50% 11.8%;
+    --color-primary-3: 214deg 59.4% 15.3%;
+    --color-primary-4: 214deg 65.8% 17.9%;
+    --color-primary-5: 213deg 71.2% 20.2%;
+    --color-primary-6: 212deg 77.4% 23.1%;
+    --color-primary-7: 211deg 85.1% 27.4%;
+    --color-primary-8: 211deg 89.7% 34.1%;
+    --color-primary-9: 206deg 100% 50%;
+    --color-primary-10: 209deg 100% 60.6%;
+    --color-primary-11: 210deg 100% 66.1%;
+    --color-primary-12: 206deg 98% 95.8%;
+
+    --color-success-1: 146deg 30% 7.4%;
+    --color-success-2: 136deg 33.3% 8.8%;
+    --color-success-3: 137deg 36% 11.4%;
+    --color-success-4: 137deg 37.6% 13.7%;
+    --color-success-5: 136deg 38.7% 16%;
+    --color-success-6: 135deg 39.6% 19.1%;
+    --color-success-7: 134deg 40.3% 23.8%;
+    --color-success-8: 131deg 40.1% 30.8%;
+    --color-success-9: 131deg 41% 46.5%;
+    --color-success-10: 131deg 39% 52.1%;
+    --color-success-11: 131deg 43% 57.2%;
+    --color-success-12: 137deg 72% 94%;
+
+    --color-warning-1: 36deg 100% 6.1%;
+    --color-warning-2: 35deg 100% 7.6%;
+    --color-warning-3: 32deg 100% 10.2%;
+    --color-warning-4: 32deg 100% 12.4%;
+    --color-warning-5: 33deg 100% 14.6%;
+    --color-warning-6: 35deg 100% 17.1%;
+    --color-warning-7: 35deg 91% 21.6%;
+    --color-warning-8: 36deg 100% 25.5%;
+    --color-warning-9: 39deg 100% 57%;
+    --color-warning-10: 43deg 100% 64%;
+    --color-warning-11: 39deg 90% 49.8%;
+    --color-warning-12: 39deg 97% 93.2%;
+
+    --color-error-1: 335deg 20% 9.6%;
+    --color-error-2: 335deg 32.2% 11.6%;
+    --color-error-3: 335deg 42.5% 16.5%;
+    --color-error-4: 335deg 47.2% 19.3%;
+    --color-error-5: 335deg 50.9% 21.8%;
+    --color-error-6: 335deg 55.7% 25.3%;
+    --color-error-7: 336deg 62.9% 30.8%;
+    --color-error-8: 336deg 74.9% 39%;
+    --color-error-9: 336deg 80% 57.8%;
+    --color-error-10: 339deg 84.1% 62.6%;
+    --color-error-11: 341deg 90% 67.3%;
+    --color-error-12: 332deg 87% 96%;
+  }
+}
