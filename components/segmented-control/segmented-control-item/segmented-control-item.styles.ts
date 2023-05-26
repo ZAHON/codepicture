@@ -9,7 +9,6 @@ export const segmentedControlItemStyles = cva([
   'items-center',
   'gap-x-2',
   'w-px',
-  'font-medium',
   'bg-transparent',
   'text-neutral-11',
   'rounded-lg',
@@ -18,6 +17,8 @@ export const segmentedControlItemStyles = cva([
   'motion-safe:duration-150',
 
   // 'enabled:hover:data-[state=unchecked]:text-neutral-12',
+
+  'data-[state=checked]:font-medium',
 
   'data-[state=checked]:text-black',
   'dark:data-[state=checked]:text-white',
