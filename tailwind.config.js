@@ -7,6 +7,7 @@ module.exports = {
   content: [
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './styles/**/*.{js,ts,jsx,tsx,mdx}',
     './.storybook/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
