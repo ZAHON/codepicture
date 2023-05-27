@@ -10,6 +10,7 @@
     "test": "vitest run",
     "test:watch": "vitest --reporter verbose",
     "storybook": "storybook dev -p 6006 --no-open",
+    "storybook:build": "storybook build",
     "prepare": "husky install"
   },
   "dependencies": {
