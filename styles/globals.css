@@ -9,6 +9,26 @@
 }
 
 @layer utilities {
+  .scrollable::-webkit-scrollbar-thumb {
+    @apply rounded-b-full rounded-t-full border-[0.125rem] border-solid border-transparent bg-neutral-7 bg-clip-content hover:bg-neutral-8;
+  }
+
+  .scrollable::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .scrollable::-webkit-scrollbar-corner {
+    @apply bg-transparent;
+  }
+
+  .scrollable::-webkit-scrollbar {
+    @apply h-2.5 w-2.5;
+  }
+
+  .scrollable {
+    @apply [-ms-overflow-style:auto] [scrollbar-color:hsl(var(--color-neutral-7))_transparent] [scrollbar-gutter:stable] [scrollbar-width:auto] hover:[scrollbar-color:hsl(var(--color-neutral-8))_transparent] motion-safe:transition-[scrollbar-color] motion-safe:duration-150;
+  }
+
   .light {
     color: hsl(var(--color-neutral-12));
     background-color: hsl(0deg 0% 100%);
