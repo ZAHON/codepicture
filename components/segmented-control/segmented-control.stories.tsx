@@ -1,4 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import {
+  IconBrandAngular,
+  IconBrandReact,
+  IconBrandSvelte,
+  IconBrandVue,
+} from '@tabler/icons-react';
 import { SegmentedControl, SegmentedControlItem } from '.';
 
 const meta: Meta<typeof SegmentedControl> = {
@@ -67,6 +73,41 @@ export const WithDisabledItem: Story = {
         Svelte
       </SegmentedControlItem>,
       <SegmentedControlItem key="vue" value="vue">
+        Vue
+      </SegmentedControlItem>,
+    ],
+  },
+};
+
+export const WithItemsWithIcon: Story = {
+  args: {
+    children: [
+      <SegmentedControlItem
+        key="angular"
+        value="angular"
+        icon={<IconBrandAngular size="1rem" aria-hidden="true" focusable="false" />}
+      >
+        Angular
+      </SegmentedControlItem>,
+      <SegmentedControlItem
+        key="react"
+        value="react"
+        icon={<IconBrandReact size="1rem" aria-hidden="true" focusable="false" />}
+      >
+        React
+      </SegmentedControlItem>,
+      <SegmentedControlItem
+        key="svelte"
+        value="svelte"
+        icon={<IconBrandSvelte size="1rem" aria-hidden="true" focusable="false" />}
+      >
+        Svelte
+      </SegmentedControlItem>,
+      <SegmentedControlItem
+        key="vue"
+        value="vue"
+        icon={<IconBrandVue size="1rem" aria-hidden="true" focusable="false" />}
+      >
         Vue
       </SegmentedControlItem>,
     ],

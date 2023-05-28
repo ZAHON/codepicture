@@ -14,7 +14,10 @@ const defaultProps: Partial<SegmentedControlItemProps> = {
 
 export const SegmentedControlItem = forwardRef<HTMLButtonElement, SegmentedControlItemProps>(
   (props, ref) => {
-    const { className, children, ...others } = applayComponentDefaultProps(defaultProps, props);
+    const { className, icon, children, ...others } = applayComponentDefaultProps(
+      defaultProps,
+      props
+    );
 
     return (
       <RadioGroupItem
@@ -22,6 +25,7 @@ export const SegmentedControlItem = forwardRef<HTMLButtonElement, SegmentedContr
         className={twMerge(segmentedControlItemStyles(), className)}
         {...others}
       >
+        {icon && icon}
         {children}
       </RadioGroupItem>
     );

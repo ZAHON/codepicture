@@ -28,4 +28,9 @@ export interface SegmentedControlItemProps extends ButtonHTMLAttributes<HTMLButt
    * @default false
    */
   required?: boolean;
+
+  /**
+   * If added, the segmented control item will show icon before the items's content.
+   */
+  icon?: ReactNode;
 }
