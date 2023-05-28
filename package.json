@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@radix-ui/react-radio-group": "^1.1.2",
+    "@radix-ui/react-slider": "^1.1.2",
     "@radix-ui/react-switch": "^1.0.2",
     "@tabler/icons-react": "^2.20.0",
     "class-variance-authority": "^0.6.0",
