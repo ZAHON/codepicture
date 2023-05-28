@@ -7,6 +7,11 @@ export interface SegmentedSwitchLabelProps extends HTMLAttributes<HTMLSpanElemen
   checked: boolean;
 
   /**
+   * If added, the segmented switch label will show icon before the labels's content.
+   */
+  icon?: ReactNode;
+
+  /**
    * The content of the segmented switch label.
    */
   children: ReactNode;

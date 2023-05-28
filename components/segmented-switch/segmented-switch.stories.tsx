@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { IconSunFilled, IconMoonFilled } from '@tabler/icons-react';
 import { SegmentedSwitch } from '.';
 
 const meta: Meta<typeof SegmentedSwitch> = {
@@ -22,6 +23,8 @@ const meta: Meta<typeof SegmentedSwitch> = {
     labelsWrapperProps: { control: false },
     labelProps: { control: false },
     indicatorProps: { control: false },
+    uncheckedIcon: { control: false },
+    checkedIcon: { control: false },
   },
 };
 
@@ -39,6 +42,15 @@ export const Inverted: Story = {
 export const Disabled: Story = {
   args: {
     disabled: true,
+  },
+};
+
+export const WithIcons: Story = {
+  args: {
+    uncheckedLabel: 'Light',
+    uncheckedIcon: <IconSunFilled size="1rem" aria-hidden="true" focusable="false" />,
+    checkedLabel: 'Dark',
+    checkedIcon: <IconMoonFilled size="1rem" aria-hidden="true" focusable="false" />,
   },
 };
 

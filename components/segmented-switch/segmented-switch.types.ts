@@ -32,6 +32,16 @@ export interface SegmentedSwitchProps
   checkedLabel?: ReactNode;
 
   /**
+   * If added, the unchecked label will show icon before the labels's content.
+   */
+  uncheckedIcon?: ReactNode;
+
+  /**
+   * If added, the checked label will show icon before the labels's content.
+   */
+  checkedIcon?: ReactNode;
+
+  /**
    * The state of the segmented switch when it is initially rendered. Use when you do not need to control its state.
    */
   defaultChecked?: boolean;
@@ -77,7 +87,7 @@ export interface SegmentedSwitchProps
   /**
    * Properties spread to `SegmentedSwitchLabel` component.
    */
-  labelProps?: Omit<SegmentedSwitchLabelProps, 'children' | 'checked'>;
+  labelProps?: Omit<SegmentedSwitchLabelProps, 'children' | 'checked' | 'icon'>;
 
   /**
    * Properties spread to `SegmentedSwitchIndicator` component.

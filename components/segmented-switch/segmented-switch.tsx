@@ -27,6 +27,8 @@ export const SegmentedSwitch = forwardRef<HTMLButtonElement, SegmentedSwitchProp
     inverted,
     uncheckedLabel,
     checkedLabel,
+    uncheckedIcon,
+    checkedIcon,
     className,
     labelsWrapperProps,
     labelProps,
@@ -38,10 +40,20 @@ export const SegmentedSwitch = forwardRef<HTMLButtonElement, SegmentedSwitchProp
   const [_checked, setChecked] = useState(checked ?? defaultChecked);
 
   const labels = [
-    <SegmentedSwitchLabel key="Unchecked Label" checked={_checked === false} {...labelProps}>
+    <SegmentedSwitchLabel
+      key="Unchecked Label"
+      checked={_checked === false}
+      icon={uncheckedIcon}
+      {...labelProps}
+    >
       {uncheckedLabel}
     </SegmentedSwitchLabel>,
-    <SegmentedSwitchLabel key="Checked Label" checked={_checked === true} {...labelProps}>
+    <SegmentedSwitchLabel
+      key="Checked Label"
+      checked={_checked === true}
+      icon={checkedIcon}
+      {...labelProps}
+    >
       {checkedLabel}
     </SegmentedSwitchLabel>,
   ];
