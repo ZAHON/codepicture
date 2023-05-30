@@ -9,4 +9,5 @@ export * from './scroll-area';
 export * from './segmented-control';
 export * from './segmented-switch';
 export * from './select';
+export * from './separator';
 export * from './slider';
