@@ -1,5 +1,5 @@
 import '@/styles/globals.css';
-import type { RootLayoutProps } from './layout.types';
+import type { ReactNode } from 'react';
 import { inter } from '@/app/fonts';
 
 export const metadata = {
@@ -7,7 +7,7 @@ export const metadata = {
   description: 'Create beautiful pictures of your source code',
 };
 
-export default function RootLayout(props: RootLayoutProps) {
+export default function RootLayout(props: { children: ReactNode }) {
   const { children } = props;
 
   return (
