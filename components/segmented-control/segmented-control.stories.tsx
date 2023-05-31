@@ -34,7 +34,6 @@ const meta: Meta<typeof SegmentedControl> = {
   },
   argTypes: {
     size: { control: 'select' },
-    asChild: { control: false },
     value: { control: false },
     onValueChange: { control: false },
     children: { control: false },

@@ -9,10 +9,7 @@ import { SegmentedControlIndicator } from './segmented-control-indicator';
 import { segmentedControlStyles } from './segmented-control.styles';
 
 const defaultProps: Partial<SegmentedControlProps> = {
-  asChild: false,
   loop: true,
-  disabled: false,
-  required: false,
   size: 'md',
 };
 
