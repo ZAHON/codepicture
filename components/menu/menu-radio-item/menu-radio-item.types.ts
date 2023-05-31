@@ -31,12 +31,6 @@ export interface MenuRadioItemProps
   textValue?: string;
 
   /**
-   * Change the component to the HTML tag or custom component of the only child. This will merge the original component props with the props of the supplied element/component and change the underlying DOM node.
-   * @default false
-   */
-  asChild?: boolean;
-
-  /**
    * If added, the menu radio item will show icon before the item's content.
    */
   icon?: ReactNode;

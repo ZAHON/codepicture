@@ -9,18 +9,8 @@ import { menuContentStyles } from './menu-content.styles';
 
 const defaultProps: Partial<MenuContentProps> = {
   size: 'md',
-  asChild: false,
   loop: true,
-  side: 'bottom',
   sideOffset: 10,
-  align: 'center',
-  alignOffset: 0,
-  avoidCollisions: true,
-  collisionBoundary: [],
-  collisionPadding: 0,
-  arrowPadding: 0,
-  sticky: 'partial',
-  hideWhenDetached: false,
 };
 
 export const MenuContent = forwardRef<HTMLDivElement, MenuContentProps>((props, ref) => {

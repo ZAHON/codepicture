@@ -8,7 +8,6 @@ import { useMenuContext } from '../menu-context/menu-context';
 import { menuItemStyles } from './menu-item.styles';
 
 const defualtProps: Partial<MenuItemProps> = {
-  asChild: false,
   color: 'neutral',
 };
 

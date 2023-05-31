@@ -25,12 +25,6 @@ export interface MenuContentProps extends HTMLAttributes<HTMLDivElement> {
   container?: HTMLElement;
 
   /**
-   * Change the component to the HTML tag or custom component of the only child. This will merge the original component props with the props of the supplied element/component and change the underlying DOM node.
-   * @default false
-   */
-  asChild?: boolean;
-
-  /**
    * When `true`, keyboard navigation will loop from last item to first, and vice versa.
    * @default true
    */
@@ -102,12 +96,6 @@ export interface MenuContentProps extends HTMLAttributes<HTMLDivElement> {
    * @default 0
    */
   collisionPadding?: number | Partial<Record<'top' | 'right' | 'bottom' | 'left', number>>;
-
-  /**
-   * The padding between the menu arrow and the edges of the menu content. If your content has border-radius, this will prevent it from overflowing the corners.
-   * @default 0
-   */
-  arrowPadding?: number;
 
   /**
    * The sticky behavior on the align axis. `"partial"` will keep the content in the boundary as long as the trigger is at least partially in the boundary whilst `"always"` will keep the content in the boundary regardless.
