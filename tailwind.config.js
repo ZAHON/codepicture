@@ -96,6 +96,8 @@ module.exports = {
         'slide-left-and-fade': 'slide-left-and-fade 300ms cubic-bezier(0.16, 1, 0.3, 1)',
         'show-notification': 'show-notification 200ms ease-out',
         'hide-notification': 'hide-notification 150ms ease-in forwards',
+        'show-dialog-overlay': 'show-dialog-overlay 200ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'show-dialog-content': 'show-dialog-content 200ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
       keyframes: {
         'slide-up-and-fade': {
@@ -121,6 +123,14 @@ module.exports = {
         'hide-notification': {
           '0%': { opacity: 1 },
           '100%': { opacity: 0 },
+        },
+        'show-dialog-overlay': {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        'show-dialog-content': {
+          '0%': { opacity: 0, transform: 'translate(-50%, -50%) scale(0.96)' },
+          '100%': { opacity: 1, transform: 'translate(-50%, -50%) scale(1)' },
         },
       },
     },
