@@ -14,9 +14,6 @@ const defaultProps: Partial<SegmentedSwitchProps> = {
   value: 'on',
   uncheckedLabel: 'No',
   checkedLabel: 'Yes',
-  inverted: false,
-  disabled: false,
-  required: false,
 };
 
 export const SegmentedSwitch = forwardRef<HTMLButtonElement, SegmentedSwitchProps>((props, ref) => {
