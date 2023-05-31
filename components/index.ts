@@ -13,3 +13,4 @@ export * from './segmented-switch';
 export * from './select';
 export * from './separator';
 export * from './slider';
+export * from './theme-changer';
