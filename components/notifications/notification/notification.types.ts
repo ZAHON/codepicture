@@ -9,6 +9,11 @@ type HTMLAttributesToOmt = 'title' | 'children';
 export interface NotificationProps
   extends Omit<HTMLAttributes<HTMLDivElement>, HTMLAttributesToOmt> {
   /**
+   * The state of the notification.
+   */
+  visible: boolean;
+
+  /**
    * The type of the notification.
    */
   type: 'info' | 'success' | 'warning' | 'error' | 'loading';

@@ -13,6 +13,7 @@ function NotificationTest(props: Partial<NotificationProps>) {
   return (
     <Notification
       data-testid={notificationDataTestId}
+      visible
       type="info"
       message={notificationMessage}
       {...props}
@@ -24,7 +25,7 @@ describe('Notification', () => {
   it('should support ref', () => {
     const ref = createRef<HTMLDivElement>();
 
-    render(<Notification ref={ref} type="info" message={notificationMessage} />);
+    render(<Notification ref={ref} visible type="info" message={notificationMessage} />);
     expect(ref.current).toBeInstanceOf(HTMLDivElement);
   });
 

@@ -5,6 +5,7 @@ const meta: Meta<typeof Notification> = {
   title: 'UI/Notification',
   component: Notification,
   args: {
+    visible: true,
     type: 'info',
     message: 'You are now obligated to give a star to CodePicture project on GitHub',
     title: 'We notify you that',

@@ -18,6 +18,7 @@ const defaultProps: Partial<NotificationProps> = {
 
 export const Notification = forwardRef<HTMLDivElement, NotificationProps>((props, ref) => {
   const {
+    visible,
     type,
     title,
     message,
@@ -40,7 +41,7 @@ export const Notification = forwardRef<HTMLDivElement, NotificationProps>((props
       ref={ref}
       role="status"
       aria-live="polite"
-      className={twMerge(notificationStyles({ fontSize, withBorder }), className)}
+      className={twMerge(notificationStyles({ visible, fontSize, withBorder }), className)}
       {...others}
     >
       {type === 'loading' && <Loader size={28} color="currentColor" {...loaderProps} />}

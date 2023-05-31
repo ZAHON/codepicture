@@ -15,6 +15,10 @@ export const notificationStyles = cva(
   ],
   {
     variants: {
+      visible: {
+        true: ['animate-show-notification'],
+        false: ['animate-hide-notification'],
+      },
       fontSize: {
         sm: ['text-xs'],
         md: ['text-sm'],

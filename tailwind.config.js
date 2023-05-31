@@ -94,8 +94,8 @@ module.exports = {
         'slide-right-and-fade': 'slide-right-and-fade 300ms cubic-bezier(0.16, 1, 0.3, 1)',
         'slide-down-and-fade': 'slide-down-and-fade 300ms cubic-bezier(0.16, 1, 0.3, 1)',
         'slide-left-and-fade': 'slide-left-and-fade 300ms cubic-bezier(0.16, 1, 0.3, 1)',
-        'show-notification': 'show-notification 300ms ease-in',
-        'hide-notification': 'hide-notification 1000ms ease-out',
+        'show-notification': 'show-notification 200ms ease-out',
+        'hide-notification': 'hide-notification 150ms ease-in forwards',
       },
       keyframes: {
         'slide-up-and-fade': {

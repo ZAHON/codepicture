@@ -1,6 +1,6 @@
 import type { NotificationProps } from '@/components/notifications/notification';
 
-export interface NotifyShowArgs extends NotificationProps {
+export interface NotifyShowArgs extends Omit<NotificationProps, 'visible'> {
   /**
    * The id attribute of the notification.
    */

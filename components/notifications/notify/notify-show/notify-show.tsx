@@ -20,11 +20,7 @@ export function notifyShow(args: NotifyShowArgs) {
         toast.dismiss(t.id);
       }
 
-      return (
-        <div className={t.visible ? 'animate-show-notification' : 'animate-hide-notification'}>
-          <Notification type={type} onClose={handleClose} {...others} />
-        </div>
-      );
+      return <Notification visible={t.visible} type={type} onClose={handleClose} {...others} />;
     },
     { id, position, duration: notifyDuration }
   );
