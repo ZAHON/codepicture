@@ -1,6 +1,8 @@
 import '@/styles/globals.css';
 import type { ReactNode } from 'react';
-import { inter } from '@/app/fonts';
+import { Providers } from './providers';
+import { Notifications } from '@/components';
+import { inter } from './fonts';
 
 export const metadata = {
   title: 'CodePicture',
@@ -11,8 +13,13 @@ export default function RootLayout(props: { children: ReactNode }) {
   const { children } = props;
 
   return (
-    <html lang="en" className={`${inter.variable}`}>
-      <body>{children}</body>
+    <html suppressHydrationWarning lang="en" className={`${inter.variable}`}>
+      <Providers>
+        <body>
+          <Notifications />
+          {children}
+        </body>
+      </Providers>
     </html>
   );
 }
