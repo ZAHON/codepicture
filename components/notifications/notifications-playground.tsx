@@ -1,7 +1,7 @@
 import type { InputHTMLAttributes } from 'react';
-import type { NotifyShowArgs } from './notify/notify-show/notify-show.types';
+import type { NotifyShowArgs } from '@/lib/notify/notify-show/notify-show.types';
 import { useState } from 'react';
-import { notify } from '.';
+import { notify } from '@/lib';
 import { Button, Label, NativeSelect, SegmentedSwitch } from '@/components';
 
 export function NotificationsPlayground() {
