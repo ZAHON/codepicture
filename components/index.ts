@@ -5,6 +5,7 @@ export * from './label';
 export * from './loader';
 export * from './menu';
 export * from './native-select';
+export * from './notifications';
 export * from './scroll-area';
 export * from './segmented-control';
 export * from './segmented-switch';
