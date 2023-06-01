@@ -108,4 +108,10 @@ export interface MenuContentProps extends HTMLAttributes<HTMLDivElement> {
    * @default false
    */
   hideWhenDetached?: boolean;
+
+  /**
+   * If `true`, menu content will have border.
+   * @default true
+   */
+  withBorder?: boolean;
 }

@@ -11,15 +11,20 @@ const defaultProps: Partial<MenuContentProps> = {
   size: 'md',
   loop: true,
   sideOffset: 10,
+  withBorder: true,
 };
 
 export const MenuContent = forwardRef<HTMLDivElement, MenuContentProps>((props, ref) => {
-  const { size, forceMount, container, className, children, ...others } =
+  const { size, withBorder, forceMount, container, className, children, ...others } =
     applayComponentDefaultProps(defaultProps, props);
 
   return (
     <Portal forceMount={forceMount} container={container}>
-      <Content ref={ref} className={twMerge(menuContentStyles(), className)} {...others}>
+      <Content
+        ref={ref}
+        className={twMerge(menuContentStyles({ withBorder }), className)}
+        {...others}
+      >
         <MenuContextProvider value={{ size }}>{children}</MenuContextProvider>
       </Content>
     </Portal>
