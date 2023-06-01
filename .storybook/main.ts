@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     'storybook-dark-mode',
     '@storybook/addon-a11y',
     'storybook-addon-css-user-preferences',
+    '@storybook/addon-viewport',
   ],
   framework: {
     name: '@storybook/nextjs',
