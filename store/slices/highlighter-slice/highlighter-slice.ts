@@ -3,8 +3,11 @@ import { getHighlighter, setCDN, setWasm } from 'shiki';
 
 export const createHighlighterSlice: CreateHighlighterSlice = (set, get) => ({
   highlighter: undefined,
+  highlighterError: false,
   setHighlighter: async () => {
     const highlighter = get().highlighter;
+
+    set(() => ({ highlighterError: false }));
 
     if (!highlighter) {
       try {
@@ -22,10 +25,14 @@ export const createHighlighterSlice: CreateHighlighterSlice = (set, get) => ({
           theme: editorTheme,
         });
 
-        set(() => ({ highlighter, editorLanguageIsLoading: false, editorThemeIsLoading: false }));
+        set(() => ({
+          highlighter,
+          highlighterError: false,
+          editorLanguageIsLoading: false,
+          editorThemeIsLoading: false,
+        }));
       } catch {
-        console.error('Failed to load highlighter');
-        // TODO Show error modal containing "Try again" button
+        set(() => ({ highlighterError: true }));
       }
     }
   },

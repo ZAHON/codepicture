@@ -4,6 +4,7 @@ import type { EditorSlice } from '../editor-slice';
 
 export type HighlighterSlice = {
   highlighter: Highlighter | undefined;
+  highlighterError: boolean;
   setHighlighter: () => void;
 };
 
