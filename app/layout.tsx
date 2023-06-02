@@ -14,12 +14,10 @@ export default function RootLayout(props: { children: ReactNode }) {
 
   return (
     <html suppressHydrationWarning lang="en" className={`${inter.variable}`}>
-      <Providers>
-        <body>
-          <Notifications />
-          {children}
-        </body>
-      </Providers>
+      <body>
+        <Notifications />
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
