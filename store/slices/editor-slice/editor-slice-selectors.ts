@@ -12,3 +12,4 @@ export const selectSetEditorLanguage = (state: State) => state.setEditorLanguage
 // editor theme
 export const selectEditorTheme = (state: State) => state.editorTheme;
 export const selectEditorThemeIsLoading = (state: State) => state.editorThemeIsLoading;
+export const selectSetEditorTheme = (state: State) => state.setEditorTheme;

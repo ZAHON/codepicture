@@ -1,6 +1,7 @@
+import type { Theme } from 'shiki';
 import type { CreateEditorSlice } from './editor-slice.types';
 import { editorCodePlaceholder } from './editor-code-placeholder';
-import { LanguageId, languages } from '@/data';
+import { LanguageId, languages, themes } from '@/data';
 import { notify } from '@/lib';
 
 export const createEditorSlice: CreateEditorSlice = (set, get) => ({
@@ -58,6 +59,7 @@ export const createEditorSlice: CreateEditorSlice = (set, get) => ({
     };
 
     const notifyId = crypto.randomUUID();
+
     notify.show({
       id: notifyId,
       type: 'loading',
@@ -85,6 +87,57 @@ export const createEditorSlice: CreateEditorSlice = (set, get) => ({
         id: notifyId,
         type: 'error',
         message: `Failed to load ${newLanguageData.label} language`,
+      });
+    }
+  },
+
+  setEditorTheme: async (editorTheme) => {
+    const highlighter = get().highlighter;
+    const prevEditorTheme = get().editorTheme;
+
+    // Error: Highlighter is not loaded
+    if (!highlighter) {
+      return;
+    }
+
+    set(() => ({ editorTheme, editorThemeIsLoading: true }));
+
+    // Info: Theme with id: themeId is already loaded
+    if (highlighter.getLoadedThemes().includes(editorTheme as Theme)) {
+      set(() => ({ editorThemeIsLoading: false }));
+      return;
+    }
+
+    const newThemeData = themes.find(({ id }) => id === editorTheme);
+
+    // Error: Theme with id: themeId does not exist
+    if (!newThemeData) {
+      set(() => ({ editorTheme: prevEditorTheme, editorThemeIsLoading: false }));
+      return;
+    }
+
+    const notifyId = crypto.randomUUID();
+
+    notify.show({
+      id: notifyId,
+      type: 'loading',
+      message: `Loading ${newThemeData.label} theme`,
+    });
+
+    try {
+      await highlighter.loadTheme(editorTheme);
+      set(() => ({ editorThemeIsLoading: false }));
+      notify.show({
+        id: notifyId,
+        type: 'success',
+        message: `Successed to load ${newThemeData.label} theme`,
+      });
+    } catch {
+      set(() => ({ editorTheme: prevEditorTheme, editorThemeIsLoading: false }));
+      notify.show({
+        id: notifyId,
+        type: 'error',
+        message: `Failed to load ${newThemeData.label} theme`,
       });
     }
   },

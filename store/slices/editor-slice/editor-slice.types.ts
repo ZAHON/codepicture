@@ -11,6 +11,7 @@ export type EditorSlice = {
 
   setEditorCode: (editorCode: string) => void;
   setEditorLanguage: (editorLanguage: LanguageId) => void;
+  setEditorTheme: (editorTheme: ThemeId) => void;
 };
 
 export type CreateEditorSlice = StateCreator<EditorSlice & HighlighterSlice, [], [], EditorSlice>;

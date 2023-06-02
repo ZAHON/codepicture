@@ -1,4 +1,5 @@
 import { EditorLanguageControl } from './editor-language-control';
+import { EditorThemeControl } from './editor-theme-control';
 
 export function EditorControls() {
   return (
@@ -8,6 +9,7 @@ export function EditorControls() {
       </div>
       <div className="flex flex-col gap-y-2 py-2">
         <EditorLanguageControl />
+        <EditorThemeControl />
       </div>
     </div>
   );
