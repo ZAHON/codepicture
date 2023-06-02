@@ -8,6 +8,7 @@ export const createEditorSlice: CreateEditorSlice = (set, get) => ({
   editorCode: editorCodePlaceholder,
   editorLanguage: 'tsx',
   editorLanguageIsLoading: true,
+  editorLineNumbers: true,
   editorTheme: 'github-dark',
   editorThemeIsLoading: true,
 
@@ -90,6 +91,8 @@ export const createEditorSlice: CreateEditorSlice = (set, get) => ({
       });
     }
   },
+
+  setEditorLineNumbers: (editorLineNumbers) => set(() => ({ editorLineNumbers })),
 
   setEditorTheme: async (editorTheme) => {
     const highlighter = get().highlighter;

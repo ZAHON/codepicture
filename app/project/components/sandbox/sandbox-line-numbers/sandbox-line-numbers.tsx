@@ -1,9 +1,10 @@
 'use client';
+import { useStore, selectEditorLineNumbers } from '@/store';
 import { useSandboxLineNumbers } from './hooks';
 import { containerStyles, liStyles, spanStyles } from './sandbox-line-numbers.styles';
 
 export function SandboxLineNumbers() {
-  const editorLineNumbers = true;
+  const editorLineNumbers = useStore(selectEditorLineNumbers);
   const lineNumbers = useSandboxLineNumbers();
 
   if (!editorLineNumbers) {

@@ -9,6 +9,10 @@ export const selectEditorLanguage = (state: State) => state.editorLanguage;
 export const selectEditorLanguageIsLoading = (state: State) => state.editorLanguageIsLoading;
 export const selectSetEditorLanguage = (state: State) => state.setEditorLanguage;
 
+// editor line numbers
+export const selectEditorLineNumbers = (state: State) => state.editorLineNumbers;
+export const selectSetEditorLineNumbers = (state: State) => state.setEditorLineNumbers;
+
 // editor theme
 export const selectEditorTheme = (state: State) => state.editorTheme;
 export const selectEditorThemeIsLoading = (state: State) => state.editorThemeIsLoading;

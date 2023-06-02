@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import { useStore, selectEditorLineNumbers } from '@/store';
 
 interface SandboxEditorStyle extends CSSProperties {
   '--sandbox-editor-font-family': string;
@@ -8,7 +9,7 @@ interface SandboxEditorStyle extends CSSProperties {
 }
 
 export function useSandboxEditorStyle() {
-  const editorLineNumbers = true;
+  const editorLineNumbers = useStore(selectEditorLineNumbers);
 
   const sandboxEditorStyle: SandboxEditorStyle = {
     '--sandbox-editor-font-family': `'Fira Code'`,

@@ -6,11 +6,13 @@ export type EditorSlice = {
   editorCode: string;
   editorLanguage: LanguageId;
   editorLanguageIsLoading: boolean;
+  editorLineNumbers: boolean;
   editorTheme: ThemeId;
   editorThemeIsLoading: boolean;
 
   setEditorCode: (editorCode: string) => void;
   setEditorLanguage: (editorLanguage: LanguageId) => void;
+  setEditorLineNumbers: (editorLineNumbers: boolean) => void;
   setEditorTheme: (editorTheme: ThemeId) => void;
 };
 
