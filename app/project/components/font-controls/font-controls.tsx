@@ -1,4 +1,5 @@
 import { FontFamilyControl } from './font-family-control';
+import { FontLigaturesControl } from './font-ligatures-control';
 import { FontSizeControl } from './font-size-control';
 
 export function FontControls() {
@@ -9,6 +10,7 @@ export function FontControls() {
       </div>
       <div className="flex flex-col gap-y-2 py-2">
         <FontFamilyControl />
+        <FontLigaturesControl />
         <FontSizeControl />
       </div>
     </div>
