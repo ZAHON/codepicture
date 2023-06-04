@@ -8,4 +8,5 @@ export const sandboxEditorStyles = cva([
   'bg-[color:var(--sandbox-editor-background)]',
   'text-[color:var(--sandbox-editor-foreground)]',
   '[font-family:var(--sandbox-editor-font-family)]',
+  'text-[length:var(--sandbox-editor-font-size)]',
 ]);
