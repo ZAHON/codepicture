@@ -1,4 +1,5 @@
 import { FrameVisibleControl } from './frame-visible-control';
+import { FrameOpacityControl } from './frame-opacity-control';
 
 export function FrameControls() {
   return (
@@ -8,6 +9,7 @@ export function FrameControls() {
       </div>
       <div className="flex flex-col gap-y-2 py-2">
         <FrameVisibleControl />
+        <FrameOpacityControl />
       </div>
     </div>
   );
