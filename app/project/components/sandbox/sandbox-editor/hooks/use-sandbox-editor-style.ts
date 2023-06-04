@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
-import { useStore, selectEditorLineNumbers } from '@/store';
+import { useStore, selectEditorLineNumbers, selectFontFamily } from '@/store';
+import { getFontFamilyCssVariableById } from '@/utils';
 
 interface SandboxEditorStyle extends CSSProperties {
   '--sandbox-editor-font-family': string;
@@ -11,8 +12,10 @@ interface SandboxEditorStyle extends CSSProperties {
 export function useSandboxEditorStyle() {
   const editorLineNumbers = useStore(selectEditorLineNumbers);
 
+  const fontFamily = useStore(selectFontFamily);
+
   const sandboxEditorStyle: SandboxEditorStyle = {
-    '--sandbox-editor-font-family': `'Fira Code'`,
+    '--sandbox-editor-font-family': getFontFamilyCssVariableById(fontFamily),
 
     '--sandbox-editor-padding-left': editorLineNumbers ? '0.3125rem' : '1.3125rem',
     '--sandbox-editor-padding-top': '1.3125rem',
