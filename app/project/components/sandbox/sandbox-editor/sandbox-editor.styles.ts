@@ -11,4 +11,5 @@ export const sandboxEditorStyles = cva([
   'text-[length:var(--sandbox-editor-font-size)]',
   '[font-feature-settings:var(--sandbox-editor-font-ligatures)]',
   'leading-[var(--sandbox-editor-line-height)]',
+  'tracking-[var(--sandbox-editor-letter-spacing)]',
 ]);

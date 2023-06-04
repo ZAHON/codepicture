@@ -2,6 +2,7 @@ import { FontFamilyControl } from './font-family-control';
 import { FontLigaturesControl } from './font-ligatures-control';
 import { FontSizeControl } from './font-size-control';
 import { LineHeightControl } from './line-height-control';
+import { LetterSpacingControl } from './letter-spacing-control';
 
 export function FontControls() {
   return (
@@ -14,6 +15,7 @@ export function FontControls() {
         <FontLigaturesControl />
         <FontSizeControl />
         <LineHeightControl />
+        <LetterSpacingControl />
       </div>
     </div>
   );

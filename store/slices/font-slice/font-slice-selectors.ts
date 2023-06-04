@@ -12,6 +12,10 @@ export const selectSetFontLigatures = (state: State) => state.setFontLigatures;
 export const selectFontSize = (state: State) => state.fontSize;
 export const selectSetFontSize = (state: State) => state.setFontSize;
 
+// letter spacing
+export const selectLetterSpacing = (state: State) => state.letterSpacing;
+export const selectSetLetterSpacing = (state: State) => state.setLetterSpacing;
+
 // line height
 export const selectLineHeight = (state: State) => state.lineHeight;
 export const selectSetLineHeight = (state: State) => state.setLineHeight;

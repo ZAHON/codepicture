@@ -5,11 +5,13 @@ export type FontSlice = {
   fontFamily: FontId;
   fontLigatures: boolean;
   fontSize: number;
+  letterSpacing: number;
   lineHeight: number;
 
   setFontFamily: (fontId: FontId) => void;
   setFontLigatures: (fontLigatures: boolean) => void;
   setFontSize: (fontSize: number) => void;
+  setLetterSpacing: (letterSpacing: number) => void;
   setLineHeight: (lineHeight: number) => void;
 };
 
