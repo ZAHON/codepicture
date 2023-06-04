@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import { useStore, selectFrameVisible } from '@/store';
 
 interface SandboxFrameStyle extends CSSProperties {
   '--sandbox-frame-padding-inline': string;
@@ -8,12 +9,14 @@ interface SandboxFrameStyle extends CSSProperties {
 }
 
 export function useSandboxFrameStyle() {
+  const frameVisible = useStore(selectFrameVisible);
+
   const sandboxFrameStyle: SandboxFrameStyle = {
     '--sandbox-frame-padding-inline': `${64 / 16}rem`,
     '--sandbox-frame-padding-block': `${64 / 16}rem`,
     '--sandbox-frame-fill':
       'linear-gradient(112deg, #06b7db -63.59%, #ff4dcc -20.3%, #0072f5 70.46%)',
-    '--sandbox-frame-opacity': 100,
+    '--sandbox-frame-opacity': frameVisible ? 100 : 0,
   };
 
   return sandboxFrameStyle;

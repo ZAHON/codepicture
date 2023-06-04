@@ -1,3 +1,3 @@
-import type { EditorSlice, FontSlice, HighlighterSlice } from './slices';
+import type { EditorSlice, FontSlice, FrameSlice, HighlighterSlice } from './slices';
 
-export type State = EditorSlice & FontSlice & HighlighterSlice;
+export type State = EditorSlice & FontSlice & FrameSlice & HighlighterSlice;
