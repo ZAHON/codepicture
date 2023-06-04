@@ -11,3 +11,7 @@ export const selectSetFontLigatures = (state: State) => state.setFontLigatures;
 // font size
 export const selectFontSize = (state: State) => state.fontSize;
 export const selectSetFontSize = (state: State) => state.setFontSize;
+
+// line height
+export const selectLineHeight = (state: State) => state.lineHeight;
+export const selectSetLineHeight = (state: State) => state.setLineHeight;
