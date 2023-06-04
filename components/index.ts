@@ -10,6 +10,7 @@ export * from './notifications';
 export * from './scroll-area';
 export * from './segmented-control';
 export * from './segmented-switch';
+export * from './segmented-tabs';
 export * from './select';
 export * from './separator';
 export * from './slider';
