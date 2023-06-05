@@ -4,8 +4,9 @@ import { useStore, selectHighlighter } from '@/store';
 import { SandboxOverlay } from './sandbox-overlay';
 import { SandboxFrame } from './sandbox-frame';
 import { SandboxContent } from './sandbox-content';
-import { SandboxWindowReflection } from './sandbox-window-reflection';
 import { SandboxWindow } from './sandbox-window';
+import { SandboxWindowReflection } from './sandbox-window-reflection';
+import { SandboxWindowHeader } from './sandbox-window-header';
 import { SandboxLineNumbers } from './sandbox-line-numbers';
 import { SandboxEditor } from './sandbox-editor';
 import { SandboxSimpleCodeEditor } from './sandbox-simple-code-editor';
@@ -24,6 +25,9 @@ export function Sandbox() {
         <SandboxContent>
           <SandboxWindow>
             <SandboxWindowReflection>
+              <SandboxWindowHeader>
+                <></>
+              </SandboxWindowHeader>
               <SandboxEditor>
                 <SandboxLineNumbers />
                 <SandboxSimpleCodeEditor>
