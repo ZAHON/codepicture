@@ -1,4 +1,5 @@
 import { WindowReflectionControl } from './window-reflection-control';
+import { WindowShadowControl } from './window-shadow-control';
 
 export function WindowControls() {
   return (
@@ -8,6 +9,7 @@ export function WindowControls() {
       </div>
       <div className="flex flex-col gap-y-2 py-2">
         <WindowReflectionControl />
+        <WindowShadowControl />
       </div>
     </div>
   );
