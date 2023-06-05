@@ -7,4 +7,5 @@ export const useStore = create<State>()((...a) => ({
   ...slices.createFontSlice(...a),
   ...slices.createFrameSlice(...a),
   ...slices.createHighlighterSlice(...a),
+  ...slices.createWindowSlice(...a),
 }));

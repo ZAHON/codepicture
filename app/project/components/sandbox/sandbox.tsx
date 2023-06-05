@@ -4,6 +4,7 @@ import { useStore, selectHighlighter } from '@/store';
 import { SandboxOverlay } from './sandbox-overlay';
 import { SandboxFrame } from './sandbox-frame';
 import { SandboxContent } from './sandbox-content';
+import { SandboxWindowReflection } from './sandbox-window-reflection';
 import { SandboxWindow } from './sandbox-window';
 import { SandboxLineNumbers } from './sandbox-line-numbers';
 import { SandboxEditor } from './sandbox-editor';
@@ -22,12 +23,14 @@ export function Sandbox() {
       <SandboxFrame>
         <SandboxContent>
           <SandboxWindow>
-            <SandboxEditor>
-              <SandboxLineNumbers />
-              <SandboxSimpleCodeEditor>
-                <SandboxSyntaxHighlighter />
-              </SandboxSimpleCodeEditor>
-            </SandboxEditor>
+            <SandboxWindowReflection>
+              <SandboxEditor>
+                <SandboxLineNumbers />
+                <SandboxSimpleCodeEditor>
+                  <SandboxSyntaxHighlighter />
+                </SandboxSimpleCodeEditor>
+              </SandboxEditor>
+            </SandboxWindowReflection>
           </SandboxWindow>
         </SandboxContent>
       </SandboxFrame>
