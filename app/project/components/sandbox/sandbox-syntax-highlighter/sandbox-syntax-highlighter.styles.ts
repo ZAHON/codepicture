@@ -16,3 +16,9 @@ export const lineStyles = cva([
   'empty:before:break-words',
   'empty:before:content-["_"]',
 ]);
+
+export const tokenStyles = cva([
+  'motion-safe:transition-[color]',
+  'motion-safe:ease-linear',
+  'motion-safe:duration-150',
+]);

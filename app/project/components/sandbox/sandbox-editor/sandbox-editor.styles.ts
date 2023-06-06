@@ -12,4 +12,8 @@ export const sandboxEditorStyles = cva([
   '[font-feature-settings:var(--sandbox-editor-font-ligatures)]',
   'leading-[var(--sandbox-editor-line-height)]',
   'tracking-[var(--sandbox-editor-letter-spacing)]',
+
+  'motion-safe:transition-[background-color]',
+  'motion-safe:ease-linear',
+  'motion-safe:duration-150',
 ]);

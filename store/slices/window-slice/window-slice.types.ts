@@ -5,12 +5,14 @@ export type WindowSlice = {
   windowHeaderVisible: boolean;
   windowReflection: boolean;
   windowShadow: ShadowId;
+  windowTabAccent: boolean;
   windowTabContent: string;
   windowTabVisible: boolean;
 
   setWindowHeaderVisible: (windowHeaderVisible: boolean) => void;
   setWindowReflection: (windowReflection: boolean) => void;
   setWindowShadow: (windowShadow: ShadowId) => void;
+  setWindowTabAccent: (windowTabVisible: boolean) => void;
   setWindowTabContent: (windowTabContent: string) => void;
   setWindowTabVisible: (windowTabVisible: boolean) => void;
 };

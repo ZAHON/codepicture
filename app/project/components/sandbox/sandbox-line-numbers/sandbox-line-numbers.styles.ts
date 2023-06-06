@@ -14,4 +14,10 @@ export const liStyles = cva([
   'text-[color:var(--sandbox-line-number-inactive-foreground)]',
 ]);
 
-export const spanStyles = cva(['scale-90']);
+export const spanStyles = cva([
+  'scale-90',
+
+  'motion-safe:transition-[color]',
+  'motion-safe:ease-linear',
+  'motion-safe:duration-150',
+]);

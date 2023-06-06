@@ -1,7 +1,7 @@
 'use client';
 import { useSandboxSyntaxHighlighter } from './hooks';
 import { getTokenStyle, getLineKey, getTokenKey } from './utils';
-import { codeStyles, lineStyles } from './sandbox-syntax-highlighter.styles';
+import { codeStyles, lineStyles, tokenStyles } from './sandbox-syntax-highlighter.styles';
 
 export function SandboxSyntaxHighlighter() {
   const italics = true;
@@ -19,6 +19,7 @@ export function SandboxSyntaxHighlighter() {
             <span
               key={getTokenKey(lineIndex, tokenIndex)}
               style={getTokenStyle({ color, fontStyle, italics })}
+              className={tokenStyles()}
             >
               {content}
             </span>
