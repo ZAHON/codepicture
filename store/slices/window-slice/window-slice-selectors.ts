@@ -15,3 +15,7 @@ export const selectSetWindowShadow = (state: State) => state.setWindowShadow;
 // window tab content
 export const selectWindowTabContent = (state: State) => state.windowTabContent;
 export const selectSetWindowTabContent = (state: State) => state.setWindowTabContent;
+
+// window tab visible
+export const selectWindowTabVisible = (state: State) => state.windowTabVisible;
+export const selectSetWindowTabVisible = (state: State) => state.setWindowTabVisible;

@@ -6,11 +6,13 @@ export type WindowSlice = {
   windowReflection: boolean;
   windowShadow: ShadowId;
   windowTabContent: string;
+  windowTabVisible: boolean;
 
   setWindowHeaderVisible: (windowHeaderVisible: boolean) => void;
   setWindowReflection: (windowReflection: boolean) => void;
   setWindowShadow: (windowShadow: ShadowId) => void;
   setWindowTabContent: (windowTabContent: string) => void;
+  setWindowTabVisible: (windowTabVisible: boolean) => void;
 };
 
 export type CreateWindowSlice = StateCreator<WindowSlice, [], [], WindowSlice>;

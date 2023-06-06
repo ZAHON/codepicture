@@ -5,9 +5,11 @@ export const createWindowSlice: CreateWindowSlice = (set) => ({
   windowReflection: false,
   windowShadow: 'bottom',
   windowTabContent: 'index.tsx',
+  windowTabVisible: true,
 
   setWindowHeaderVisible: (windowHeaderVisible) => set(() => ({ windowHeaderVisible })),
   setWindowReflection: (windowReflection) => set(() => ({ windowReflection })),
   setWindowShadow: (windowShadow) => set(() => ({ windowShadow })),
   setWindowTabContent: (windowTabContent) => set(() => ({ windowTabContent })),
+  setWindowTabVisible: (windowTabVisible) => set(() => ({ windowTabVisible })),
 });

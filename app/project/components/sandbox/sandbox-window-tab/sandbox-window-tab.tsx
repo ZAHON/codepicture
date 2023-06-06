@@ -1,21 +1,31 @@
 'use client';
 import AutosizeInput from 'react-input-autosize';
-import { useStore, selectWindowTabContent, selectSetWindowTabContent } from '@/store';
+import {
+  useStore,
+  selectWindowTabVisible,
+  selectWindowTabContent,
+  selectSetWindowTabContent,
+} from '@/store';
 import { wrapperStyles, inputStyles } from './sandbox-window-tab.styles';
 
 export function SandboxWindowTab() {
-  const tabContent = useStore(selectWindowTabContent);
-  const setTabContent = useStore(selectSetWindowTabContent);
+  const windowTabVisible = useStore(selectWindowTabVisible);
+  const windowTabContent = useStore(selectWindowTabContent);
+  const setWindowTabContent = useStore(selectSetWindowTabContent);
 
   const tabAccent = true;
+
+  if (!windowTabVisible) {
+    return null;
+  }
 
   return (
     <div className={wrapperStyles({ tabAccent })}>
       <AutosizeInput
         type="text"
         placeholder="Untitled"
-        value={tabContent}
-        onChange={(e) => setTabContent(e.target.value)}
+        value={windowTabContent}
+        onChange={(e) => setWindowTabContent(e.target.value)}
         inputClassName={inputStyles()}
       />
     </div>

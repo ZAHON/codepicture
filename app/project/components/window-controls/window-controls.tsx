@@ -1,4 +1,5 @@
 import { WindowHeaderVisibleVontrol } from './window-header-visible-control';
+import { WindowTabVisibleControl } from './window-tab-visible-control';
 import { WindowReflectionControl } from './window-reflection-control';
 import { WindowShadowControl } from './window-shadow-control';
 
@@ -10,6 +11,7 @@ export function WindowControls() {
       </div>
       <div className="flex flex-col gap-y-2 py-2">
         <WindowHeaderVisibleVontrol />
+        <WindowTabVisibleControl />
         <WindowReflectionControl />
         <WindowShadowControl />
       </div>
