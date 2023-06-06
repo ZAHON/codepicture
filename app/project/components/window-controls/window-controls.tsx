@@ -4,6 +4,7 @@ import { WindowTabVisibleControl } from './window-tab-visible-control';
 import { WindowTabAccentControl } from './window-tab-accent-control';
 import { WindowReflectionControl } from './window-reflection-control';
 import { WindowShadowControl } from './window-shadow-control';
+import { WindowBorderRadiusControl } from './window-border-radius-control';
 
 export function WindowControls() {
   return (
@@ -18,6 +19,7 @@ export function WindowControls() {
         <WindowTabAccentControl />
         <WindowReflectionControl />
         <WindowShadowControl />
+        <WindowBorderRadiusControl />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import { useStore, selectWindowShadow } from '@/store';
+import { useStore, selectWindowBorderRadius, selectWindowShadow } from '@/store';
 import { getShadowValueById } from '@/utils';
 
 interface SandboxWindowStyle extends CSSProperties {
@@ -8,10 +8,11 @@ interface SandboxWindowStyle extends CSSProperties {
 }
 
 export function useSandboxWindowStyle() {
+  const windowBorderRadius = useStore(selectWindowBorderRadius);
   const windowShadow = useStore(selectWindowShadow);
 
   const sandboxWindowStyle: SandboxWindowStyle = {
-    '--sandbox-window-border-radius': `${12 / 16}rem`,
+    '--sandbox-window-border-radius': `${windowBorderRadius / 16}rem`,
     '--sandbox-window-shadow': getShadowValueById(windowShadow),
   };
 

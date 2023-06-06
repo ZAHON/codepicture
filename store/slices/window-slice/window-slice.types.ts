@@ -10,6 +10,7 @@ type WindowControlsType =
   | 'none';
 
 export type WindowSlice = {
+  windowBorderRadius: number;
   windowControlsType: WindowControlsType;
   windowHeaderVisible: boolean;
   windowReflection: boolean;
@@ -18,6 +19,7 @@ export type WindowSlice = {
   windowTabContent: string;
   windowTabVisible: boolean;
 
+  setWindowBorderRadius: (windowBorderRadius: number) => void;
   setWindowControlsType: (windowControlsType: WindowControlsType) => void;
   setWindowHeaderVisible: (windowHeaderVisible: boolean) => void;
   setWindowReflection: (windowReflection: boolean) => void;

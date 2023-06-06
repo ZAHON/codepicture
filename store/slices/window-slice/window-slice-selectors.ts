@@ -1,5 +1,9 @@
 import type { State } from '../../store.types';
 
+// window border radius
+export const selectWindowBorderRadius = (state: State) => state.windowBorderRadius;
+export const selectSetWindowBorderRadius = (state: State) => state.setWindowBorderRadius;
+
 // window controls type
 export const selectWindowControlsType = (state: State) => state.windowControlsType;
 export const selectSetWindowControlsType = (state: State) => state.setWindowControlsType;
