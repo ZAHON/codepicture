@@ -4,6 +4,7 @@
     "--sandbox-editor-background": "#fff",
     "--sandbox-editor-foreground": "#24292e",
     "--sandbox-editor-cursor-foreground": "#044289",
+    "--sandbox-editor-selection-background": "#0366d625",
     "--sandbox-line-number-inactive-foreground": "#1b1f234d",
     "--sandbox-window-header-background": "#f6f8fa",
     "--sandbox-window-tab-active-foreground": "#2f363d",
