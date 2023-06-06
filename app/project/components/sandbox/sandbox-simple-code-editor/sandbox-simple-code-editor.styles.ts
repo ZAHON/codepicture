@@ -48,6 +48,7 @@ export const textareaStyles = cva([
   'pl-[var(--sandbox-editor-padding-left)]',
   'pr-[1.3125rem]',
   'caret-[color:var(--sandbox-editor-cursor-foreground)]',
+  'selection:bg-[color:var(--sandbox-editor-selection-background)]',
 ]);
 
 export const preStyles = cva([
@@ -75,5 +76,5 @@ export const preStyles = cva([
 
   'overflow-hidden',
   'whitespace-pre',
-  'selection:bg-transparent',
+  'selection:bg-[color:var(--sandbox-editor-selection-background)]',
 ]);

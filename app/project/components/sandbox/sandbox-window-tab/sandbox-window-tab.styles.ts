@@ -65,6 +65,7 @@ export const inputStyles = cva([
   'text-[color:var(--sandbox-window-tab-active-foreground)]',
   'caret-[color:var(--sandbox-editor-cursor-foreground)]',
   'placeholder:text-[color:var(--sandbox-window-tab-inactive-foreground)]',
+  'selection:bg-[color:var(--sandbox-editor-selection-background)]',
 
   'placeholder:motion-safe:transition-[color]',
   'placeholder:motion-safe:ease-linear',
