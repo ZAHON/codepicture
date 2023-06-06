@@ -7,6 +7,7 @@ import { SandboxContent } from './sandbox-content';
 import { SandboxWindow } from './sandbox-window';
 import { SandboxWindowReflection } from './sandbox-window-reflection';
 import { SandboxWindowHeader } from './sandbox-window-header';
+import { SandboxWindowTab } from './sandbox-window-tab';
 import { SandboxLineNumbers } from './sandbox-line-numbers';
 import { SandboxEditor } from './sandbox-editor';
 import { SandboxSimpleCodeEditor } from './sandbox-simple-code-editor';
@@ -26,7 +27,7 @@ export function Sandbox() {
           <SandboxWindow>
             <SandboxWindowReflection>
               <SandboxWindowHeader>
-                <></>
+                <SandboxWindowTab />
               </SandboxWindowHeader>
               <SandboxEditor>
                 <SandboxLineNumbers />

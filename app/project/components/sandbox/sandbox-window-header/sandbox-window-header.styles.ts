@@ -6,5 +6,6 @@ export const sandboxWindowHeaderStyles = cva([
   'gap-x-4',
   'px-4',
   'h-12',
-  'bg-[color:var(--sandbox-editor-background)]',
+  // 'bg-[color:var(--sandbox-editor-background)]',
+  'bg-[color:var(--sandbox-window-header-background)]',
 ]);

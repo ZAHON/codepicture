@@ -11,3 +11,7 @@ export const selectSetWindowReflection = (state: State) => state.setWindowReflec
 // window shadow
 export const selectWindowShadow = (state: State) => state.windowShadow;
 export const selectSetWindowShadow = (state: State) => state.setWindowShadow;
+
+// window tab content
+export const selectWindowTabContent = (state: State) => state.windowTabContent;
+export const selectSetWindowTabContent = (state: State) => state.setWindowTabContent;
