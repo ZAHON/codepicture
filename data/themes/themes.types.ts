@@ -1,6 +1,12 @@
 import type { CSSProperties } from 'react';
 
-export type ThemeId = 'github-dark' | 'github-light';
+export type ThemeId =
+  | 'atom-one-light'
+  | 'dark-modern'
+  | 'github-dark'
+  | 'github-light'
+  | 'light-modern'
+  | 'one-dark-pro';
 
 export type Theme = {
   id: ThemeId;
