@@ -1,7 +1,16 @@
 import type { StateCreator } from 'zustand';
 import type { ShadowId } from '@/data';
 
+type WindowControlsType =
+  | 'macos-filled-color'
+  | 'macos-filled-gray'
+  | 'macos-outline-color'
+  | 'macos-outline-gray'
+  | 'windows'
+  | 'none';
+
 export type WindowSlice = {
+  windowControlsType: WindowControlsType;
   windowHeaderVisible: boolean;
   windowReflection: boolean;
   windowShadow: ShadowId;
@@ -9,6 +18,7 @@ export type WindowSlice = {
   windowTabContent: string;
   windowTabVisible: boolean;
 
+  setWindowControlsType: (windowControlsType: WindowControlsType) => void;
   setWindowHeaderVisible: (windowHeaderVisible: boolean) => void;
   setWindowReflection: (windowReflection: boolean) => void;
   setWindowShadow: (windowShadow: ShadowId) => void;

@@ -1,5 +1,9 @@
 import type { State } from '../../store.types';
 
+// window controls type
+export const selectWindowControlsType = (state: State) => state.windowControlsType;
+export const selectSetWindowControlsType = (state: State) => state.setWindowControlsType;
+
 // window header visible
 export const selectWindowHeaderVisible = (state: State) => state.windowHeaderVisible;
 export const selectSetWindowHeaderVisible = (state: State) => state.setWindowHeaderVisible;

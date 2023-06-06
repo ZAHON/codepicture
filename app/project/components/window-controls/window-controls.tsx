@@ -1,4 +1,5 @@
 import { WindowHeaderVisibleVontrol } from './window-header-visible-control';
+import { WindowControlsTypeControl } from './window-controls-type-control';
 import { WindowTabVisibleControl } from './window-tab-visible-control';
 import { WindowTabAccentControl } from './window-tab-accent-control';
 import { WindowReflectionControl } from './window-reflection-control';
@@ -12,6 +13,7 @@ export function WindowControls() {
       </div>
       <div className="flex flex-col gap-y-2 py-2">
         <WindowHeaderVisibleVontrol />
+        <WindowControlsTypeControl />
         <WindowTabVisibleControl />
         <WindowTabAccentControl />
         <WindowReflectionControl />

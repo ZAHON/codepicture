@@ -4,7 +4,7 @@ export const wrapperStyles = cva(
   [
     'h-full',
     'flex',
-    'justify-center',
+    'justify-start',
     'items-center',
     'px-4',
     'bg-transparent',
@@ -21,7 +21,6 @@ export const wrapperStyles = cva(
           'relative',
           'h-[2.375rem]',
           'mt-3',
-          // 'self-end',
           'rounded-tl-md',
           'rounded-tr-md',
           'shadow-[1px_10px_5px_1px_#00000040]',
