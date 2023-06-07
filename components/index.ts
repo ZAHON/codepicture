@@ -8,6 +8,7 @@ export * from './loader';
 export * from './menu';
 export * from './native-select';
 export * from './notifications';
+export * from './number-input';
 export * from './popover';
 export * from './scroll-area';
 export * from './segmented-control';

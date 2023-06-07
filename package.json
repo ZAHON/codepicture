@@ -28,6 +28,8 @@
     "@radix-ui/react-switch": "^1.0.2",
     "@radix-ui/react-tabs": "^1.0.4",
     "@tabler/icons-react": "^2.20.0",
+    "@zag-js/number-input": "^0.10.2",
+    "@zag-js/react": "^0.10.2",
     "class-variance-authority": "^0.6.0",
     "merge-refs": "^1.2.1",
     "next": "13.4.3",

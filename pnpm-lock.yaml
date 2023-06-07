@@ -34,6 +34,12 @@ dependencies:
   '@tabler/icons-react':
     specifier: ^2.20.0
     version: 2.20.0(react@18.2.0)
+  '@zag-js/number-input':
+    specifier: ^0.10.2
+    version: 0.10.2
+  '@zag-js/react':
+    specifier: ^0.10.2
+    version: 0.10.2(react-dom@18.2.0)(react@18.2.0)
   class-variance-authority:
     specifier: ^0.6.0
     version: 0.6.0(typescript@5.0.4)
@@ -5310,6 +5316,92 @@ packages:
       tslib: 2.5.2
     dev: true
 
+  /@zag-js/anatomy@0.10.2:
+    resolution: {integrity: sha512-hXJO047Bx1ilIQIlY4yk4f7QM7hFWg5p6DC4zZBsQf2A/FmDikGcOvqYhM4NM5Zuw8Rp4RF8aSU2qWONqAo8kA==}
+    dev: false
+
+  /@zag-js/core@0.10.2:
+    resolution: {integrity: sha512-p9ctX27Dik2PYUPE66O2sJwesGsmlV6FbMSbGfc/lteZiQHkFxulOTs1kiFxUDfjFgbsHDu4a0QwBmNrHH25Uw==}
+    dependencies:
+      '@zag-js/store': 0.10.2
+      klona: 2.0.6
+    dev: false
+
+  /@zag-js/dom-event@0.10.2:
+    resolution: {integrity: sha512-W44npN40fufpser5SBGLhXo+0AyDSEX+ySP2gBX2uIaPxRa/GZJGt8lWJf/tVRx6XOCa8eZtLvHrYRcJ6mWqWg==}
+    dependencies:
+      '@zag-js/text-selection': 0.10.2
+      '@zag-js/types': 0.10.2
+    dev: false
+
+  /@zag-js/dom-query@0.10.2:
+    resolution: {integrity: sha512-gsQztWG54tkxzFvteUxWa017oDz4qJj1okCMMQ1s0mGkK4N7HY5AzAx8zMJoVYwZPmlBKOgCwJTbGB/1mUBaqg==}
+    dev: false
+
+  /@zag-js/form-utils@0.10.2:
+    resolution: {integrity: sha512-lMce2u8EXpAQWzEsfIgIdHhbygYvWZQy/5Vwv6tRt7hQd076iJX+DWXTkawlwPREwNm/pn7Dy7SETyX7qeAkRw==}
+    dependencies:
+      '@zag-js/mutation-observer': 0.10.2
+    dev: false
+
+  /@zag-js/mutation-observer@0.10.2:
+    resolution: {integrity: sha512-D2nCn8m7LexaPjVLLvlKzGLxJidH6LlMrhEyQt8BmUtpQf/u9dF21c+L72SrrLleiDv1Ke7us6HYj4xhSA/aTg==}
+    dev: false
+
+  /@zag-js/number-input@0.10.2:
+    resolution: {integrity: sha512-Vl/aWemrdjTvyRxhsl40oUTxgnS0jrNyTKQRSkyhqI2Bp1afXrmoexReKQ2HrhtZMEE6Q9hAMzUISDYBAl7n8Q==}
+    dependencies:
+      '@zag-js/anatomy': 0.10.2
+      '@zag-js/core': 0.10.2
+      '@zag-js/dom-event': 0.10.2
+      '@zag-js/dom-query': 0.10.2
+      '@zag-js/form-utils': 0.10.2
+      '@zag-js/mutation-observer': 0.10.2
+      '@zag-js/number-utils': 0.10.2
+      '@zag-js/types': 0.10.2
+      '@zag-js/utils': 0.10.2
+    dev: false
+
+  /@zag-js/number-utils@0.10.2:
+    resolution: {integrity: sha512-a18LQlteigmlirYh8xRDO732U5r5cbJHspPwSmWQEVeQVwXmeGtJXlCWULvg2Zm2u4Zpdzdoo4o3kX7+yWZIHg==}
+    dev: false
+
+  /@zag-js/react@0.10.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-D4kjnYg897C7kA7uhXZMyMGQM7iWDiddmnyeLnZUFTDILX6uEYx7epQgeAQ0gmeRw2Un1ZNaKylM8IqlvqXzhg==}
+    peerDependencies:
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+    dependencies:
+      '@zag-js/core': 0.10.2
+      '@zag-js/store': 0.10.2
+      '@zag-js/types': 0.10.2
+      proxy-compare: 2.5.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@zag-js/store@0.10.2:
+    resolution: {integrity: sha512-GUTViqs+v8Pkn96ooqjMZbMtywFEtOogbz5/3qJJoPAjFFtFGxjycQRZOB1mg4a52lK0Uh4BQ1x1atG06EkLaw==}
+    dependencies:
+      proxy-compare: 2.5.1
+    dev: false
+
+  /@zag-js/text-selection@0.10.2:
+    resolution: {integrity: sha512-XPhowW6odc5jZ9Lzolh1KiqeQbNkXQwMFU8t5/gh15xC0Bds/ueksnhWJgYrr9DBWIkCi2MyXMM5hmKqBRIepg==}
+    dependencies:
+      '@zag-js/dom-query': 0.10.2
+    dev: false
+
+  /@zag-js/types@0.10.2:
+    resolution: {integrity: sha512-a5VK1VfsYfvJs2JzLFMcM3yLf2NU+WQLql5ChV5qa9M2CLyUH+czgwKvjFFrSsvUWYSdVJyTxFEZI9sfNnQg/Q==}
+    dependencies:
+      csstype: 3.1.2
+    dev: false
+
+  /@zag-js/utils@0.10.2:
+    resolution: {integrity: sha512-CRxtBtPyNE9tjFnwxGZsU8Gr4kLAb1JhhpRv9yJKVs2aQp03+//USP0nn98L8qy3rIy7kVZtUL6+NosB3pkebA==}
+    dev: false
+
   /abab@2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
     dev: true
@@ -8953,7 +9045,6 @@ packages:
   /klona@2.0.6:
     resolution: {integrity: sha512-dhG34DXATL5hSxJbIexCft8FChFXtmskoZYnoPWjXQuebWYCNkVeV3KkGegCK9CP1oswI/vQibS2GY7Em/sJJA==}
     engines: {node: '>= 8'}
-    dev: true
 
   /language-subtag-registry@0.3.22:
     resolution: {integrity: sha512-tN0MCzyWnoz/4nHS6uxdlFWoUZT7ABptwKPQ52Ea7URk6vll88bWBVhodtnlfEuCcKWNGoc+uGbw1cwa9IKh/w==}
@@ -10302,6 +10393,10 @@ packages:
       forwarded: 0.2.0
       ipaddr.js: 1.9.1
     dev: true
+
+  /proxy-compare@2.5.1:
+    resolution: {integrity: sha512-oyfc0Tx87Cpwva5ZXezSp5V9vht1c7dZBhvuV/y3ctkgMVUmiAGDVeeB0dKhGSyT0v1ZTEQYpe/RXlBVBNuCLA==}
+    dev: false
 
   /proxy-from-env@1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
