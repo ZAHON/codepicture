@@ -1,6 +1,7 @@
 export * from './alert-dialog';
 export * from './button';
 export * from './close-button';
+export * from './dialog';
 export * from './icon-button';
 export * from './label';
 export * from './loader';
