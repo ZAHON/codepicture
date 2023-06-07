@@ -4,6 +4,10 @@ import type { State } from '../../store.types';
 export const selectEditorCode = (state: State) => state.editorCode;
 export const selectSetEditorCode = (state: State) => state.setEditorCode;
 
+// editor first line number
+export const selectEditorFirstLineNumber = (state: State) => state.editorFirstLineNumber;
+export const selectSetEditorFirstLineNumber = (state: State) => state.setEditorFirstLineNumber;
+
 // editor language
 export const selectEditorLanguage = (state: State) => state.editorLanguage;
 export const selectEditorLanguageIsLoading = (state: State) => state.editorLanguageIsLoading;

@@ -5,6 +5,7 @@ import { LanguageId, languages, themes } from '@/data';
 import { notify } from '@/lib';
 
 export const createEditorSlice: CreateEditorSlice = (set, get) => ({
+  editorFirstLineNumber: 1,
   editorCode: editorCodePlaceholder,
   editorLanguage: 'tsx',
   editorLanguageIsLoading: true,
@@ -13,6 +14,8 @@ export const createEditorSlice: CreateEditorSlice = (set, get) => ({
   editorThemeIsLoading: true,
 
   setEditorCode: (editorCode) => set(() => ({ editorCode })),
+
+  setEditorFirstLineNumber: (editorFirstLineNumber) => set(() => ({ editorFirstLineNumber })),
 
   setEditorLanguage: async (editorLanguage) => {
     const highlighter = get().highlighter;
