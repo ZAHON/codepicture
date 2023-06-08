@@ -19,7 +19,7 @@ export interface ThemeCSSProperties extends CSSProperties {
   '--sandbox-editor-foreground'?: string;
   '--sandbox-editor-cursor-foreground'?: string;
   '--sandbox-editor-selection-background'?: string;
-  '--sandbox-line-number-inactive-foreground'?: string;
+  '--sandbox-editor-line-number-inactive-foreground'?: string;
   '--sandbox-window-header-background'?: string;
   '--sandbox-window-tab-active-foreground'?: string;
   '--sandbox-window-tab-inactive-foreground'?: string;

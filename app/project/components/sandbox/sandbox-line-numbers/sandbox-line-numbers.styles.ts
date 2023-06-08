@@ -11,7 +11,7 @@ export const liStyles = cva([
   'pr-[0.625rem]',
   'text-right',
   'leading-[inherit]',
-  'text-[color:var(--sandbox-line-number-inactive-foreground)]',
+  'text-[color:var(--sandbox-editor-line-number-inactive-foreground)]',
 ]);
 
 export const spanStyles = cva([

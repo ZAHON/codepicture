@@ -5,7 +5,7 @@
     "--sandbox-editor-foreground": "#e1e4e8",
     "--sandbox-editor-cursor-foreground": "#c8e1ff",
     "--sandbox-editor-selection-background": "#3392ff44",
-    "--sandbox-line-number-inactive-foreground": "#444d56",
+    "--sandbox-editor-line-number-inactive-foreground": "#444d56",
     "--sandbox-window-header-background": "#1f2428",
     "--sandbox-window-tab-active-foreground": "#e1e4e8",
     "--sandbox-window-tab-inactive-foreground": "#959da5"
