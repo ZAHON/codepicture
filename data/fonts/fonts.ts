@@ -14,6 +14,12 @@ export const fonts: Font[] = [
     ligatures: true,
   },
   {
+    id: 'intel-one-mono',
+    cssVariable: '--font-intel-one-mono',
+    label: 'Intel One Mono',
+    ligatures: false,
+  },
+  {
     id: 'jetbrains-mono',
     cssVariable: '--font-jetbrains-mono',
     label: 'JetBrains Mono',

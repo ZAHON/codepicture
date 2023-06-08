@@ -1,6 +1,7 @@
 export type FontId =
   | 'cascadia-code'
   | 'fira-code'
+  | 'intel-one-mono'
   | 'jetbrains-mono'
   | 'overpass-mono'
   | 'source-code-pro'

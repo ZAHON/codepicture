@@ -23,6 +23,13 @@ const fira_code = localFont({
   variable: '--font-fira-code',
 });
 
+const intel_one_mono = localFont({
+  src: '../fonts/intel-one-mono.woff2',
+  display: 'swap',
+  preload: false,
+  variable: '--font-intel-one-mono',
+});
+
 const jetbrains_mono = localFont({
   src: '../fonts/jetbrains-mono.woff2',
   display: 'swap',
@@ -55,6 +62,7 @@ export const fontsVariable = [
   inter.variable,
   cascadia_code.variable,
   fira_code.variable,
+  intel_one_mono.variable,
   jetbrains_mono.variable,
   overpass_mono.variable,
   source_code_pro.variable,
