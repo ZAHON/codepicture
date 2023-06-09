@@ -8,7 +8,7 @@ export interface NotifyShowArgs extends Omit<NotificationProps, 'visible'> {
 
   /**
    * The position of the notification.
-   * @default "bottom-right"
+   * @default "top-right"
    */
   position?:
     | 'top-left'

@@ -5,7 +5,7 @@ import { Toaster } from 'react-hot-toast';
 import { applayComponentDefaultProps } from '@/utils';
 
 const defaultProps: Partial<NotificationsProps> = {
-  position: 'bottom-right',
+  position: 'top-right',
   gutter: 10,
   topOffset: 10,
   rightOffset: 10,

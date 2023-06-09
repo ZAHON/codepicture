@@ -1,5 +1,13 @@
+'use client';
+import { useMediaQuery } from '@/hooks';
+import { BottomMenuPopover } from './bottom-menu-popover';
+
 export function BottomMenu() {
-  return (
-    <div className="flex h-14 items-center justify-between border-t border-t-neutral-5 bg-white px-4 dark:bg-black md:hidden"></div>
-  );
+  const matches = useMediaQuery('(min-width: 768px)');
+
+  if (matches) {
+    return null;
+  }
+
+  return <BottomMenuPopover />;
 }

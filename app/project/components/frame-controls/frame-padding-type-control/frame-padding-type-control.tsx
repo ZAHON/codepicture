@@ -1,11 +1,13 @@
 'use client';
 import { useId } from 'react';
+import { useMediaQuery } from '@/hooks';
 import { useStore, selectFramePaddingType, selectSetFramePaddingType } from '@/store';
 import { IconAdjustmentsAlt } from '@tabler/icons-react';
 import { LabelAsSpan, SegmentedControl, SegmentedControlItem } from '@/components';
 
 export function FramePaddingTypeControl() {
   const controlId = useId();
+  const matches = useMediaQuery('(min-width: 768px)');
   const framePaddingType = useStore(selectFramePaddingType);
   const setFramePaddingType = useStore(selectSetFramePaddingType);
 
@@ -15,11 +17,11 @@ export function FramePaddingTypeControl() {
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">
-      <LabelAsSpan id={controlId} size="sm">
+      <LabelAsSpan id={controlId} size={matches ? 'sm' : 'md'}>
         Padding
       </LabelAsSpan>
       <SegmentedControl
-        size="sm"
+        size={matches ? 'sm' : 'md'}
         value={framePaddingType}
         onValueChange={handleValueChange}
         aria-labelledby={controlId}
@@ -31,7 +33,11 @@ export function FramePaddingTypeControl() {
         <SegmentedControlItem value="64">64</SegmentedControlItem>
         <SegmentedControlItem value="128">128</SegmentedControlItem>
         <SegmentedControlItem value="custom" aria-label="Edit manually">
-          <IconAdjustmentsAlt size="0.875rem" aria-hidden="true" focusable="false" />
+          <IconAdjustmentsAlt
+            size={matches ? '0.875rem' : '1rem'}
+            aria-hidden="true"
+            focusable="false"
+          />
         </SegmentedControlItem>
       </SegmentedControl>
     </div>

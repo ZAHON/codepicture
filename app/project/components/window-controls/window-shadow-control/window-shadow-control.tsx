@@ -1,35 +1,52 @@
 'use client';
 import { useId } from 'react';
+import { useMediaQuery } from '@/hooks';
 import { useStore, selectWindowShadow, selectSetWindowShadow } from '@/store';
-import { Label, Select, SelectContent, SelectGroup, SelectItem } from '@/components';
+import { Label, Select, SelectContent, SelectGroup, SelectItem, NativeSelect } from '@/components';
 import { shadows } from '@/data';
 
 export function WindowShadowControl() {
   const controlId = useId();
+  const matches = useMediaQuery('(min-width: 768px)');
   const windowShadow = useStore(selectWindowShadow);
   const setWindowShadow = useStore(selectSetWindowShadow);
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">
-      <Label size="sm" htmlFor={controlId}>
+      <Label htmlFor={controlId} size={matches ? 'sm' : 'md'}>
         Shadow
       </Label>
-      <Select
-        size="sm"
-        value={windowShadow}
-        onValueChange={(value) => setWindowShadow(value as typeof windowShadow)}
-        className="col-span-2"
-      >
-        <SelectContent>
-          <SelectGroup>
-            {shadows.map(({ id, label }) => (
-              <SelectItem key={id} value={id}>
-                {label}
-              </SelectItem>
-            ))}
-          </SelectGroup>
-        </SelectContent>
-      </Select>
+      {matches ? (
+        <Select
+          size="sm"
+          value={windowShadow}
+          onValueChange={(value) => setWindowShadow(value as typeof windowShadow)}
+          className="col-span-2"
+        >
+          <SelectContent>
+            <SelectGroup>
+              {shadows.map(({ id, label }) => (
+                <SelectItem key={id} value={id}>
+                  {label}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      ) : (
+        <NativeSelect
+          size="md"
+          value={windowShadow}
+          onChange={(e) => setWindowShadow(e.target.value as typeof windowShadow)}
+          wrapperProps={{ className: 'col-span-2' }}
+        >
+          {shadows.map(({ id, label }) => (
+            <option key={id} value={id}>
+              {label}
+            </option>
+          ))}
+        </NativeSelect>
+      )}
     </div>
   );
 }

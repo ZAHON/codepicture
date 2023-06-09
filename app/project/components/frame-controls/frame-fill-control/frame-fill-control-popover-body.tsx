@@ -1,4 +1,5 @@
 'use client';
+import { useMediaQuery } from '@/hooks';
 import { useStore, selectFrameFillType, selectSetFrameFillType } from '@/store';
 import {
   SegmentedTabs,
@@ -10,6 +11,7 @@ import { FrameFillControlColors } from './frame-fill-control-colors';
 import { FrameFillControlGradients } from './frame-fill-control-gradients';
 
 export function FrameFillControlPopoverBody() {
+  const matches = useMediaQuery('(min-width: 768px)');
   const frameFillType = useStore(selectFrameFillType);
   const setFrameFillType = useStore(selectSetFrameFillType);
 
@@ -19,7 +21,7 @@ export function FrameFillControlPopoverBody() {
 
   return (
     <SegmentedTabs value={frameFillType} onValueChange={handleValueChange}>
-      <SegmentedTabsList size="sm" className="mx-4">
+      <SegmentedTabsList size={matches ? 'sm' : 'md'} className="mx-4">
         <SegmentedTabsTrigger value="color">Colors</SegmentedTabsTrigger>
         <SegmentedTabsTrigger value="gradient">Gradients</SegmentedTabsTrigger>
       </SegmentedTabsList>

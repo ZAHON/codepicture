@@ -1,7 +1,7 @@
 export interface NotificationsProps {
   /**
    * The position of the toasts.
-   * @default "bottom-right"
+   * @default "top-right"
    */
   position?:
     | 'top-left'

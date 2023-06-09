@@ -5,7 +5,7 @@ import { getNotifyDuration } from './utils';
 import { Notification } from '@/components/notifications/notification';
 
 const defaultArgs: Partial<NotifyShowArgs> = {
-  position: 'bottom-right',
+  position: 'top-right',
 };
 
 export function notifyShow(args: NotifyShowArgs) {

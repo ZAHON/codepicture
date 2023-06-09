@@ -1,5 +1,6 @@
 'use client';
 import { useId } from 'react';
+import { useMediaQuery } from '@/hooks';
 import {
   useStore,
   selectFramePaddingType,
@@ -10,6 +11,7 @@ import { LabelAsSpan, Slider } from '@/components';
 
 export function FramePaddingHorizontalControl() {
   const controlId = useId();
+  const matches = useMediaQuery('(min-width: 768px)');
   const framePaddingType = useStore(selectFramePaddingType);
   const framePaddingHorizontal = useStore(selectFramePaddingHorizontal);
   const setFramePaddingHorizontal = useStore(selectSetFramePaddingHorizontal);
@@ -21,13 +23,13 @@ export function FramePaddingHorizontalControl() {
   return (
     <div className="flex flex-col gap-y-0.5 pl-2">
       <div className="flex h-6 items-center justify-between">
-        <LabelAsSpan size="sm" id={controlId}>
+        <LabelAsSpan id={controlId} size={matches ? 'sm' : 'md'}>
           Padding X
         </LabelAsSpan>
-        <span className="cursor-default text-xs">{framePaddingHorizontal}px</span>
+        <span className="cursor-default text-sm md:text-xs">{framePaddingHorizontal}px</span>
       </div>
       <Slider
-        size="sm"
+        size={matches ? 'sm' : 'md'}
         value={framePaddingHorizontal}
         onValueChange={setFramePaddingHorizontal}
         thumbLabel="Change frame padding horizontal"

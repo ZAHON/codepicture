@@ -18,7 +18,7 @@ export const FrameFillControlTrigger = forwardRef<HTMLButtonElement, FrameFillCo
         id="frame-fill-control-trigger"
         aria-label="Change frame fill"
         style={{ background: frameFillValue }}
-        className="col-span-2 h-8 rounded-lg border-4 border-neutral-6 focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary-9 motion-safe:transition-[background] motion-safe:duration-150 motion-safe:ease-linear"
+        className="col-span-2 h-9 rounded-lg border-4 border-neutral-6 focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary-9 motion-safe:transition-[background] motion-safe:duration-150 motion-safe:ease-linear md:h-8"
         {...props}
       />
     );

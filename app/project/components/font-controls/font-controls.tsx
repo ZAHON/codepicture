@@ -7,10 +7,10 @@ import { LetterSpacingControl } from './letter-spacing-control';
 export function FontControls() {
   return (
     <div>
-      <div className="flex h-12 items-center">
+      <div className="hidden h-12 items-center md:flex">
         <span className="cursor-default text-sm font-medium">Font</span>
       </div>
-      <div className="flex flex-col gap-y-2 py-2">
+      <div className="flex flex-col gap-y-4 py-4 md:gap-y-2 md:py-2">
         <FontFamilyControl />
         <FontLigaturesControl />
         <FontSizeControl />

@@ -74,7 +74,7 @@ export function FrameFillControlColors() {
     >
       {data.map(({ name, items }) => (
         <div key={name} className="flex flex-col gap-y-2">
-          <span className="cursor-default text-xs font-medium">{name}</span>
+          <span className="cursor-default text-sm font-medium md:text-xs">{name}</span>
           <div className="grid grid-cols-5 gap-4">
             {items.map(({ id, value, label }) => (
               <FrameFillControlFillSwatch

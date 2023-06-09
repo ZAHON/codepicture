@@ -9,10 +9,10 @@ import { WindowBorderRadiusControl } from './window-border-radius-control';
 export function WindowControls() {
   return (
     <div>
-      <div className="flex h-12 items-center">
+      <div className="hidden h-12 items-center md:flex">
         <span className="cursor-default text-sm font-medium">Window</span>
       </div>
-      <div className="flex flex-col gap-y-2 py-2">
+      <div className="flex flex-col gap-y-4 py-4 md:gap-y-2 md:py-2">
         <WindowHeaderVisibleVontrol />
         <WindowControlsTypeControl />
         <WindowTabVisibleControl />

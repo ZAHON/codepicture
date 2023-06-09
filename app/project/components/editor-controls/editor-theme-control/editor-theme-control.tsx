@@ -1,6 +1,7 @@
 'use client';
 import type { ThemeId } from '@/data';
 import { useId } from 'react';
+import { useMediaQuery } from '@/hooks';
 import {
   useStore,
   selectEditorTheme,
@@ -15,6 +16,7 @@ import {
   SelectLabel,
   SelectItem,
   SelectSeparator,
+  NativeSelect,
 } from '@/components';
 import { themes } from '@/data';
 
@@ -28,43 +30,70 @@ const themesLightSorted = themes
 
 export function EditorThemeControl() {
   const controlId = useId();
+  const matches = useMediaQuery('(min-width: 768px)');
   const editorTheme = useStore(selectEditorTheme);
   const editorThemeIsLoading = useStore(selectEditorThemeIsLoading);
   const setEditorTheme = useStore(selectSetEditorTheme);
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">
-      <Label size="sm" htmlFor={controlId}>
+      <Label htmlFor={controlId} size={matches ? 'sm' : 'md'}>
         Theme
       </Label>
-      <Select
-        size="sm"
-        value={editorTheme}
-        onValueChange={(value) => setEditorTheme(value as ThemeId)}
-        id={controlId}
-        disabled={editorThemeIsLoading}
-        className="col-span-2"
-      >
-        <SelectContent>
-          <SelectGroup>
-            <SelectLabel>Light themes</SelectLabel>
+      {matches ? (
+        <Select
+          size="sm"
+          value={editorTheme}
+          onValueChange={(value) => setEditorTheme(value as ThemeId)}
+          id={controlId}
+          disabled={editorThemeIsLoading}
+          className="col-span-2"
+        >
+          <SelectContent>
+            <SelectGroup>
+              <SelectLabel>Light themes</SelectLabel>
+              {themesLightSorted.map(({ id, label }) => (
+                <SelectItem key={id} value={id}>
+                  {label}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+            <SelectSeparator />
+            <SelectGroup>
+              <SelectLabel>Dark themes</SelectLabel>
+              {themesDarkSorted.map(({ id, label }) => (
+                <SelectItem key={id} value={id}>
+                  {label}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      ) : (
+        <NativeSelect
+          size="md"
+          value={editorTheme}
+          onChange={(e) => setEditorTheme(e.target.value as ThemeId)}
+          id={controlId}
+          disabled={editorThemeIsLoading}
+          wrapperProps={{ className: 'col-span-2' }}
+        >
+          <optgroup label="Light themes">
             {themesLightSorted.map(({ id, label }) => (
-              <SelectItem key={id} value={id}>
+              <option key={id} value={id}>
                 {label}
-              </SelectItem>
+              </option>
             ))}
-          </SelectGroup>
-          <SelectSeparator />
-          <SelectGroup>
-            <SelectLabel>Dark themes</SelectLabel>
+          </optgroup>
+          <optgroup label="Dark themes">
             {themesDarkSorted.map(({ id, label }) => (
-              <SelectItem key={id} value={id}>
+              <option key={id} value={id}>
                 {label}
-              </SelectItem>
+              </option>
             ))}
-          </SelectGroup>
-        </SelectContent>
-      </Select>
+          </optgroup>
+        </NativeSelect>
+      )}
     </div>
   );
 }

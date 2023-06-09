@@ -15,7 +15,7 @@ export default function RootLayout(props: { children: ReactNode }) {
   return (
     <html suppressHydrationWarning lang="en" className={fontsVariable}>
       <body>
-        <Notifications />
+        <Notifications topOffset={72} rightOffset={16} />
         <Providers>{children}</Providers>
       </body>
     </html>

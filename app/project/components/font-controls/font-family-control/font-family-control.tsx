@@ -1,6 +1,7 @@
 'use client';
 import type { FontId } from '@/data';
 import { useId } from 'react';
+import { useMediaQuery } from '@/hooks';
 import { useStore, selectFontFamily, selectSetFontFamily } from '@/store';
 import {
   Label,
@@ -10,6 +11,7 @@ import {
   SelectLabel,
   SelectItem,
   SelectSeparator,
+  NativeSelect,
 } from '@/components';
 import { fonts } from '@/data';
 import { getFontFamilyCssVariableById } from '@/utils';
@@ -24,42 +26,69 @@ const fontsWithoutLigatures = fonts
 
 export function FontFamilyControl() {
   const controlId = useId();
+  const matches = useMediaQuery('(min-width: 768px)');
   const fontFamily = useStore(selectFontFamily);
   const setFontFamily = useStore(selectSetFontFamily);
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">
-      <Label size="sm" htmlFor={controlId}>
+      <Label htmlFor={controlId} size={matches ? 'sm' : 'md'}>
         Font family
       </Label>
-      <Select
-        size="sm"
-        value={fontFamily}
-        onValueChange={(value) => setFontFamily(value as FontId)}
-        id={controlId}
-        style={{ fontFamily: getFontFamilyCssVariableById(fontFamily) }}
-        className="col-span-2"
-      >
-        <SelectContent>
-          <SelectGroup>
-            <SelectLabel>With ligatures</SelectLabel>
+      {matches ? (
+        <Select
+          size="sm"
+          value={fontFamily}
+          onValueChange={(value) => setFontFamily(value as FontId)}
+          id={controlId}
+          style={{ fontFamily: getFontFamilyCssVariableById(fontFamily) }}
+          className="col-span-2"
+        >
+          <SelectContent>
+            <SelectGroup>
+              <SelectLabel>With ligatures</SelectLabel>
+              {fontsWithLigatures.map(({ id, label, cssVariable }) => (
+                <SelectItem key={id} value={id} style={{ fontFamily: `var(${cssVariable})` }}>
+                  {label}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+            <SelectSeparator />
+            <SelectGroup>
+              <SelectLabel>Without ligatures</SelectLabel>
+              {fontsWithoutLigatures.map(({ id, label, cssVariable }) => (
+                <SelectItem key={id} value={id} style={{ fontFamily: `var(${cssVariable})` }}>
+                  {label}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      ) : (
+        <NativeSelect
+          size="md"
+          value={fontFamily}
+          onChange={(e) => setFontFamily(e.target.value as FontId)}
+          id={controlId}
+          style={{ fontFamily: getFontFamilyCssVariableById(fontFamily) }}
+          wrapperProps={{ className: 'col-span-2' }}
+        >
+          <optgroup label="With ligatures">
             {fontsWithLigatures.map(({ id, label, cssVariable }) => (
-              <SelectItem key={id} value={id} style={{ fontFamily: `var(${cssVariable})` }}>
+              <option key={id} value={id} style={{ fontFamily: `var(${cssVariable})` }}>
                 {label}
-              </SelectItem>
+              </option>
             ))}
-          </SelectGroup>
-          <SelectSeparator />
-          <SelectGroup>
-            <SelectLabel>Without ligatures</SelectLabel>
+          </optgroup>
+          <optgroup label="Without ligatures">
             {fontsWithoutLigatures.map(({ id, label, cssVariable }) => (
-              <SelectItem key={id} value={id} style={{ fontFamily: `var(${cssVariable})` }}>
+              <option key={id} value={id} style={{ fontFamily: `var(${cssVariable})` }}>
                 {label}
-              </SelectItem>
+              </option>
             ))}
-          </SelectGroup>
-        </SelectContent>
-      </Select>
+          </optgroup>
+        </NativeSelect>
+      )}
     </div>
   );
 }
