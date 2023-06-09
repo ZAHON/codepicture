@@ -39,9 +39,5 @@ export function SandboxWindowControls() {
     return null;
   }
 
-  return (
-    <div className={sandboxWindowControlsStyles({ onLeftSide: windowControlsType === 'windows' })}>
-      {getWindowControls()}
-    </div>
-  );
+  return <div className={sandboxWindowControlsStyles()}>{getWindowControls()}</div>;
 }

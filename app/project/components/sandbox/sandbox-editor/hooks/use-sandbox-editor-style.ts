@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react';
+import type { SandboxEditorStyle } from '../sandbox-editor.types';
 import {
   useStore,
   selectEditorLineNumbers,
@@ -9,18 +9,6 @@ import {
   selectLetterSpacing,
 } from '@/store';
 import { getFontFamilyCssVariableById } from '@/utils';
-
-interface SandboxEditorStyle extends CSSProperties {
-  '--sandbox-editor-font-family': string;
-  '--sandbox-editor-font-ligatures': string;
-  '--sandbox-editor-font-size': string;
-  '--sandbox-editor-line-height': string;
-  '--sandbox-editor-letter-spacing': string;
-
-  '--sandbox-editor-padding-left': string;
-  '--sandbox-editor-padding-top': string;
-  '--sandbox-editor-padding-bottom': string;
-}
 
 export function useSandboxEditorStyle() {
   const editorLineNumbers = useStore(selectEditorLineNumbers);

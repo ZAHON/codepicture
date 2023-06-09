@@ -8,7 +8,11 @@ import {
   selectWindowTabContent,
   selectSetWindowTabContent,
 } from '@/store';
-import { wrapperStyles, inputStyles } from './sandbox-window-tab.styles';
+import {
+  sandboxWindowTabStyles,
+  sandboxWindowTabInnerStyles,
+  sandboxWindowTabInputStyles,
+} from './sandbox-window-tab.styles';
 
 export function SandboxWindowTab() {
   const windowTabVisible = useStore(selectWindowTabVisible);
@@ -21,14 +25,16 @@ export function SandboxWindowTab() {
   }
 
   return (
-    <div className={twMerge(wrapperStyles({ accent: windowTabAccent }))}>
-      <AutosizeInput
-        type="text"
-        placeholder="Untitled"
-        value={windowTabContent}
-        onChange={(e) => setWindowTabContent(e.target.value)}
-        inputClassName={inputStyles()}
-      />
+    <div className={sandboxWindowTabStyles()}>
+      <div className={twMerge(sandboxWindowTabInnerStyles({ withAccent: windowTabAccent }))}>
+        <AutosizeInput
+          type="text"
+          placeholder="Untitled"
+          value={windowTabContent}
+          onChange={(e) => setWindowTabContent(e.target.value)}
+          inputClassName={sandboxWindowTabInputStyles()}
+        />
+      </div>
     </div>
   );
 }

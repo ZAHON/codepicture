@@ -1,5 +1,8 @@
 import type { ReactNode } from 'react';
 
-export type SandboxWindowReflectionProps = {
+export interface SandboxWindowReflectionProps {
+  /**
+   * The content of the sandbox window reflection - `SandboxWindowHeader` and `SandboxEditor` components.
+   */
   children: ReactNode;
-};
+}

@@ -1,5 +1,13 @@
-import type { ReactNode } from 'react';
+import type { ReactNode, CSSProperties } from 'react';
 
-export type SandboxWindowProps = {
+export interface SandboxWindowProps {
+  /**
+   * The content of the sandbox window - `SandboxWindowReflection` component.
+   */
   children: ReactNode;
-};
+}
+
+export interface SandboxWindowStyle extends CSSProperties {
+  '--sandbox-window-border-radius': string;
+  '--sandbox-window-shadow': string;
+}

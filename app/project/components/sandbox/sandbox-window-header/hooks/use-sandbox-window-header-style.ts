@@ -1,10 +1,5 @@
-import type { CSSProperties } from 'react';
+import type { SandboxWindowHeaderStyle } from '../sandbox-window-header.types';
 import { useStore, selectWindowTabAccent, selectWindowControlsType } from '@/store';
-
-interface SandboxWindowHeaderStyle extends CSSProperties {
-  '--sandbox-window-header-fill': string;
-  '--sandbox-window-header-flex-direction': string;
-}
 
 export function useSandboxWindowHeaderStyle() {
   const windowTabAccent = useStore(selectWindowTabAccent);

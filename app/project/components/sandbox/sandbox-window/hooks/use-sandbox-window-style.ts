@@ -1,11 +1,6 @@
-import type { CSSProperties } from 'react';
+import type { SandboxWindowStyle } from '../sandbox-window.types';
 import { useStore, selectWindowBorderRadius, selectWindowShadow } from '@/store';
 import { getShadowValueById } from '@/utils';
-
-interface SandboxWindowStyle extends CSSProperties {
-  '--sandbox-window-border-radius': string;
-  '--sandbox-window-shadow': string;
-}
 
 export function useSandboxWindowStyle() {
   const windowBorderRadius = useStore(selectWindowBorderRadius);

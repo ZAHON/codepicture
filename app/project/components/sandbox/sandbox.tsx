@@ -9,8 +9,8 @@ import { SandboxWindowReflection } from './sandbox-window-reflection';
 import { SandboxWindowHeader } from './sandbox-window-header';
 import { SandboxWindowControls } from './sandbox-window-controls';
 import { SandboxWindowTab } from './sandbox-window-tab';
-import { SandboxLineNumbers } from './sandbox-line-numbers';
 import { SandboxEditor } from './sandbox-editor';
+import { SandboxEditorLineNumbers } from './sandbox-editor-line-numbers';
 import { SandboxSimpleCodeEditor } from './sandbox-simple-code-editor';
 import { SandboxSyntaxHighlighter } from './sandbox-syntax-highlighter';
 
@@ -32,7 +32,7 @@ export function Sandbox() {
                 <SandboxWindowTab />
               </SandboxWindowHeader>
               <SandboxEditor>
-                <SandboxLineNumbers />
+                <SandboxEditorLineNumbers />
                 <SandboxSimpleCodeEditor>
                   <SandboxSyntaxHighlighter />
                 </SandboxSimpleCodeEditor>

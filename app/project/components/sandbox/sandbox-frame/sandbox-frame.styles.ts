@@ -13,7 +13,6 @@ export const sandboxFrameStyles = cva(
     'before:inset-0',
     'before:[background:var(--sandbox-frame-fill)]',
     'before:opacity-[var(--sandbox-frame-opacity)]',
-
     'before:motion-safe:transition-[background]',
     'before:motion-safe:ease-linear',
     'before:motion-safe:duration-150',

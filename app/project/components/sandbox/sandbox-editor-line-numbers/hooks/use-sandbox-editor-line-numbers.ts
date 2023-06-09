@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { useStore, selectEditorCode, selectEditorFirstLineNumber } from '@/store';
 
-export function useSandboxLineNumbers() {
+export function useSandboxEditorLineNumbers() {
   const editorCode = useStore(selectEditorCode);
   const editorFirstLineNumber = useStore(selectEditorFirstLineNumber);
 

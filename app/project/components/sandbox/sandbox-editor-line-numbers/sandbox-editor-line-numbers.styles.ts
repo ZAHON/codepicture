@@ -1,20 +1,19 @@
 import { cva } from 'class-variance-authority';
 
-export const containerStyles = cva(['flex', 'flex-col']);
+export const sandboxEditorLineNumbersStyles = cva(['flex', 'flex-col']);
 
-export const liStyles = cva([
-  'flex',
-  'select-none',
-  'items-center',
-  'justify-end',
-  'pl-[1.3125rem]',
+export const sandboxEditorLineNumbersListItemStyles = cva([
   'pr-[0.625rem]',
+  'pl-[1.3125rem]',
+  'flex',
+  'justify-end',
+  'items-center',
+  'select-none',
   'text-right',
-  'leading-[inherit]',
   'text-[color:var(--sandbox-editor-line-number-inactive-foreground)]',
 ]);
 
-export const spanStyles = cva([
+export const sandboxEditorLineNumbersItemStyles = cva([
   'scale-90',
 
   'motion-safe:transition-[color]',

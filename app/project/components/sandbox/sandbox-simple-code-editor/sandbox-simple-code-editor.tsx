@@ -1,8 +1,7 @@
 'use client';
-import type { KeyboardEvent, ChangeEvent, SyntheticEvent } from 'react';
+import type { KeyboardEvent, ChangeEvent } from 'react';
 import type {
   SandboxSimpleCodeEditorProps,
-  Selection,
   Record,
   History,
 } from './sandbox-simple-code-editor.types';
@@ -15,7 +14,11 @@ import {
   selectEditorThemeIsLoading,
   selectSetEditorCode,
 } from '@/store';
-import { containerStyles, textareaStyles, preStyles } from './sandbox-simple-code-editor.styles';
+import {
+  sandboxSimpleCodeEditorStyles,
+  sandboxSimpleCodeEditorTextareaStyles,
+  sandboxSimpleCodeEditorPreStyles,
+} from './sandbox-simple-code-editor.styles';
 
 const insertSpaces = true;
 const ignoreTabKey = false;
@@ -362,36 +365,36 @@ export function SandboxSimpleCodeEditor(props: SandboxSimpleCodeEditorProps) {
     setCode(value);
   }
 
-  function handleSelect(e: SyntheticEvent<HTMLTextAreaElement>) {
-    const { value, selectionStart, selectionEnd } = e.currentTarget;
+  // function handleSelect(e: SyntheticEvent<HTMLTextAreaElement>) {
+  //   const { value, selectionStart, selectionEnd } = e.currentTarget;
 
-    const linesBeforeCaret = getLines(value, selectionStart);
-    const startLine = linesBeforeCaret.length;
-    const endLine = getLines(value, selectionEnd).length;
+  //   const linesBeforeCaret = getLines(value, selectionStart);
+  //   const startLine = linesBeforeCaret.length;
+  //   const endLine = getLines(value, selectionEnd).length;
 
-    const selection: Selection = [startLine - 1, endLine - 1];
+  //   const selection: Selection = [startLine - 1, endLine - 1];
 
-    console.log(selection);
-  }
+  //   console.log(selection);
+  // }
 
   return (
-    <div className={containerStyles()}>
+    <div className={sandboxSimpleCodeEditorStyles()}>
       <textarea
         ref={textareaRef}
         value={editorCode}
         disabled={editorLanguageIsLoading || editorThemeIsLoading}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
-        onSelect={handleSelect}
+        // onSelect={handleSelect}
         autoCapitalize="off"
         autoComplete="off"
         autoCorrect="off"
         spellCheck={false}
         data-gramm={false}
         aria-label="Type some code"
-        className={textareaStyles()}
+        className={sandboxSimpleCodeEditorTextareaStyles()}
       />
-      <pre aria-hidden className={preStyles()}>
+      <pre aria-hidden className={sandboxSimpleCodeEditorPreStyles()}>
         {children}
       </pre>
     </div>

@@ -1,12 +1,14 @@
 import { cva } from 'class-variance-authority';
 
-export const wrapperStyles = cva(
+export const sandboxWindowTabStyles = cva(['w-full', 'flex', 'justify-start']);
+
+export const sandboxWindowTabInnerStyles = cva(
   [
     'h-full',
+    'px-4',
     'flex',
     'justify-start',
     'items-center',
-    'px-4',
     'bg-transparent',
     'shadow-none',
 
@@ -16,7 +18,7 @@ export const wrapperStyles = cva(
   ],
   {
     variants: {
-      accent: {
+      withAccent: {
         true: [
           'relative',
           'h-[2.375rem]',
@@ -58,9 +60,9 @@ export const wrapperStyles = cva(
   }
 );
 
-export const inputStyles = cva([
-  'bg-transparent',
+export const sandboxWindowTabInputStyles = cva([
   'text-sm',
+  'bg-transparent',
   'focus:outline-none',
   'text-[color:var(--sandbox-window-tab-active-foreground)]',
   'caret-[color:var(--sandbox-editor-cursor-foreground)]',

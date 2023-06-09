@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react';
+import type { SandboxFrameStyle } from '../sandbox-frame.types';
 import {
   useStore,
   selectFramePaddingHorizontal,
@@ -8,13 +8,6 @@ import {
   selectFrameOpacity,
 } from '@/store';
 import { getFillValueById } from '@/utils';
-
-interface SandboxFrameStyle extends CSSProperties {
-  '--sandbox-frame-padding-inline': string;
-  '--sandbox-frame-padding-block': string;
-  '--sandbox-frame-fill': string;
-  '--sandbox-frame-opacity': number;
-}
 
 export function useSandboxFrameStyle() {
   const framePaddingHorizontal = useStore(selectFramePaddingHorizontal);

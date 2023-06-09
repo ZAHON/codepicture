@@ -1,8 +1,11 @@
 import type { ReactNode } from 'react';
 
-export type SandboxSimpleCodeEditorProps = {
+export interface SandboxSimpleCodeEditorProps {
+  /**
+   * The content of the sandbox simple code editor - `SandboxSyntaxHighlighter` component.
+   */
   children: ReactNode;
-};
+}
 
 export type Selection = [selectionStart: number, selectionEnd: number];
 

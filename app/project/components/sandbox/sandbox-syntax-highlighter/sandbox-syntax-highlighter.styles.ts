@@ -1,13 +1,13 @@
 import { cva } from 'class-variance-authority';
 
-export const codeStyles = cva([
+export const sandboxSyntaxHighlighterStyles = cva([
   'block',
   'w-auto',
   'text-[1em]',
   '[font-family:inherit_!important]',
 ]);
 
-export const lineStyles = cva([
+export const sandboxSyntaxHighlighterLineStyles = cva([
   'block',
   'w-full',
   'pl-[var(--sandbox-editor-padding-left)]',
@@ -17,7 +17,7 @@ export const lineStyles = cva([
   'empty:before:content-["_"]',
 ]);
 
-export const tokenStyles = cva([
+export const sandboxSyntaxHighlighterTokenStyles = cva([
   'motion-safe:transition-[color]',
   'motion-safe:ease-linear',
   'motion-safe:duration-150',

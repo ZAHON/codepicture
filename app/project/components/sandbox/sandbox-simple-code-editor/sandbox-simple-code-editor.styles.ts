@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority';
 
-export const containerStyles = cva([
+export const sandboxSimpleCodeEditorStyles = cva([
   'relative',
   'text-left',
   'box-border',
@@ -9,7 +9,7 @@ export const containerStyles = cva([
   'flex-grow',
 ]);
 
-export const textareaStyles = cva([
+export const sandboxSimpleCodeEditorTextareaStyles = cva([
   'py-0',
   'm-0',
   'border-none',
@@ -51,7 +51,7 @@ export const textareaStyles = cva([
   'selection:bg-[color:var(--sandbox-editor-selection-background)]',
 ]);
 
-export const preStyles = cva([
+export const sandboxSimpleCodeEditorPreStyles = cva([
   'p-0',
   'm-0',
   'border-none',
