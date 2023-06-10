@@ -1,8 +1,9 @@
 import type { CreateFontSlice } from './font-slice.types';
+import { fonts } from '@/data';
 
 export const createFontSlice: CreateFontSlice = (set) => ({
   fontBolds: true,
-  fontFamily: 'fira-code',
+  fontFamily: fonts[Math.floor(Math.random() * fonts.length)].id,
   fontLigatures: true,
   fontSize: 14,
   italics: true,
