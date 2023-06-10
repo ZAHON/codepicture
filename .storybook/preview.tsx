@@ -1,8 +1,6 @@
 import type { Preview } from '@storybook/react';
-import React from 'react';
 import { themes } from '@storybook/theming';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import { ThemeProvider } from 'next-themes';
 import '../styles/globals.css';
 
 const preview: Preview = {
@@ -26,13 +24,6 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [
-    (Story) => (
-      <ThemeProvider attribute="class">
-        <Story />
-      </ThemeProvider>
-    ),
-  ],
 };
 
 export default preview;
