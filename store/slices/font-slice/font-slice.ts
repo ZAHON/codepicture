@@ -1,6 +1,7 @@
 import type { CreateFontSlice } from './font-slice.types';
 
 export const createFontSlice: CreateFontSlice = (set) => ({
+  fontBolds: true,
   fontFamily: 'fira-code',
   fontLigatures: true,
   fontSize: 14,
@@ -8,6 +9,7 @@ export const createFontSlice: CreateFontSlice = (set) => ({
   letterSpacing: 0,
   lineHeight: 133,
 
+  setFontBolds: (fontBolds) => set(() => ({ fontBolds })),
   setFontFamily: (fontFamily) => set(() => ({ fontFamily })),
   setFontLigatures: (fontLigatures) => set(() => ({ fontLigatures })),
   setFontSize: (fontSize) => set(() => ({ fontSize })),

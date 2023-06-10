@@ -2,6 +2,7 @@ import type { StateCreator } from 'zustand';
 import type { FontId } from '@/data';
 
 export type FontSlice = {
+  fontBolds: boolean;
   fontFamily: FontId;
   fontLigatures: boolean;
   fontSize: number;
@@ -9,6 +10,7 @@ export type FontSlice = {
   letterSpacing: number;
   lineHeight: number;
 
+  setFontBolds: (fontBolds: boolean) => void;
   setFontFamily: (fontId: FontId) => void;
   setFontLigatures: (fontLigatures: boolean) => void;
   setFontSize: (fontSize: number) => void;

@@ -1,5 +1,9 @@
 import type { State } from '../../store.types';
 
+// font bolds
+export const selectFontBolds = (state: State) => state.fontBolds;
+export const selectSetFontBolds = (state: State) => state.setFontBolds;
+
 // font family
 export const selectFontFamily = (state: State) => state.fontFamily;
 export const selectSetFontFamily = (state: State) => state.setFontFamily;
