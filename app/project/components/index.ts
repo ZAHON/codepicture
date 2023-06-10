@@ -1,4 +1,5 @@
 export * from './bottom-menu';
+export * from './dropdown-menu';
 export * from './editor-controls';
 export * from './font-controls';
 export * from './frame-controls';
