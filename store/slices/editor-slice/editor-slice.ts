@@ -9,7 +9,7 @@ export const createEditorSlice: CreateEditorSlice = (set, get) => ({
   editorLanguage: 'tsx',
   editorLanguageIsLoading: true,
   editorLineNumbers: true,
-  editorTheme: 'github-dark',
+  editorTheme: themes[Math.floor(Math.random() * themes.length)].id,
   editorThemeIsLoading: true,
 
   setEditorCode: (editorCode) => set(() => ({ editorCode })),
