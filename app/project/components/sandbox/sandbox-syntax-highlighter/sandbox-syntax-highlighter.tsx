@@ -1,4 +1,5 @@
 'use client';
+import { useStore, selectItalics } from '@/store';
 import { useSandboxSyntaxHighlighter } from './hooks';
 import { getTokenStyle, getLineKey, getTokenKey } from './utils';
 import {
@@ -8,7 +9,7 @@ import {
 } from './sandbox-syntax-highlighter.styles';
 
 export function SandboxSyntaxHighlighter() {
-  const italics = true;
+  const italics = useStore(selectItalics);
   const linesWithTokens = useSandboxSyntaxHighlighter();
 
   if (typeof linesWithTokens === 'string') {
