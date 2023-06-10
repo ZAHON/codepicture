@@ -1,7 +1,6 @@
 import { EditorLanguageControl } from './editor-language-control';
 import { EditorThemeControl } from './editor-theme-control';
 import { EditorLineNumbersControl } from './editor-line-numbers-control';
-import { EditorFirstLineNumberControl } from './editor-first-line-number-control';
 
 export function EditorControls() {
   return (
@@ -13,7 +12,6 @@ export function EditorControls() {
         <EditorLanguageControl />
         <EditorThemeControl />
         <EditorLineNumbersControl />
-        <EditorFirstLineNumberControl />
       </div>
     </div>
   );

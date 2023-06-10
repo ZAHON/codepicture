@@ -1,21 +1,10 @@
-import { useMemo } from 'react';
-import { useStore, selectEditorCode, selectEditorFirstLineNumber } from '@/store';
+import { useStore, selectEditorCode } from '@/store';
 
 export function useSandboxEditorLineNumbers() {
   const editorCode = useStore(selectEditorCode);
-  const editorFirstLineNumber = useStore(selectEditorFirstLineNumber);
 
-  const codeLines = useMemo(() => {
-    return Array.from(Array(editorCode.split('\n').length).keys());
-  }, [editorCode]);
-
-  const firstNumber = useMemo(() => {
-    return editorFirstLineNumber >= 1 ? editorFirstLineNumber : 1;
-  }, [editorFirstLineNumber]);
-
-  const lineNumbers = useMemo(() => {
-    return codeLines.map((el) => el + firstNumber);
-  }, [codeLines, firstNumber]);
+  const codeLines = Array.from(Array(editorCode.split('\n').length).keys());
+  const lineNumbers = codeLines.map((el) => el + 1);
 
   return lineNumbers;
 }
