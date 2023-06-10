@@ -3,10 +3,20 @@ import type { CSSProperties } from 'react';
 export type ThemeId =
   | 'atom-one-light'
   | 'dark-modern'
+  | 'github-dark-colorblind'
+  | 'github-dark-default'
+  | 'github-dark-dimmend'
   | 'github-dark'
+  | 'github-light-default'
+  | 'github-light-colorblind'
   | 'github-light'
   | 'light-modern'
-  | 'one-dark-pro';
+  | 'one-dark-pro-darker'
+  | 'one-dark-pro-mix'
+  | 'one-dark-pro'
+  | 'tokyo-night-light'
+  | 'tokyo-night-storm'
+  | 'tokyo-night';
 
 export type Theme = {
   id: ThemeId;
