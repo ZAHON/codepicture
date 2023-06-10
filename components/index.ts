@@ -17,4 +17,5 @@ export * from './segmented-tabs';
 export * from './select';
 export * from './separator';
 export * from './slider';
+export * from './text-input';
 export * from './theme-changer';
