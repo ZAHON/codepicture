@@ -19,9 +19,9 @@ export function FrameFillControlPopover() {
         collisionPadding={10}
         className="p-0"
       >
-        <div className="flex items-center justify-between px-4 py-2 ">
+        <div className="flex items-center justify-between px-4 py-2">
           <p className="cursor-default text-base font-medium md:text-sm">Frame fill</p>
-          <PopoverClose size={matches ? 'sm' : 'md'} variant="subtle" />
+          <PopoverClose variant="subtle" className="h-9 w-9 md:h-8 md:w-8" />
         </div>
         <Separator className="mb-4" />
         <FrameFillControlPopoverBody />

@@ -1,5 +1,4 @@
 'use client';
-import type { LanguageId } from '@/data';
 import { useId } from 'react';
 import { useMediaQuery } from '@/hooks';
 import {
@@ -8,8 +7,10 @@ import {
   selectEditorLanguageIsLoading,
   selectSetEditorLanguage,
 } from '@/store';
-import { Label, Select, SelectContent, SelectGroup, SelectItem, NativeSelect } from '@/components';
+import { Label } from '@/components';
 import { languages } from '@/data';
+import { EditorLanguageControlSelect } from './editor-language-control-select';
+import { EditorLanguageControlNativeSelect } from './editor-language-control-native-select';
 
 const languagesSorted = languages
   .filter(({ public: languageIsPublic }) => languageIsPublic)
@@ -24,43 +25,25 @@ export function EditorLanguageControl() {
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">
-      <Label htmlFor={controlId} size={matches ? 'sm' : 'md'}>
+      <Label htmlFor={controlId} className="text-sm md:text-xs">
         Language
       </Label>
       {matches ? (
-        <Select
-          size="sm"
-          value={editorLanguage}
-          onValueChange={(value) => setEditorLanguage(value as LanguageId)}
+        <EditorLanguageControlSelect
           id={controlId}
           disabled={editorLanguageIsLoading}
-          className="col-span-2"
-        >
-          <SelectContent>
-            <SelectGroup>
-              {languagesSorted.map(({ id, label }) => (
-                <SelectItem key={id} value={id}>
-                  {label}
-                </SelectItem>
-              ))}
-            </SelectGroup>
-          </SelectContent>
-        </Select>
+          data={languagesSorted}
+          value={editorLanguage}
+          onChange={setEditorLanguage}
+        />
       ) : (
-        <NativeSelect
-          size="md"
-          value={editorLanguage}
-          onChange={(e) => setEditorLanguage(e.target.value as LanguageId)}
+        <EditorLanguageControlNativeSelect
           id={controlId}
           disabled={editorLanguageIsLoading}
-          wrapperProps={{ className: 'col-span-2' }}
-        >
-          {languagesSorted.map(({ id, label }) => (
-            <option key={id} value={id}>
-              {label}
-            </option>
-          ))}
-        </NativeSelect>
+          data={languagesSorted}
+          value={editorLanguage}
+          onChange={setEditorLanguage}
+        />
       )}
     </div>
   );

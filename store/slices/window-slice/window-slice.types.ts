@@ -1,7 +1,7 @@
 import type { StateCreator } from 'zustand';
 import type { ShadowId } from '@/data';
 
-type WindowControlsType =
+export type WindowControlsType =
   | 'macos-filled-color'
   | 'macos-filled-gray'
   | 'macos-outline-color'

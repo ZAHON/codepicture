@@ -2,8 +2,10 @@
 import { useId } from 'react';
 import { useMediaQuery } from '@/hooks';
 import { useStore, selectWindowShadow, selectSetWindowShadow } from '@/store';
-import { Label, Select, SelectContent, SelectGroup, SelectItem, NativeSelect } from '@/components';
+import { Label } from '@/components';
 import { shadows } from '@/data';
+import { WindowShadowControlSelect } from './window-shadow-control-select';
+import { WindowShadowControlNativeSelect } from './window-shadow-control-native-select';
 
 export function WindowShadowControl() {
   const controlId = useId();
@@ -13,39 +15,23 @@ export function WindowShadowControl() {
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">
-      <Label htmlFor={controlId} size={matches ? 'sm' : 'md'}>
+      <Label htmlFor={controlId} className="text-sm md:text-xs">
         Shadow
       </Label>
       {matches ? (
-        <Select
-          size="sm"
+        <WindowShadowControlSelect
+          id={controlId}
+          data={shadows}
           value={windowShadow}
-          onValueChange={(value) => setWindowShadow(value as typeof windowShadow)}
-          className="col-span-2"
-        >
-          <SelectContent>
-            <SelectGroup>
-              {shadows.map(({ id, label }) => (
-                <SelectItem key={id} value={id}>
-                  {label}
-                </SelectItem>
-              ))}
-            </SelectGroup>
-          </SelectContent>
-        </Select>
+          onChange={setWindowShadow}
+        />
       ) : (
-        <NativeSelect
-          size="md"
+        <WindowShadowControlNativeSelect
+          id={controlId}
+          data={shadows}
           value={windowShadow}
-          onChange={(e) => setWindowShadow(e.target.value as typeof windowShadow)}
-          wrapperProps={{ className: 'col-span-2' }}
-        >
-          {shadows.map(({ id, label }) => (
-            <option key={id} value={id}>
-              {label}
-            </option>
-          ))}
-        </NativeSelect>
+          onChange={setWindowShadow}
+        />
       )}
     </div>
   );
