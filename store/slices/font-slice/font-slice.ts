@@ -4,17 +4,17 @@ import { fonts } from '@/data';
 export const createFontSlice: CreateFontSlice = (set) => ({
   fontBolds: true,
   fontFamily: fonts[Math.floor(Math.random() * fonts.length)].id,
+  fontItalics: true,
+  fontLetterSpacing: 0,
   fontLigatures: true,
+  fontLineHeight: 133,
   fontSize: 14,
-  italics: true,
-  letterSpacing: 0,
-  lineHeight: 133,
 
   setFontBolds: (fontBolds) => set(() => ({ fontBolds })),
   setFontFamily: (fontFamily) => set(() => ({ fontFamily })),
+  setFontItalics: (fontItalics) => set(() => ({ fontItalics })),
+  setFontLetterSpacing: (fontLetterSpacing) => set(() => ({ fontLetterSpacing })),
   setFontLigatures: (fontLigatures) => set(() => ({ fontLigatures })),
+  setFontLineHeight: (fontLineHeight) => set(() => ({ fontLineHeight })),
   setFontSize: (fontSize) => set(() => ({ fontSize })),
-  setItalics: (italics) => set(() => ({ italics })),
-  setLetterSpacing: (letterSpacing) => set(() => ({ letterSpacing })),
-  setLineHeight: (lineHeight) => set(() => ({ lineHeight })),
 });

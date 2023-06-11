@@ -1,10 +1,10 @@
 import { FontFamilyControl } from './font-family-control';
 import { FontLigaturesControl } from './font-ligatures-control';
 import { FontBoldsControl } from './font-bolds-control';
-import { ItalicsControl } from './italics-control';
+import { FontItalicsControl } from './font-italics-control';
 import { FontSizeControl } from './font-size-control';
-import { LineHeightControl } from './line-height-control';
-import { LetterSpacingControl } from './letter-spacing-control';
+import { FontLineHeightControl } from './font-line-height-control';
+import { FontLetterSpacingControl } from './font-letter-spacing-control';
 
 export function FontControls() {
   return (
@@ -16,10 +16,10 @@ export function FontControls() {
         <FontFamilyControl />
         <FontLigaturesControl />
         <FontBoldsControl />
-        <ItalicsControl />
+        <FontItalicsControl />
         <FontSizeControl />
-        <LineHeightControl />
-        <LetterSpacingControl />
+        <FontLineHeightControl />
+        <FontLetterSpacingControl />
       </div>
     </div>
   );

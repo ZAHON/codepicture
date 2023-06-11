@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectFontBolds, selectItalics } from '@/store';
+import { useStore, selectFontBolds, selectFontItalics } from '@/store';
 import { useSandboxSyntaxHighlighter } from './hooks';
 import { getTokenStyle, getLineKey, getTokenKey } from './utils';
 import {
@@ -10,7 +10,7 @@ import {
 
 export function SandboxSyntaxHighlighter() {
   const fontBolds = useStore(selectFontBolds);
-  const italics = useStore(selectItalics);
+  const fontItalics = useStore(selectFontItalics);
   const linesWithTokens = useSandboxSyntaxHighlighter();
 
   if (typeof linesWithTokens === 'string') {
@@ -24,7 +24,7 @@ export function SandboxSyntaxHighlighter() {
           {tokens.map(({ content, color, fontStyle }, tokenIndex) => (
             <span
               key={getTokenKey(lineIndex, tokenIndex)}
-              style={getTokenStyle({ color, fontStyle, bolds: fontBolds, italics })}
+              style={getTokenStyle({ color, fontStyle, bolds: fontBolds, italics: fontItalics })}
               className={sandboxSyntaxHighlighterTokenStyles()}
             >
               {content}

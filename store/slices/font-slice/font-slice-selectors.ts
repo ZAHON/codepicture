@@ -8,22 +8,22 @@ export const selectSetFontBolds = (state: State) => state.setFontBolds;
 export const selectFontFamily = (state: State) => state.fontFamily;
 export const selectSetFontFamily = (state: State) => state.setFontFamily;
 
+// font italics
+export const selectFontItalics = (state: State) => state.fontItalics;
+export const selectSetFontItalics = (state: State) => state.setFontItalics;
+
+// font letter spacing
+export const selectFontLetterSpacing = (state: State) => state.fontLetterSpacing;
+export const selectSetFontLetterSpacing = (state: State) => state.setFontLetterSpacing;
+
 // font ligatures
 export const selectFontLigatures = (state: State) => state.fontLigatures;
 export const selectSetFontLigatures = (state: State) => state.setFontLigatures;
 
+// font line height
+export const selectFontLineHeight = (state: State) => state.fontLineHeight;
+export const selectSetFontLineHeight = (state: State) => state.setFontLineHeight;
+
 // font size
 export const selectFontSize = (state: State) => state.fontSize;
 export const selectSetFontSize = (state: State) => state.setFontSize;
-
-// italics
-export const selectItalics = (state: State) => state.italics;
-export const selectSetItalics = (state: State) => state.setItalics;
-
-// letter spacing
-export const selectLetterSpacing = (state: State) => state.letterSpacing;
-export const selectSetLetterSpacing = (state: State) => state.setLetterSpacing;
-
-// line height
-export const selectLineHeight = (state: State) => state.lineHeight;
-export const selectSetLineHeight = (state: State) => state.setLineHeight;
