@@ -4,6 +4,7 @@ import { useMediaQuery } from '@/hooks';
 import { Menu, MenuContent, MenuSeparator, MenuGroup } from '@/components';
 import { DropdownMenuTrigger } from './dropdown-menu-trigger';
 import { DropdownMenuExportImage } from './dropdown-menu-export-image';
+import { DropdownMenuOpenInNewTab } from './dropdown-menu-open-in-new-tab';
 import { DropdownMenuGithubLink } from './dropdown-menu-github-link';
 import { DropdownMenuThemeChanger } from './dropdown-menu-theme-changer';
 
@@ -23,6 +24,7 @@ export function DropdownMenu() {
       >
         <MenuGroup>
           <DropdownMenuExportImage />
+          <DropdownMenuOpenInNewTab />
         </MenuGroup>
         <MenuSeparator />
         <MenuGroup>
