@@ -13,7 +13,11 @@ export function SandboxFrame(props: SandboxFrameProps) {
   const transitionPadding = framePaddingType !== 'custom';
 
   return (
-    <div style={sandboxframeStyle} className={sandboxFrameStyles({ transitionPadding })}>
+    <div
+      id="sandbox-frame"
+      style={sandboxframeStyle}
+      className={sandboxFrameStyles({ transitionPadding })}
+    >
       {children}
     </div>
   );

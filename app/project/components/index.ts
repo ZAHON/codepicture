@@ -1,6 +1,7 @@
 export * from './bottom-menu';
 export * from './dropdown-menu';
 export * from './editor-controls';
+export * from './export-image-dialog';
 export * from './font-controls';
 export * from './frame-controls';
 export * from './header';

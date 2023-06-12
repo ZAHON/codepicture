@@ -381,6 +381,7 @@ export function SandboxSimpleCodeEditor(props: SandboxSimpleCodeEditorProps) {
     <div className={sandboxSimpleCodeEditorStyles()}>
       <textarea
         ref={textareaRef}
+        id="sandbox-simple-code-editor-textarea"
         value={editorCode}
         disabled={editorLanguageIsLoading || editorThemeIsLoading}
         onChange={handleChange}

@@ -25,7 +25,7 @@ export function SandboxWindowTab() {
   }
 
   return (
-    <div className={sandboxWindowTabStyles()}>
+    <div id="sandbox-window-tab" className={sandboxWindowTabStyles()}>
       <div className={twMerge(sandboxWindowTabInnerStyles({ withAccent: windowTabAccent }))}>
         <AutosizeInput
           type="text"
