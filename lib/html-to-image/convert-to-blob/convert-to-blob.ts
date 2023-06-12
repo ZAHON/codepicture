@@ -10,7 +10,7 @@ export async function convertToBlob(args: ConvertToBlobArgs) {
   const blob = await toBlob(node, {
     type: mimeType,
     cacheBust: true,
-    pixelRatio: 1,
+    pixelRatio: Math.floor(window.devicePixelRatio),
     filter,
   });
 
