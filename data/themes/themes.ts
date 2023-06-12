@@ -7,8 +7,58 @@ export const themes: Theme[] = [
     type: 'light',
   },
   {
+    id: 'ayu-dark',
+    label: 'Ayu Dark',
+    type: 'dark',
+  },
+  {
+    id: 'ayu-light',
+    label: 'Ayu Light',
+    type: 'light',
+  },
+  {
+    id: 'ayu-mirage',
+    label: 'Ayu Mirage',
+    type: 'dark',
+  },
+  {
+    id: 'catppuccin-frappe',
+    label: 'Catppuccin Frappé',
+    type: 'dark',
+  },
+  {
+    id: 'catppuccin-latte',
+    label: 'Catppuccin Latte',
+    type: 'light',
+  },
+  {
+    id: 'catppuccin-macchiato',
+    label: 'Catppuccin Macchiato',
+    type: 'dark',
+  },
+  {
+    id: 'catppuccin-mocha',
+    label: 'Catppuccin Mocha',
+    type: 'dark',
+  },
+  {
+    id: 'cobalt2',
+    label: 'Cobalt2',
+    type: 'dark',
+  },
+  {
+    id: 'darcula',
+    label: 'Darcula',
+    type: 'dark',
+  },
+  {
     id: 'dark-modern',
     label: 'Dark Modern',
+    type: 'dark',
+  },
+  {
+    id: 'dracula',
+    label: 'Dracula',
     type: 'dark',
   },
   {
@@ -52,6 +102,26 @@ export const themes: Theme[] = [
     type: 'light',
   },
   {
+    id: 'monokai-dimmend',
+    label: 'Monokai Dimmend',
+    type: 'dark',
+  },
+  {
+    id: 'monokai',
+    label: 'Monokai',
+    type: 'dark',
+  },
+  {
+    id: 'night-owl-light',
+    label: 'Night Owl Light',
+    type: 'light',
+  },
+  {
+    id: 'night-owl',
+    label: 'Night Owl',
+    type: 'dark',
+  },
+  {
     id: 'one-dark-pro-darker',
     label: 'One Dark Pro Darker',
     type: 'dark',
@@ -80,5 +150,30 @@ export const themes: Theme[] = [
     id: 'tokyo-night',
     label: 'Tokyo Night',
     type: 'dark',
+  },
+  {
+    id: 'vitesse-black',
+    label: 'Vitesse Black',
+    type: 'dark',
+  },
+  {
+    id: 'vitesse-dark-soft',
+    label: 'Vitesse Dark Soft',
+    type: 'dark',
+  },
+  {
+    id: 'vitesse-dark',
+    label: 'Vitesse Dark',
+    type: 'dark',
+  },
+  {
+    id: 'vitesse-light-soft',
+    label: 'Vitesse Light Soft',
+    type: 'light',
+  },
+  {
+    id: 'vitesse-light',
+    label: 'Vitesse Light',
+    type: 'light',
   },
 ];
