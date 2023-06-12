@@ -55,7 +55,7 @@ export function DropdownMenuCopyToClipboard() {
       ]);
 
       notify.show({
-        type: 'info',
+        type: 'success',
         message: 'Snippet copied to clipboard',
       });
     } catch {
