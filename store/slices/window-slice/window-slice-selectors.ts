@@ -31,3 +31,7 @@ export const selectSetWindowTabContent = (state: State) => state.setWindowTabCon
 // window tab visible
 export const selectWindowTabVisible = (state: State) => state.windowTabVisible;
 export const selectSetWindowTabVisible = (state: State) => state.setWindowTabVisible;
+
+// window watermark
+export const selectWindowWatermark = (state: State) => state.windowWatermark;
+export const selectSetWindowWatermark = (state: State) => state.setWindowWatermark;

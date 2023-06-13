@@ -3,6 +3,7 @@ import { WindowControlsTypeControl } from './window-controls-type-control';
 import { WindowTabVisibleControl } from './window-tab-visible-control';
 import { WindowTabAccentControl } from './window-tab-accent-control';
 import { WindowReflectionControl } from './window-reflection-control';
+import { WindowWatermarkControl } from './window-watermark-control';
 import { WindowShadowControl } from './window-shadow-control';
 import { WindowBorderRadiusControl } from './window-border-radius-control';
 
@@ -18,6 +19,7 @@ export function WindowControls() {
         <WindowTabVisibleControl />
         <WindowTabAccentControl />
         <WindowReflectionControl />
+        <WindowWatermarkControl />
         <WindowShadowControl />
         <WindowBorderRadiusControl />
       </div>
