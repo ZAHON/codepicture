@@ -18,10 +18,9 @@ export function DropdownMenu() {
       <DropdownMenuTrigger state={open} />
       <MenuContent
         size={matches ? 'sm' : 'md'}
-        align="start"
-        sideOffset={15}
-        collisionPadding={{ left: 16, right: 16 }}
-        className="w-[calc(100vw-2rem)] md:w-auto"
+        align="end"
+        sideOffset={matches ? 15 : 10}
+        className="w-screen rounded-none border-x-0 border-t-0 md:w-auto md:rounded-lg md:border md:border-neutral-5"
       >
         <MenuGroup>
           <DropdownMenuExportImage />
