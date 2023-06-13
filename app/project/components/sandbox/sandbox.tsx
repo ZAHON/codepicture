@@ -5,6 +5,7 @@ import { SandboxOverlay } from './sandbox-overlay';
 import { SandboxFrame } from './sandbox-frame';
 import { SandboxContent } from './sandbox-content';
 import { SandboxWindow } from './sandbox-window';
+import { SandboxWindowWatermark } from './sandbox-window-watermark';
 import { SandboxWindowReflection } from './sandbox-window-reflection';
 import { SandboxWindowHeader } from './sandbox-window-header';
 import { SandboxWindowControls } from './sandbox-window-controls';
@@ -26,6 +27,7 @@ export function Sandbox() {
       <SandboxFrame>
         <SandboxContent>
           <SandboxWindow>
+            <SandboxWindowWatermark />
             <SandboxWindowReflection>
               <SandboxWindowHeader>
                 <SandboxWindowControls />
