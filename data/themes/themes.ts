@@ -22,6 +22,21 @@ export const themes: Theme[] = [
     type: 'dark',
   },
   {
+    id: 'bluloco-dark',
+    label: 'Bluloco Dark',
+    type: 'dark',
+  },
+  {
+    id: 'bluloco-light',
+    label: 'Bluloco Light',
+    type: 'light',
+  },
+  {
+    id: 'brackets-light-pro',
+    label: 'Brackets Light Pro',
+    type: 'light',
+  },
+  {
     id: 'catppuccin-frappe',
     label: 'Catppuccin Frappé',
     type: 'dark',
@@ -97,6 +112,16 @@ export const themes: Theme[] = [
     type: 'light',
   },
   {
+    id: 'houston',
+    label: 'Houston',
+    type: 'dark',
+  },
+  {
+    id: 'kanagawa',
+    label: 'Kanagawa',
+    type: 'dark',
+  },
+  {
     id: 'light-modern',
     label: 'Light Modern',
     type: 'light',
@@ -122,6 +147,11 @@ export const themes: Theme[] = [
     type: 'dark',
   },
   {
+    id: 'nord',
+    label: 'Nord',
+    type: 'dark',
+  },
+  {
     id: 'one-dark-pro-darker',
     label: 'One Dark Pro Darker',
     type: 'dark',
@@ -135,6 +165,41 @@ export const themes: Theme[] = [
     id: 'one-dark-pro',
     label: 'One Dark Pro',
     type: 'dark',
+  },
+  {
+    id: 'one-monokai',
+    label: 'One Monokai',
+    type: 'dark',
+  },
+  {
+    id: 'panda-syntax',
+    label: 'Panda Syntax',
+    type: 'dark',
+  },
+  {
+    id: 'quiet-light',
+    label: 'Quiet Light',
+    type: 'light',
+  },
+  {
+    id: 'shades-of-purple-sd',
+    label: 'Shades of Purple SD',
+    type: 'dark',
+  },
+  {
+    id: 'shades-of-purple',
+    label: 'Shades of Purple',
+    type: 'dark',
+  },
+  {
+    id: 'sublime-material-dark',
+    label: 'Sublime Material Dark',
+    type: 'dark',
+  },
+  {
+    id: 'sublime-material-light',
+    label: 'Sublime Material Light',
+    type: 'light',
   },
   {
     id: 'tokyo-night-light',
