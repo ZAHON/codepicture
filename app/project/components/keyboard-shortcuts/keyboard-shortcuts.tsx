@@ -3,6 +3,7 @@ import { useMediaQuery } from '@/hooks';
 import { KeyboardShortcutsDialog } from './keyboard-shortcuts-dialog';
 import { KeyboardShortcutsFocusCodeEditor } from './keyboard-shortcuts-focus-code-editor';
 import { KeyboardShortcutsToggleTheme } from './keyboard-shortcuts-toggle-theme';
+import { KeyboardShortcutsExportImage } from './keyboard-shortcuts-export-image';
 import { KeyboardShortcutsOpenShortcuts } from './keyboard-shortcuts-open-shortcuts';
 
 export function KeyboardShortcuts() {
@@ -18,6 +19,7 @@ export function KeyboardShortcuts() {
 
       <KeyboardShortcutsFocusCodeEditor />
       <KeyboardShortcutsToggleTheme />
+      <KeyboardShortcutsExportImage />
       <KeyboardShortcutsOpenShortcuts />
     </>
   );

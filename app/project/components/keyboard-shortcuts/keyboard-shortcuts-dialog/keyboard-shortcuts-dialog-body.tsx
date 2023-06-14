@@ -6,6 +6,7 @@ const shortcuts = [
   { label: 'Focus code editor', keys: ['F'] },
   { label: 'Unfocus code editor', keys: ['Esc'] },
   { label: 'Toggle theme', keys: ['D'] },
+  { label: 'Export image', keys: ['Ctrl', 'S'] },
   { label: 'Open shortcuts', keys: ['?'] },
 ];
 
@@ -16,7 +17,7 @@ export function KeyboardShortcutsDialogBody() {
         {shortcuts.map(({ label, keys }) => (
           <Fragment key={label}>
             <dt className="text-sm">{label}</dt>
-            <dd className="flex justify-end gap-x-1">
+            <dd className="flex justify-end gap-x-2">
               {keys.map((key) => (
                 <Kbd key={key} fontSize="sm">
                   {key}
