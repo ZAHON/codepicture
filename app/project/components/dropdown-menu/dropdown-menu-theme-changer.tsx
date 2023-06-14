@@ -1,14 +1,14 @@
 'use client';
 import { IconSunHigh, IconMoon } from '@tabler/icons-react';
-import { useTheme } from 'next-themes';
+import { useTheme } from '@/hooks';
 import { MenuItem } from '@/components';
 
 export function DropdownMenuThemeChanger() {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
-  const label = `${resolvedTheme === 'dark' ? 'Light' : 'Dark'} theme`;
+  const label = `${theme === 'dark' ? 'Light' : 'Dark'} theme`;
   const icon =
-    resolvedTheme === 'dark' ? (
+    theme === 'dark' ? (
       <IconSunHigh
         aria-hidden="true"
         focusable="false"
@@ -23,13 +23,13 @@ export function DropdownMenuThemeChanger() {
     );
 
   function handleToggleTheme(e: Event) {
-    if (resolvedTheme) {
+    if (theme) {
       e.preventDefault();
-      setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+      toggleTheme();
     }
   }
 
-  if (!resolvedTheme) {
+  if (!theme) {
     return null;
   }
 
