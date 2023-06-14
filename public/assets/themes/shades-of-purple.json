@@ -9,7 +9,7 @@
     "--sandbox-editor-line-number-inactive-foreground": "#a599e9",
     "--sandbox-window-header-background": "#222244",
     "--sandbox-window-tab-active-foreground": "#ffffff",
-    "--sandbox-window-tab-inactive-foreground": "a599e9"
+    "--sandbox-window-tab-inactive-foreground": "#a599e9"
   },
   "tokenColors": [
     {
