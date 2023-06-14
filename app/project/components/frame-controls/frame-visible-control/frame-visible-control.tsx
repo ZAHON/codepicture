@@ -1,6 +1,6 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFrameVisible, selectSetFrameVisible } from '@/store';
+import { useStore, selectFrameVisible, selectSetFrameVisible } from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function FrameVisibleControl() {

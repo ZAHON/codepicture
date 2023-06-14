@@ -1,4 +1,4 @@
-import { useStore, selectEditorCode } from '@/store';
+import { useStore, selectEditorCode } from '@project/store';
 
 export function useSandboxEditorLineNumbers() {
   const editorCode = useStore(selectEditorCode);

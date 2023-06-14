@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectEditorLineNumbers } from '@/store';
+import { useStore, selectEditorLineNumbers } from '@project/store';
 import { useSandboxEditorLineNumbers } from './hooks';
 import {
   sandboxEditorLineNumbersStyles,

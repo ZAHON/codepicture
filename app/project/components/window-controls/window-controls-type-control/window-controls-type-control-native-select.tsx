@@ -1,5 +1,5 @@
 'use client';
-import type { WindowControlsType } from '@/store/slices/window-slice/window-slice.types';
+import type { WindowControlsType } from '@project/store/slices/window-slice/window-slice.types';
 import { NativeSelect } from '@/components';
 
 interface WindowControlsTypeControlNativeSelectProps {

@@ -1,2 +1,2 @@
-export { useProjectStore } from './use-project-store';
+export { useStore } from './use-store';
 export * from './selectors';

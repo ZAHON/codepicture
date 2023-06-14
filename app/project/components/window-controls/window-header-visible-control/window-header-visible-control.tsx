@@ -1,6 +1,6 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectWindowHeaderVisible, selectSetWindowHeaderVisible } from '@/store';
+import { useStore, selectWindowHeaderVisible, selectSetWindowHeaderVisible } from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function WindowHeaderVisibleVontrol() {

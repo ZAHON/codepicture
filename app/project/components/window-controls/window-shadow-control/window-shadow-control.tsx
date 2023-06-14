@@ -1,7 +1,7 @@
 'use client';
 import { useId } from 'react';
 import { useMediaQuery } from '@/hooks';
-import { useStore, selectWindowShadow, selectSetWindowShadow } from '@/store';
+import { useStore, selectWindowShadow, selectSetWindowShadow } from '@project/store';
 import { Label } from '@/components';
 import { shadows } from '@/data';
 import { WindowShadowControlSelect } from './window-shadow-control-select';

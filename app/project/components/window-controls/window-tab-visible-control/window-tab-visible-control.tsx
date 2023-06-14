@@ -5,7 +5,7 @@ import {
   selectWindowHeaderVisible,
   selectWindowTabVisible,
   selectSetWindowTabVisible,
-} from '@/store';
+} from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function WindowTabVisibleControl() {

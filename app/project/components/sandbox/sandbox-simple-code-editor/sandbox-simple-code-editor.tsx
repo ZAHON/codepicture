@@ -13,7 +13,7 @@ import {
   selectEditorLanguageIsLoading,
   selectEditorThemeIsLoading,
   selectSetEditorCode,
-} from '@/store';
+} from '@project/store';
 import {
   sandboxSimpleCodeEditorStyles,
   sandboxSimpleCodeEditorTextareaStyles,

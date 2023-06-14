@@ -1,6 +1,6 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFontSize, selectSetFontSize } from '@/store';
+import { useStore, selectFontSize, selectSetFontSize } from '@project/store';
 import { LabelAsSpan, Slider } from '@/components';
 
 export function FontSizeControl() {

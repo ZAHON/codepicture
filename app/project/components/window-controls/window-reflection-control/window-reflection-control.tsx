@@ -1,6 +1,6 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectWindowReflection, selectSetWindowReflection } from '@/store';
+import { useStore, selectWindowReflection, selectSetWindowReflection } from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function WindowReflectionControl() {

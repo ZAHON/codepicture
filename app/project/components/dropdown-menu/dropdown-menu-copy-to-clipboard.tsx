@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { IconClipboard } from '@tabler/icons-react';
-import { useStore, selectWindowTabContent } from '@/store';
+import { useStore, selectWindowTabContent } from '@project/store';
 import { MenuItem, Loader } from '@/components';
 import { htmlToImage, notify } from '@/lib';
 

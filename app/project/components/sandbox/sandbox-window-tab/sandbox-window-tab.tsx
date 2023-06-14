@@ -7,7 +7,7 @@ import {
   selectWindowTabAccent,
   selectWindowTabContent,
   selectSetWindowTabContent,
-} from '@/store';
+} from '@project/store';
 import {
   sandboxWindowTabStyles,
   sandboxWindowTabInnerStyles,

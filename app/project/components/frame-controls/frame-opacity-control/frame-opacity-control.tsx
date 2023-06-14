@@ -1,6 +1,11 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFrameVisible, selectFrameOpacity, selectSetFrameOpacity } from '@/store';
+import {
+  useStore,
+  selectFrameVisible,
+  selectFrameOpacity,
+  selectSetFrameOpacity,
+} from '@project/store';
 import { LabelAsSpan, Slider } from '@/components';
 
 export function FrameOpacityControl() {

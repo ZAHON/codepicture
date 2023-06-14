@@ -2,6 +2,7 @@ import type { CreateKeyboardShortcutsSlice } from './keyboard-shortcuts-slice.ty
 
 export const createKeyboardShortcutsSlice: CreateKeyboardShortcutsSlice = (set) => ({
   keyboardShortcutsDialogOpen: false,
+
   setKeyboardShortcutsDialogOpen: (keyboardShortcutsDialogOpen) => {
     set(() => ({ keyboardShortcutsDialogOpen }));
   },

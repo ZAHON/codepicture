@@ -9,7 +9,7 @@ export type WindowControlsType =
   | 'windows'
   | 'none';
 
-export type WindowSlice = {
+export interface WindowSlice {
   windowBorderRadius: number;
   windowControlsType: WindowControlsType;
   windowHeaderVisible: boolean;
@@ -29,6 +29,6 @@ export type WindowSlice = {
   setWindowTabContent: (windowTabContent: string) => void;
   setWindowTabVisible: (windowTabVisible: boolean) => void;
   setWindowWatermark: (windowWatermark: boolean) => void;
-};
+}
 
 export type CreateWindowSlice = StateCreator<WindowSlice, [], [], WindowSlice>;

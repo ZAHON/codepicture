@@ -6,7 +6,7 @@ import {
   selectEditorLanguage,
   selectEditorLanguageIsLoading,
   selectSetEditorLanguage,
-} from '@/store';
+} from '@project/store';
 import { Label } from '@/components';
 import { languages } from '@/data';
 import { EditorLanguageControlSelect } from './editor-language-control-select';

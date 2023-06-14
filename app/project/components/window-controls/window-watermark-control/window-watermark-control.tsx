@@ -1,6 +1,6 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectWindowWatermark, selectSetWindowWatermark } from '@/store';
+import { useStore, selectWindowWatermark, selectSetWindowWatermark } from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function WindowWatermarkControl() {

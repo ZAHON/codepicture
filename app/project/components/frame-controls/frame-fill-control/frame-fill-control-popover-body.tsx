@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectFrameFillType, selectSetFrameFillType } from '@/store';
+import { useStore, selectFrameFillType, selectSetFrameFillType } from '@project/store';
 import {
   SegmentedTabs,
   SegmentedTabsList,

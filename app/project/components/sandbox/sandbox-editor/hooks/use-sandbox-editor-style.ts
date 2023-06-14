@@ -7,7 +7,7 @@ import {
   selectFontLigatures,
   selectFontLineHeight,
   selectFontLetterSpacing,
-} from '@/store';
+} from '@project/store';
 import { getFontFamilyCssVariableById } from '@/utils';
 
 export function useSandboxEditorStyle() {

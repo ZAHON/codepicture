@@ -1,6 +1,6 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFontLigatures, selectSetFontLigatures } from '@/store';
+import { useStore, selectFontLigatures, selectSetFontLigatures } from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function FontLigaturesControl() {

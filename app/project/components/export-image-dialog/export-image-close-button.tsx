@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectSetExportImageDialogOpen } from '@/store';
+import { useStore, selectSetExportImageDialogOpen } from '@project/store';
 import { Button } from '@/components';
 
 export function ExportImageCloseButton() {

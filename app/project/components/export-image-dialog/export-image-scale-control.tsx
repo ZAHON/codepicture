@@ -1,7 +1,7 @@
 'use client';
 import { useId } from 'react';
 import { LabelAsSpan, SegmentedControl, SegmentedControlItem } from '@/components';
-import { useStore, selectExportImageScale, selectSetExportImageScale } from '@/store';
+import { useStore, selectExportImageScale, selectSetExportImageScale } from '@project/store';
 
 export function ExportImageScaleControl() {
   const controlLabelId = useId();

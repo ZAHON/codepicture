@@ -6,7 +6,7 @@ import {
   selectHighlighter,
   selectEditorTheme,
   selectEditorThemeIsLoading,
-} from '@/store';
+} from '@project/store';
 
 export function useSandboxContentStyle() {
   const highlighter = useStore(selectHighlighter);

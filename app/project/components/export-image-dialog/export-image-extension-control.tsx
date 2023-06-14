@@ -1,7 +1,11 @@
 'use client';
 import { useId } from 'react';
 import { LabelAsSpan, SegmentedControl, SegmentedControlItem } from '@/components';
-import { useStore, selectExportImageExtension, selectSetExportImageExtension } from '@/store';
+import {
+  useStore,
+  selectExportImageExtension,
+  selectSetExportImageExtension,
+} from '@project/store';
 
 export function ExportMenuExtensionControl() {
   const controlLabelId = useId();

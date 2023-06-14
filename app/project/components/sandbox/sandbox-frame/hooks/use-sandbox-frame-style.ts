@@ -6,7 +6,7 @@ import {
   selectFrameVisible,
   selectFrameFill,
   selectFrameOpacity,
-} from '@/store';
+} from '@project/store';
 import { getFillValueById } from '@/utils';
 
 export function useSandboxFrameStyle() {

@@ -1,6 +1,6 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFontItalics, selectSetFontItalics } from '@/store';
+import { useStore, selectFontItalics, selectSetFontItalics } from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function FontItalicsControl() {

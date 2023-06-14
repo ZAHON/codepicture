@@ -8,7 +8,7 @@ import {
   selectEditorLanguageIsLoading,
   selectEditorTheme,
   selectEditorThemeIsLoading,
-} from '@/store';
+} from '@project/store';
 import { getThemedTokens } from '../utils';
 
 export function useSandboxSyntaxHighlighter() {

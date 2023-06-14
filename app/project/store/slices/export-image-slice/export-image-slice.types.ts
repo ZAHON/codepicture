@@ -3,7 +3,7 @@ import type { StateCreator } from 'zustand';
 type ExportImageExtension = 'png' | 'jpeg';
 type ExportImageScale = 1 | 2 | 4 | 8 | 16;
 
-export type ExportImageSlice = {
+export interface ExportImageSlice {
   exportImageDialogOpen: boolean;
   exportImageExporting: boolean;
   exportImageName: string;
@@ -17,6 +17,6 @@ export type ExportImageSlice = {
   setExportImageExtension: (exportImageExtension: ExportImageExtension) => void;
   setExportImageQuality: (exportImageQuality: number) => void;
   setExportImageScale: (exportImageScale: ExportImageScale) => void;
-};
+}
 
 export type CreateExportImageSlice = StateCreator<ExportImageSlice, [], [], ExportImageSlice>;

@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectWindowControlsType } from '@/store';
+import { useStore, selectWindowControlsType } from '@project/store';
 import {
   MacOSFilledColor,
   MacOSFilledGray,

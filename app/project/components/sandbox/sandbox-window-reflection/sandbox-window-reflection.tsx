@@ -1,6 +1,6 @@
 'use client';
 import type { SandboxWindowReflectionProps } from './sandbox-window-reflection.types';
-import { useStore, selectEditorTheme, selectWindowReflection } from '@/store';
+import { useStore, selectEditorTheme, selectWindowReflection } from '@project/store';
 import { twMerge } from 'tailwind-merge';
 import { getThemeTypeById } from '@/utils';
 import { sandboxWindowReflectionStyles } from './sandbox-window-reflection.styles';

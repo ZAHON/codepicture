@@ -1,6 +1,6 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFontLineHeight, selectSetFontLineHeight } from '@/store';
+import { useStore, selectFontLineHeight, selectSetFontLineHeight } from '@project/store';
 import { LabelAsSpan, Slider } from '@/components';
 
 export function FontLineHeightControl() {

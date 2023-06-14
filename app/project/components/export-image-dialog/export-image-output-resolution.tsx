@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectExportImageScale } from '@/store';
+import { useStore, selectExportImageScale } from '@project/store';
 
 export function ExportImageOutputResolution() {
   const exportImageScale = useStore(selectExportImageScale);

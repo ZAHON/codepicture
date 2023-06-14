@@ -2,10 +2,10 @@
 import { IconCommand } from '@tabler/icons-react';
 import { useMediaQuery } from '@/hooks';
 import { MenuItem } from '@/components';
-import { useProjectStore, selectSetKeyboardShortcutsDialogOpen } from '@project/store';
+import { useStore, selectSetKeyboardShortcutsDialogOpen } from '@project/store';
 
 export function DropdownMenuKeyboardShortcuts() {
-  const keyboardShortcutsDialogOpen = useProjectStore(selectSetKeyboardShortcutsDialogOpen);
+  const keyboardShortcutsDialogOpen = useStore(selectSetKeyboardShortcutsDialogOpen);
   const matches = useMediaQuery('(min-width: 768px)');
 
   if (!matches) {

@@ -6,7 +6,7 @@ import {
   selectEditorTheme,
   selectEditorThemeIsLoading,
   selectSetEditorTheme,
-} from '@/store';
+} from '@project/store';
 import { Label } from '@/components';
 import { themes } from '@/data';
 import { EditorThemeControlSelect } from './editor-theme-control-select';

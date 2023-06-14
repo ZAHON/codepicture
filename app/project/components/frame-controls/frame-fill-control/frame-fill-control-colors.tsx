@@ -8,7 +8,7 @@ import {
   selectFrameFillType,
   selectSetFrameFill,
   selectSetFrameFillType,
-} from '@/store';
+} from '@project/store';
 import { FrameFillControlFillSwatch } from './frame-fill-control-fill-swatch';
 
 const data = [

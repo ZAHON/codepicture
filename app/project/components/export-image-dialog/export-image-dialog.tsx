@@ -1,5 +1,9 @@
 'use client';
-import { useStore, selectExportImageDialogOpen, selectSetExportImageDialogOpen } from '@/store';
+import {
+  useStore,
+  selectExportImageDialogOpen,
+  selectSetExportImageDialogOpen,
+} from '@project/store';
 import { Dialog, DialogPortal, DialogOverlay, DialogContent } from '@/components';
 import { ExportImageDialogHeader } from './export-image-dialog-header';
 import { ExportImageDialogBody } from './export-image-dialog-body';

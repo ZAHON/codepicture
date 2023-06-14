@@ -1,7 +1,7 @@
 import type { StateCreator } from 'zustand';
 import type { FontId } from '@/data';
 
-export type FontSlice = {
+export interface FontSlice {
   fontBolds: boolean;
   fontFamily: FontId;
   fontItalics: boolean;
@@ -17,6 +17,6 @@ export type FontSlice = {
   setFontLigatures: (fontLigatures: boolean) => void;
   setFontLineHeight: (fontLineHeight: number) => void;
   setFontSize: (fontSize: number) => void;
-};
+}
 
 export type CreateFontSlice = StateCreator<FontSlice, [], [], FontSlice>;

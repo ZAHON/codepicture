@@ -1,6 +1,6 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectEditorLineNumbers, selectSetEditorLineNumbers } from '@/store';
+import { useStore, selectEditorLineNumbers, selectSetEditorLineNumbers } from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function EditorLineNumbersControl() {

@@ -1,7 +1,7 @@
 'use client';
 import type { ButtonHTMLAttributes } from 'react';
 import { forwardRef } from 'react';
-import { useStore, selectFrameFill } from '@/store';
+import { useStore, selectFrameFill } from '@project/store';
 import { getFillValueById } from '@/utils';
 
 type FrameFillControlTriggerProps = ButtonHTMLAttributes<HTMLButtonElement>;

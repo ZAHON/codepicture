@@ -1,5 +1,5 @@
 import type { SandboxWindowStyle } from '../sandbox-window.types';
-import { useStore, selectWindowBorderRadius, selectWindowShadow } from '@/store';
+import { useStore, selectWindowBorderRadius, selectWindowShadow } from '@project/store';
 import { getShadowValueById } from '@/utils';
 
 export function useSandboxWindowStyle() {

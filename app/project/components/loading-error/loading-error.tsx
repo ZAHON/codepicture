@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectHighlighterError, selectSetHighlighter } from '@/store';
+import { useStore, selectHighlighterError, selectSetHighlighter } from '@project/store';
 import {
   Button,
   AlertDialog,

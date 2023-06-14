@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectHighlighter } from '@/store';
+import { useStore, selectHighlighter } from '@project/store';
 
 import { SandboxOverlay } from './sandbox-overlay';
 import { SandboxFrame } from './sandbox-frame';

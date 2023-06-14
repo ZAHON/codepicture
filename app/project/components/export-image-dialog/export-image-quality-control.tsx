@@ -6,7 +6,7 @@ import {
   selectExportImageExtension,
   selectExportImageQuality,
   selectSetExportImageQuality,
-} from '@/store';
+} from '@project/store';
 
 export function ExportImageQualityControl() {
   const controlLabelId = useId();

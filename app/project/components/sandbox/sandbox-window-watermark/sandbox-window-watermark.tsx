@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectWindowWatermark } from '@/store';
+import { useStore, selectWindowWatermark } from '@project/store';
 import { Logo } from '@/svgs';
 import { sandboxWindowWatermarkStyles } from './sandbox-window-watermark.styles';
 

@@ -1,6 +1,6 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFontBolds, selectSetFontBolds } from '@/store';
+import { useStore, selectFontBolds, selectSetFontBolds } from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function FontBoldsControl() {

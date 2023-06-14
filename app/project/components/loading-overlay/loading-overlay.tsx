@@ -1,6 +1,6 @@
 'use client';
 import { useEffect } from 'react';
-import { useStore, selectHighlighter, selectSetHighlighter } from '@/store';
+import { useStore, selectHighlighter, selectSetHighlighter } from '@project/store';
 import { Loader } from '@/components';
 
 export function LoadingOverlay() {

@@ -6,7 +6,7 @@ import {
   selectWindowControlsType,
   selectWindowHeaderVisible,
   selectSetWindowControlsType,
-} from '@/store';
+} from '@project/store';
 import { Label } from '@/components';
 import { WindowControlsTypeControlSelect } from './window-controls-type-control-select';
 import { WindowControlsTypeControlNativeSelect } from './window-controls-type-control-native-select';

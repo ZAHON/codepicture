@@ -5,7 +5,7 @@ import {
   selectFramePaddingType,
   selectFramePaddingVertical,
   selectSetFramePaddingVertical,
-} from '@/store';
+} from '@project/store';
 import { LabelAsSpan, Slider } from '@/components';
 
 export function FramePaddingVerticalControl() {

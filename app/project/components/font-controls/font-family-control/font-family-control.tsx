@@ -1,7 +1,7 @@
 'use client';
 import { useId } from 'react';
 import { useMediaQuery } from '@/hooks';
-import { useStore, selectFontFamily, selectSetFontFamily } from '@/store';
+import { useStore, selectFontFamily, selectSetFontFamily } from '@project/store';
 import { Label } from '@/components';
 import { fonts } from '@/data';
 import { FontFamilyControlSelect } from './font-family-control-select';

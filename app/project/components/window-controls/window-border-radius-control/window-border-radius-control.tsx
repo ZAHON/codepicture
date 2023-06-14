@@ -1,6 +1,6 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectWindowBorderRadius, selectSetWindowBorderRadius } from '@/store';
+import { useStore, selectWindowBorderRadius, selectSetWindowBorderRadius } from '@project/store';
 import { LabelAsSpan, Slider } from '@/components';
 
 export function WindowBorderRadiusControl() {

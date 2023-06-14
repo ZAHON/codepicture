@@ -1,6 +1,6 @@
 'use client';
 import { Label } from '@/components';
-import { useStore, selectFrameVisible } from '@/store';
+import { useStore, selectFrameVisible } from '@project/store';
 import { FrameFillControlPopover } from './frame-fill-control-popover';
 
 export function FrameFillControl() {

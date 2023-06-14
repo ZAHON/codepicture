@@ -8,7 +8,7 @@ import {
   selectWindowTabContent,
   selectSetExportImageDialogOpen,
   selectSetExportImageExporting,
-} from '@/store';
+} from '@project/store';
 import { Button } from '@/components';
 import { htmlToImage, notify } from '@/lib';
 

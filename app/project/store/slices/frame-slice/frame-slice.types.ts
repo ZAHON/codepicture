@@ -5,7 +5,7 @@ type FrameFill = ColorId | GradientId;
 type FrameFillType = 'color' | 'gradient';
 type FramePaddingType = '0' | '16' | '32' | '64' | '128' | 'custom';
 
-export type FrameSlice = {
+export interface FrameSlice {
   frameFill: FrameFill;
   frameFillType: FrameFillType;
   frameOpacity: number;
@@ -21,6 +21,6 @@ export type FrameSlice = {
   setFramePaddingHorizontal: (framePaddingHorizontal: number) => void;
   setFramePaddingVertical: (framePaddingVertical: number) => void;
   setFrameVisible: (frameVisible: boolean) => void;
-};
+}
 
 export type CreateFrameSlice = StateCreator<FrameSlice, [], [], FrameSlice>;

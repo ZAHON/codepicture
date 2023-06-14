@@ -2,6 +2,7 @@ import type { StateCreator } from 'zustand';
 
 export interface KeyboardShortcutsSlice {
   keyboardShortcutsDialogOpen: boolean;
+
   setKeyboardShortcutsDialogOpen: (keyboardShortcutsDialogOpen: boolean) => void;
 }
 

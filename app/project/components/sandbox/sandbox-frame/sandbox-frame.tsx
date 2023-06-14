@@ -1,6 +1,6 @@
 'use client';
 import type { SandboxFrameProps } from './sandbox-frame.types';
-import { useStore, selectFramePaddingType } from '@/store';
+import { useStore, selectFramePaddingType } from '@project/store';
 import { useSandboxFrameStyle } from './hooks';
 import { sandboxFrameStyles } from './sandbox-frame.styles';
 

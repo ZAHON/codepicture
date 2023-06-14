@@ -4,12 +4,14 @@ import type {
   FontSlice,
   FrameSlice,
   HighlighterSlice,
+  KeyboardShortcutsSlice,
   WindowSlice,
 } from './slices';
 
-export type State = EditorSlice &
+export type StoreState = EditorSlice &
   ExportImageSlice &
   FontSlice &
   FrameSlice &
   HighlighterSlice &
+  KeyboardShortcutsSlice &
   WindowSlice;

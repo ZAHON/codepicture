@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectFontBolds, selectFontItalics } from '@/store';
+import { useStore, selectFontBolds, selectFontItalics } from '@project/store';
 import { useSandboxSyntaxHighlighter } from './hooks';
 import { getTokenStyle, getLineKey, getTokenKey } from './utils';
 import {

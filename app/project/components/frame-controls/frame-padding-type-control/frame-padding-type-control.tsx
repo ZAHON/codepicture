@@ -1,6 +1,6 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFramePaddingType, selectSetFramePaddingType } from '@/store';
+import { useStore, selectFramePaddingType, selectSetFramePaddingType } from '@project/store';
 import { IconAdjustmentsAlt } from '@tabler/icons-react';
 import { LabelAsSpan, SegmentedControl, SegmentedControlItem } from '@/components';
 

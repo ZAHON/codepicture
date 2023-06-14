@@ -1,7 +1,7 @@
 'use client';
 import { useId } from 'react';
 import { Label, TextInput } from '@/components';
-import { useStore, selectExportImageName, selectSetExportImageName } from '@/store';
+import { useStore, selectExportImageName, selectSetExportImageName } from '@project/store';
 
 export function ExportMenuFileNameControl() {
   const controlId = useId();

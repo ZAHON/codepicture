@@ -1,6 +1,6 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFontLetterSpacing, selectSetFontLetterSpacing } from '@/store';
+import { useStore, selectFontLetterSpacing, selectSetFontLetterSpacing } from '@project/store';
 import { LabelAsSpan, Slider } from '@/components';
 
 export function FontLetterSpacingControl() {

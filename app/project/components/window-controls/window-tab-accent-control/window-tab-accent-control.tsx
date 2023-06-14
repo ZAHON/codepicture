@@ -6,7 +6,7 @@ import {
   selectWindowTabVisible,
   selectWindowTabAccent,
   selectSetWindowTabAccent,
-} from '@/store';
+} from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function WindowTabAccentControl() {

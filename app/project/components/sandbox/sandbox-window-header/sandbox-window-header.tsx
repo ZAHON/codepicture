@@ -1,6 +1,6 @@
 'use client';
 import type { SandboxWindowHeaderProps } from './sandbox-window-header.types';
-import { useStore, selectWindowHeaderVisible } from '@/store';
+import { useStore, selectWindowHeaderVisible } from '@project/store';
 import { useSandboxWindowHeaderStyle } from './hooks';
 import { sandboxWindowHeaderStyles } from './sandbox-window-header.styles';
 
