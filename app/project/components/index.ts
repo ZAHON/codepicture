@@ -5,6 +5,7 @@ export * from './export-image-dialog';
 export * from './font-controls';
 export * from './frame-controls';
 export * from './header';
+export * from './keyboard-shortcuts';
 export * from './loading-error';
 export * from './loading-overlay';
 export * from './menu';

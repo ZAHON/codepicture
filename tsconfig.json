@@ -21,7 +21,8 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@project/*": ["./app/project/*"]
     }
   },
   "types": ["vitest/globals", "node", "@types/testing-library__jest-dom"],

@@ -6,7 +6,6 @@ import type {
   History,
 } from './sandbox-simple-code-editor.types';
 import { useState, useRef, useEffect } from 'react';
-import { useHotkeys } from 'react-hotkeys-hook';
 import { isMac, isWindowsOrLinux } from './utils';
 import {
   useStore,
@@ -38,13 +37,6 @@ export function SandboxSimpleCodeEditor(props: SandboxSimpleCodeEditorProps) {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const history = useRef<History>({ stack: [], offset: -1 });
   const mounted = useRef(false);
-
-  useHotkeys('f', (e) => {
-    if (textareaRef.current) {
-      e.preventDefault();
-      textareaRef.current.focus();
-    }
-  });
 
   useEffect(() => {
     if (!mounted.current) {

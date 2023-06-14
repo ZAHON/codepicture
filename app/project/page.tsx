@@ -1,4 +1,10 @@
-import { LoadingOverlay, LoadingError, Sandbox, ExportImageDialog } from './components';
+import {
+  LoadingOverlay,
+  LoadingError,
+  Sandbox,
+  ExportImageDialog,
+  KeyboardShortcuts,
+} from './components';
 
 export default function ProjectPage() {
   return (
@@ -7,6 +13,7 @@ export default function ProjectPage() {
       <LoadingOverlay />
       <Sandbox />
       <ExportImageDialog />
+      <KeyboardShortcuts />
     </>
   );
 }

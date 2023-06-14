@@ -6,6 +6,7 @@ import { DropdownMenuTrigger } from './dropdown-menu-trigger';
 import { DropdownMenuExportImage } from './dropdown-menu-export-image';
 import { DropdownMenuOpenInNewTab } from './dropdown-menu-open-in-new-tab';
 import { DropdownMenuCopyToClipboard } from './dropdown-menu-copy-to-clipboard';
+import { DropdownMenuKeyboardShortcuts } from './dropdown-menu-keyboard-shortcuts';
 import { DropdownMenuGithubLink } from './dropdown-menu-github-link';
 import { DropdownMenuThemeChanger } from './dropdown-menu-theme-changer';
 
@@ -26,6 +27,7 @@ export function DropdownMenu() {
           <DropdownMenuExportImage />
           <DropdownMenuOpenInNewTab />
           <DropdownMenuCopyToClipboard />
+          <DropdownMenuKeyboardShortcuts />
         </MenuGroup>
         <MenuSeparator />
         <MenuGroup>
