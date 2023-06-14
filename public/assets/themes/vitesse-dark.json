@@ -7,7 +7,7 @@
     "--sandbox-editor-cursor-foreground": "#aeafad",
     "--sandbox-editor-selection-background": "#eeeeee15",
     "--sandbox-editor-line-number-inactive-foreground": "#dedcd550",
-    "--sandbox-window-header-background": "#191919",
+    "--sandbox-window-header-background": "#181818",
     "--sandbox-window-tab-active-foreground": "#dbd7caee",
     "--sandbox-window-tab-inactive-foreground": "#959da5"
   },
