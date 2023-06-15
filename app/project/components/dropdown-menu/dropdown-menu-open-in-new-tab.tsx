@@ -1,16 +1,18 @@
 'use client';
-import { useState } from 'react';
 import { IconExternalLink } from '@tabler/icons-react';
-import { useStore, selectWindowTabContent } from '@project/store';
+import {
+  useStore,
+  selectOpenInNewTabPrePreparingLink,
+  selectOpenInNewTabPrePrepareLink,
+} from '@project/store';
 import { MenuItem, Loader } from '@/components';
-import { htmlToImage, notify } from '@/lib';
 
 export function DropdownMenuOpenInNewTab() {
-  const [preparatigLink, setPreparatigLink] = useState(false);
-  const windowTabContent = useStore(selectWindowTabContent);
+  const openInNewTabPrePreparingLink = useStore(selectOpenInNewTabPrePreparingLink);
+  const openInNewTabPrePrepareLink = useStore(selectOpenInNewTabPrePrepareLink);
 
   function getIcon() {
-    if (preparatigLink) {
+    if (openInNewTabPrePreparingLink) {
       return <Loader />;
     }
 
@@ -23,51 +25,13 @@ export function DropdownMenuOpenInNewTab() {
     );
   }
 
-  async function handleOpenInNewTab() {
-    try {
-      setPreparatigLink(true);
-
-      const sandboxFrameElement = document.getElementById('sandbox-frame');
-
-      if (!sandboxFrameElement) {
-        throw Error(`Element with id: ${sandboxFrameElement} does not exist!`);
-      }
-
-      const blob = await htmlToImage.convertToBlob({
-        node: sandboxFrameElement,
-        filter: (node) => {
-          if (node.id === 'sandbox-window-tab') return Boolean(windowTabContent);
-          if (node.id === 'sandbox-simple-code-editor-textarea') return false;
-          return true;
-        },
-      });
-
-      if (!blob) {
-        throw Error('Blob not exist!');
-      }
-
-      const url = window.URL.createObjectURL(blob);
-
-      const link = document.createElement('a');
-
-      if (!/(iPhone)|(iPad)|(iPod)/i.test(window.navigator.userAgent)) {
-        link.target = '_blank';
-      }
-
-      link.href = url;
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-    } catch {
-      notify.show({ type: 'error', message: 'An error occurred while preparing the link' });
-    } finally {
-      setPreparatigLink(false);
-    }
-  }
-
   return (
-    <MenuItem disabled={preparatigLink} icon={getIcon()} onSelect={handleOpenInNewTab}>
-      {preparatigLink ? 'Preparing link...' : 'Open in new tab'}
+    <MenuItem
+      disabled={openInNewTabPrePreparingLink}
+      icon={getIcon()}
+      onSelect={openInNewTabPrePrepareLink}
+    >
+      {openInNewTabPrePreparingLink ? 'Preparing link...' : 'Open in new tab'}
     </MenuItem>
   );
 }

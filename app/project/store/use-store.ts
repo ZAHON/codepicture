@@ -9,5 +9,6 @@ export const useStore = create<StoreState>()((...a) => ({
   ...slices.createFrameSlice(...a),
   ...slices.createHighlighterSlice(...a),
   ...slices.createKeyboardShortcutsSlice(...a),
+  ...slices.createOpenInNewTabSlice(...a),
   ...slices.createWindowSlice(...a),
 }));

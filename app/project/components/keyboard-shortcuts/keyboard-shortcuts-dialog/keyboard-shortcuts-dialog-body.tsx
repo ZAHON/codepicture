@@ -7,6 +7,7 @@ const shortcuts = [
   { label: 'Unfocus code editor', keys: ['Esc'] },
   { label: 'Toggle theme', keys: ['D'] },
   { label: 'Export image', keys: ['Ctrl', 'S'] },
+  { label: 'Open in new tab', keys: ['Ctrl', 'O'] },
   { label: 'Open shortcuts', keys: ['?'] },
 ];
 

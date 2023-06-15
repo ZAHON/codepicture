@@ -5,6 +5,7 @@ import type {
   FrameSlice,
   HighlighterSlice,
   KeyboardShortcutsSlice,
+  OpenInNewTabSlice,
   WindowSlice,
 } from './slices';
 
@@ -14,4 +15,5 @@ export type StoreState = EditorSlice &
   FrameSlice &
   HighlighterSlice &
   KeyboardShortcutsSlice &
+  OpenInNewTabSlice &
   WindowSlice;
