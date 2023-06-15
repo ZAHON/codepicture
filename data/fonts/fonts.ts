@@ -2,9 +2,39 @@ import type { Font } from './fonts.types';
 
 export const fonts: Font[] = [
   {
+    id: 'anonymous-pro',
+    cssVariable: '--font-anonymous-pro',
+    label: 'Anonymous Pro',
+    ligatures: false,
+  },
+  {
     id: 'cascadia-code',
     cssVariable: '--font-cascadia-code',
     label: 'Cascadia Code',
+    ligatures: true,
+  },
+  {
+    id: 'courier-prime',
+    cssVariable: '--font-courier-prime',
+    label: 'Courier Prime',
+    ligatures: false,
+  },
+  {
+    id: 'cousine',
+    cssVariable: '--font-cousine',
+    label: 'Cousine',
+    ligatures: false,
+  },
+  {
+    id: 'droid-sans-mono',
+    cssVariable: '--font-droid-sans-mono',
+    label: 'Droid Sans Mono',
+    ligatures: false,
+  },
+  {
+    id: 'fantasque-sans-mono',
+    cssVariable: '--font-fantasque-sans-mono',
+    label: 'Fantasque Sans Mono',
     ligatures: true,
   },
   {
@@ -12,6 +42,42 @@ export const fonts: Font[] = [
     cssVariable: '--font-fira-code',
     label: 'Fira Code',
     ligatures: true,
+  },
+  {
+    id: 'fragment-mono',
+    cssVariable: '--font-fragment-mono',
+    label: 'Fragment Mono',
+    ligatures: true,
+  },
+  {
+    id: 'hack',
+    cssVariable: '--font-hack',
+    label: 'Hack',
+    ligatures: false,
+  },
+  {
+    id: 'hasklig',
+    cssVariable: '--font-hasklig',
+    label: 'Hasklig',
+    ligatures: true,
+  },
+  {
+    id: 'ia-writer-mono',
+    cssVariable: '--font-ia-writer-mono',
+    label: 'iA Writer Mono',
+    ligatures: false,
+  },
+  {
+    id: 'ibm-plex-mono',
+    cssVariable: '--font-ibm-plex-mono',
+    label: 'IBM Plex Mono',
+    ligatures: false,
+  },
+  {
+    id: 'inconsolata',
+    cssVariable: '--font-inconsolata',
+    label: 'Inconsolata',
+    ligatures: false,
   },
   {
     id: 'intel-one-mono',
@@ -26,9 +92,75 @@ export const fonts: Font[] = [
     ligatures: true,
   },
   {
+    id: 'juliamono',
+    cssVariable: '--font-juliamono',
+    label: 'JuliaMono',
+    ligatures: false,
+  },
+  {
+    id: 'liberation-mono',
+    cssVariable: '--font-liberation-mono',
+    label: 'Liberation Mono',
+    ligatures: false,
+  },
+  {
+    id: 'lotion',
+    cssVariable: '--font-lotion',
+    label: 'Lotion',
+    ligatures: true,
+  },
+  {
+    id: 'menlo',
+    cssVariable: '--font-menlo',
+    label: 'Menlo',
+    ligatures: false,
+  },
+  {
+    id: 'monoid',
+    cssVariable: '--font-monoid',
+    label: 'Monoid',
+    ligatures: true,
+  },
+  {
+    id: 'noto-mono',
+    cssVariable: '--font-noto-mono',
+    label: 'Noto Mono',
+    ligatures: false,
+  },
+  {
     id: 'overpass-mono',
     cssVariable: '--font-overpass-mono',
     label: 'Overpass Mono',
+    ligatures: false,
+  },
+  {
+    id: 'pt-mono',
+    cssVariable: '--font-pt-mono',
+    label: 'PT Mono',
+    ligatures: false,
+  },
+  {
+    id: 'recursive',
+    cssVariable: '--font-recursive',
+    label: 'Recursive',
+    ligatures: false,
+  },
+  {
+    id: 'roboto-mono',
+    cssVariable: '--font-roboto-mono',
+    label: 'Roboto Mono',
+    ligatures: false,
+  },
+  {
+    id: 'san-francisco-mono',
+    cssVariable: '--font-san-francisco-mono',
+    label: 'San Francisco Mono',
+    ligatures: false,
+  },
+  {
+    id: 'sometype-mono',
+    cssVariable: '--font-sometype-mono',
+    label: 'Sometype Mono',
     ligatures: false,
   },
   {
@@ -42,5 +174,23 @@ export const fonts: Font[] = [
     cssVariable: '--font-space-mono',
     label: 'Space Mono',
     ligatures: false,
+  },
+  {
+    id: 'sudo',
+    cssVariable: '--font-sudo',
+    label: 'Sudo',
+    ligatures: false,
+  },
+  {
+    id: 'ubuntu-mono',
+    cssVariable: '--font-ubuntu-mono',
+    label: 'Ubuntu Mono',
+    ligatures: false,
+  },
+  {
+    id: 'victor-mono',
+    cssVariable: '--font-victor-mono',
+    label: 'Victor Mono',
+    ligatures: true,
   },
 ];
