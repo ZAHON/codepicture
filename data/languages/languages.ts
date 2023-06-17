@@ -21,17 +21,17 @@ export const languages: Language[] = [
   {
     id: 'bat',
     label: 'Batch',
-    public: true,
+    public: false,
   },
   {
     id: 'bibtex',
     label: 'BibTeX',
-    public: true,
+    public: false,
   },
   {
     id: 'blade',
     label: 'Blade',
-    public: true,
+    public: false,
     embeddedLanguages: ['html', 'xml', 'sql', 'javascript', 'json', 'css'],
   },
   {
@@ -113,13 +113,13 @@ export const languages: Language[] = [
   {
     id: 'glsl',
     label: 'GLSL',
-    public: true,
+    public: false,
     embeddedLanguages: ['c'],
   },
   {
     id: 'gnuplot',
     label: 'Gnuplot',
-    public: true,
+    public: false,
   },
   {
     id: 'go',
@@ -157,7 +157,7 @@ export const languages: Language[] = [
   {
     id: 'ini',
     label: 'INI',
-    public: true,
+    public: false,
   },
   {
     id: 'java',
@@ -203,7 +203,7 @@ export const languages: Language[] = [
   {
     id: 'latex',
     label: 'LaTeX',
-    public: true,
+    public: false,
     embeddedLanguages: [
       'tex',
       'css',
@@ -238,7 +238,7 @@ export const languages: Language[] = [
   {
     id: 'make',
     label: 'Makefile',
-    public: true,
+    public: false,
   },
   {
     id: 'markdown',
@@ -402,7 +402,7 @@ export const languages: Language[] = [
   {
     id: 'raku',
     label: 'Perl 6',
-    public: true,
+    public: false,
   },
   {
     id: 'razor',
@@ -484,7 +484,7 @@ export const languages: Language[] = [
   {
     id: 'toml',
     label: 'TOML',
-    public: true,
+    public: false,
   },
   {
     id: 'tsx',
