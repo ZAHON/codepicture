@@ -9,6 +9,8 @@ export type WindowControlsType =
   | 'windows'
   | 'none';
 
+type WindowTabIconSize = 16 | 20 | 24;
+
 export interface WindowSlice {
   windowBorderRadius: number;
   windowControlsType: WindowControlsType;
@@ -19,6 +21,7 @@ export interface WindowSlice {
   windowTabContent: string;
   windowTabVisible: boolean;
   windowTabIconVisible: boolean;
+  windowTabIconSize: WindowTabIconSize;
   windowWatermark: boolean;
 
   setWindowBorderRadius: (windowBorderRadius: number) => void;
@@ -30,6 +33,7 @@ export interface WindowSlice {
   setWindowTabContent: (windowTabContent: string) => void;
   setWindowTabVisible: (windowTabVisible: boolean) => void;
   setWindowTabIconVisible: (windowTabIconVisible: boolean) => void;
+  setWindowTabIconSize: (windowTabIconSize: WindowTabIconSize) => void;
   setWindowWatermark: (windowWatermark: boolean) => void;
 }
 

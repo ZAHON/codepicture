@@ -3,13 +3,16 @@ import Image from 'next/image';
 import {
   useStore,
   selectWindowTabIconVisible,
+  selectWindowTabIconSize,
   selectEditorLanguage,
   selectEditorLanguageIsLoading,
 } from '@project/store';
 import { Loader } from '@/components';
+import { sandboxWindowTabIconStyles } from './sandbox-window-tab-icon.styles';
 
 export function SandboxWindowTabIcon() {
   const windowTabIconVisible = useStore(selectWindowTabIconVisible);
+  const windowTabIconSize = useStore(selectWindowTabIconSize);
   const editorLanguage = useStore(selectEditorLanguage);
   const editorLanguageIsLoading = useStore(selectEditorLanguageIsLoading);
 
@@ -18,15 +21,16 @@ export function SandboxWindowTabIcon() {
   }
 
   if (editorLanguageIsLoading) {
-    return <Loader size={16} />;
+    return <Loader size={windowTabIconSize} />;
   }
 
   return (
     <Image
       src={`/languages-icons/${editorLanguage}.svg`}
       alt="Language icon"
-      height={16}
-      width={16}
+      height={windowTabIconSize}
+      width={windowTabIconSize}
+      className={sandboxWindowTabIconStyles()}
     />
   );
 }
