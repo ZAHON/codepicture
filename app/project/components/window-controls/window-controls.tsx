@@ -2,6 +2,7 @@ import { WindowHeaderVisibleVontrol } from './window-header-visible-control';
 import { WindowControlsTypeControl } from './window-controls-type-control';
 import { WindowTabVisibleControl } from './window-tab-visible-control';
 import { WindowTabAccentControl } from './window-tab-accent-control';
+import { WindowTabIconVisibleControl } from './window-tab-icon-visible-control';
 import { WindowReflectionControl } from './window-reflection-control';
 import { WindowWatermarkControl } from './window-watermark-control';
 import { WindowShadowControl } from './window-shadow-control';
@@ -18,6 +19,7 @@ export function WindowControls() {
         <WindowControlsTypeControl />
         <WindowTabVisibleControl />
         <WindowTabAccentControl />
+        <WindowTabIconVisibleControl />
         <WindowReflectionControl />
         <WindowWatermarkControl />
         <WindowShadowControl />

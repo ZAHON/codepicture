@@ -18,6 +18,7 @@ export interface WindowSlice {
   windowTabAccent: boolean;
   windowTabContent: string;
   windowTabVisible: boolean;
+  windowTabIconVisible: boolean;
   windowWatermark: boolean;
 
   setWindowBorderRadius: (windowBorderRadius: number) => void;
@@ -28,6 +29,7 @@ export interface WindowSlice {
   setWindowTabAccent: (windowTabVisible: boolean) => void;
   setWindowTabContent: (windowTabContent: string) => void;
   setWindowTabVisible: (windowTabVisible: boolean) => void;
+  setWindowTabIconVisible: (windowTabIconVisible: boolean) => void;
   setWindowWatermark: (windowWatermark: boolean) => void;
 }
 

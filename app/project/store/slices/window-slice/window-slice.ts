@@ -9,6 +9,7 @@ export const createWindowSlice: CreateWindowSlice = (set) => ({
   windowTabAccent: true,
   windowTabContent: 'index.tsx',
   windowTabVisible: true,
+  windowTabIconVisible: true,
   windowWatermark: true,
 
   setWindowBorderRadius: (windowBorderRadius) => set(() => ({ windowBorderRadius })),
@@ -19,5 +20,6 @@ export const createWindowSlice: CreateWindowSlice = (set) => ({
   setWindowTabAccent: (windowTabAccent) => set(() => ({ windowTabAccent })),
   setWindowTabContent: (windowTabContent) => set(() => ({ windowTabContent })),
   setWindowTabVisible: (windowTabVisible) => set(() => ({ windowTabVisible })),
+  setWindowTabIconVisible: (windowTabIconVisible) => set(() => ({ windowTabIconVisible })),
   setWindowWatermark: (windowWatermark) => set(() => ({ windowWatermark })),
 });

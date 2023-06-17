@@ -32,6 +32,10 @@ export const selectSetWindowTabContent = (state: StoreState) => state.setWindowT
 export const selectWindowTabVisible = (state: StoreState) => state.windowTabVisible;
 export const selectSetWindowTabVisible = (state: StoreState) => state.setWindowTabVisible;
 
+// window tab icon visible
+export const selectWindowTabIconVisible = (state: StoreState) => state.windowTabIconVisible;
+export const selectSetWindowTabIconVisible = (state: StoreState) => state.setWindowTabIconVisible;
+
 // window watermark
 export const selectWindowWatermark = (state: StoreState) => state.windowWatermark;
 export const selectSetWindowWatermark = (state: StoreState) => state.setWindowWatermark;
