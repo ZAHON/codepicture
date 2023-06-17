@@ -8,6 +8,7 @@ const shortcuts = [
   { label: 'Toggle theme', keys: ['D'] },
   { label: 'Export image', keys: ['Ctrl', 'S'] },
   { label: 'Open in new tab', keys: ['Ctrl', 'O'] },
+  { label: 'Copy to clipboard', keys: ['Ctrl', 'C'] },
   { label: 'Open shortcuts', keys: ['?'] },
 ];
 

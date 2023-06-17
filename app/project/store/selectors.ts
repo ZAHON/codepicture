@@ -1,3 +1,4 @@
+export * from './slices/copy-to-clipboard-slice/copy-to-clipboard-slice-selectors';
 export * from './slices/editor-slice/editor-slice-selectors';
 export * from './slices/export-image-slice/export-image-slice-selectors';
 export * from './slices/font-slice/font-slice-selectors';

@@ -3,6 +3,7 @@ import { create } from 'zustand';
 import * as slices from './slices';
 
 export const useStore = create<StoreState>()((...a) => ({
+  ...slices.createCopyToClipboardSlice(...a),
   ...slices.createEditorSlice(...a),
   ...slices.createExportImageSlice(...a),
   ...slices.createFontSlice(...a),

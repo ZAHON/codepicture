@@ -1,4 +1,5 @@
 import type {
+  CopyToClipboardSlice,
   EditorSlice,
   ExportImageSlice,
   FontSlice,
@@ -9,7 +10,8 @@ import type {
   WindowSlice,
 } from './slices';
 
-export type StoreState = EditorSlice &
+export type StoreState = CopyToClipboardSlice &
+  EditorSlice &
   ExportImageSlice &
   FontSlice &
   FrameSlice &

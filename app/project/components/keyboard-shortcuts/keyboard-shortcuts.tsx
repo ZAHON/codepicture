@@ -5,6 +5,7 @@ import { KeyboardShortcutsFocusCodeEditor } from './keyboard-shortcuts-focus-cod
 import { KeyboardShortcutsToggleTheme } from './keyboard-shortcuts-toggle-theme';
 import { KeyboardShortcutsExportImage } from './keyboard-shortcuts-export-image';
 import { KeyboardShortcutsOpenInNewTab } from './keyboard-shortcuts-open-in-new-tab';
+import { KeyboardShortcutsCopyToClipboard } from './keyboard-shortcuts-copy-to-clipboard';
 import { KeyboardShortcutsOpenShortcuts } from './keyboard-shortcuts-open-shortcuts';
 
 export function KeyboardShortcuts() {
@@ -22,6 +23,7 @@ export function KeyboardShortcuts() {
       <KeyboardShortcutsToggleTheme />
       <KeyboardShortcutsExportImage />
       <KeyboardShortcutsOpenInNewTab />
+      <KeyboardShortcutsCopyToClipboard />
       <KeyboardShortcutsOpenShortcuts />
     </>
   );
