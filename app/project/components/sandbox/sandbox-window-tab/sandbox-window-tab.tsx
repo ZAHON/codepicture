@@ -13,6 +13,7 @@ import {
   sandboxWindowTabInnerStyles,
   sandboxWindowTabInputStyles,
 } from './sandbox-window-tab.styles';
+import { SandboxWindowTabIcon } from '../sandbox-window-tab-icon';
 
 export function SandboxWindowTab() {
   const windowTabVisible = useStore(selectWindowTabVisible);
@@ -27,6 +28,7 @@ export function SandboxWindowTab() {
   return (
     <div id="sandbox-window-tab" className={sandboxWindowTabStyles()}>
       <div className={twMerge(sandboxWindowTabInnerStyles({ withAccent: windowTabAccent }))}>
+        <SandboxWindowTabIcon />
         <AutosizeInput
           type="text"
           placeholder="Untitled"

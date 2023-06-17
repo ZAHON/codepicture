@@ -9,6 +9,7 @@ export const sandboxWindowTabInnerStyles = cva(
     'flex',
     'justify-start',
     'items-center',
+    'gap-x-2',
     'bg-transparent',
     'shadow-none',
 
