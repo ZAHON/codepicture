@@ -14,7 +14,7 @@ export default function RootLayout(props: { children: ReactNode }) {
 
   return (
     <html suppressHydrationWarning lang="en" className={fontsVariable}>
-      <body>
+      <body className="scrollable">
         <Notifications topOffset={72} rightOffset={16} />
         <Providers>{children}</Providers>
       </body>
