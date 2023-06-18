@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Logo } from '@/svgs';
-import { LinkAsButton } from '@/components';
+import { LinkAsButton, LoginButton } from '@/components';
 
 export function Header() {
   return (
@@ -9,7 +9,11 @@ export function Header() {
         <Link href="/">
           <Logo height="1.5rem" />
         </Link>
-        <LinkAsButton href="/project">Getting started</LinkAsButton>
+        <div className="flex items-center justify-center gap-x-2">
+          {/* @ts-expect-error Server Component */}
+          <LoginButton />
+          <LinkAsButton href="/project">Getting started</LinkAsButton>
+        </div>
       </header>
     </div>
   );
