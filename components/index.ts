@@ -5,6 +5,7 @@ export * from './dialog';
 export * from './icon-button';
 export * from './kbd';
 export * from './label';
+export * from './link-as-button';
 export * from './loader';
 export * from './menu';
 export * from './native-select';
