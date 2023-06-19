@@ -6,4 +6,5 @@ export * from './frame-slice';
 export * from './highlighter-slice';
 export * from './keyboard-shortcuts-slice';
 export * from './open-in-new-tab-slice';
+export * from './project-slice';
 export * from './window-slice';

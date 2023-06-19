@@ -7,6 +7,7 @@ import type {
   HighlighterSlice,
   KeyboardShortcutsSlice,
   OpenInNewTabSlice,
+  ProjectSlice,
   WindowSlice,
 } from './slices';
 
@@ -18,4 +19,5 @@ export type StoreState = CopyToClipboardSlice &
   HighlighterSlice &
   KeyboardShortcutsSlice &
   OpenInNewTabSlice &
+  ProjectSlice &
   WindowSlice;
