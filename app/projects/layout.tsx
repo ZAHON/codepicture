@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Header } from './components';
+import { Header, SubHeader } from './components';
 
 export default function ProjectsPageLayout(props: { children: ReactNode }) {
   const { children } = props;
@@ -7,6 +7,7 @@ export default function ProjectsPageLayout(props: { children: ReactNode }) {
   return (
     <>
       <Header />
+      <SubHeader />
       <main>{children}</main>
     </>
   );
