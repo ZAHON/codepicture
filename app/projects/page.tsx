@@ -1,17 +1,27 @@
 import { redirect } from 'next/navigation';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/lib/auth';
+import { ProjectCard } from './components';
+import { getOwnerProjects } from './server-actions';
+
+export const revalidate = 0;
+export const dynamic = 'force-dynamic';
 
 export default async function ProjectsPage() {
   const session = await getServerSession(authOptions);
+  const ownerId = session?.user?.id;
 
-  if (!session) {
+  if (!session || !ownerId) {
     redirect('/');
   }
 
+  const ownerProjects = await getOwnerProjects(ownerId);
+
   return (
-    <div className="p-4">
-      <h1>Projects page</h1>
-    </div>
+    <>
+      {ownerProjects.map(({ id, ...others }) => (
+        <ProjectCard key={id} id={id} {...others} />
+      ))}
+    </>
   );
 }
