@@ -10,7 +10,7 @@ export function ProjectCard(props: ProjectCardProps) {
   const languageLabel = languages.find(({ id }) => id === editorLanguage)?.label;
 
   return (
-    <li className="">
+    <li>
       <a
         href={`/project/${id}`}
         className="flex flex-col gap-y-4 rounded-lg border border-neutral-5 bg-white p-4 hover:bg-neutral-1 focus:bg-neutral-1 focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary-9 motion-safe:transition motion-safe:duration-150 dark:bg-neutral-2 dark:hover:bg-neutral-3 dark:focus:bg-neutral-3"
@@ -18,7 +18,7 @@ export function ProjectCard(props: ProjectCardProps) {
         <div className="flex flex-col gap-y-2">
           <div className="flex items-center justify-between gap-x-4">
             <h2 className="truncate text-lg font-medium">{name}</h2>
-            <ProjectCardMenu projectId={id} projectName={name} />
+            <ProjectCardMenu key={id} projectId={id} projectName={name} />
           </div>
           <div className="flex items-center gap-x-2">
             <Image

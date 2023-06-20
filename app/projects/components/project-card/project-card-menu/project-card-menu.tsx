@@ -3,8 +3,9 @@ import type { ProjectCardMenuProps } from './project-card-menu.types';
 import { useState } from 'react';
 import { IconDots } from '@tabler/icons-react';
 import { IconButton, Menu, MenuTrigger, MenuContent, MenuSeparator, MenuGroup } from '@/components';
-import { ProjectCardMenuDelete } from './project-card-menu-delate';
+import { ProjectCardMenuClone } from './project-card-menu-clone';
 import { ProjectCardMenuRename } from './project-card-menu-rename';
+import { ProjectCardMenuDelete } from './project-card-menu-delate';
 // import {
 //   useProjectDelateAlertDialogStore,
 //   selectProjectId as selectDeletingProjectId,
@@ -13,6 +14,10 @@ import {
   useProjectRenameDialogStore,
   selectProjectRenameId,
 } from '../../project-renema-dialog/project-renema-dialog-store';
+import {
+  useProjectCardMenuCloneStore,
+  selectProjectCloneId,
+} from './project-card-menu-clone/project-card-menu-clone-store';
 
 export function ProjectCardMenu(props: ProjectCardMenuProps) {
   const { projectId, projectName } = props;
@@ -20,9 +25,10 @@ export function ProjectCardMenu(props: ProjectCardMenuProps) {
   const [open, setOpen] = useState(false);
 
   const projectRenameId = useProjectRenameDialogStore(selectProjectRenameId);
+  const projectCloneId = useProjectCardMenuCloneStore(selectProjectCloneId);
 
   const label = `${open ? 'Close' : 'Open'} project card menu`;
-  const disabled = projectId === projectRenameId;
+  const disabled = projectId === projectRenameId || projectId === projectCloneId;
 
   return (
     <Menu open={open} onOpenChange={setOpen}>
@@ -33,6 +39,7 @@ export function ProjectCardMenu(props: ProjectCardMenuProps) {
       </MenuTrigger>
       <MenuContent align="end">
         <MenuGroup>
+          <ProjectCardMenuClone projectId={projectId} projectName={projectName} />
           <ProjectCardMenuRename projectId={projectId} projectName={projectName} />
           <MenuSeparator />
           <ProjectCardMenuDelete projectId={projectId} projectName={projectName} />
