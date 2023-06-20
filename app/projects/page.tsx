@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/lib/auth';
-import { ProjectCard } from './components';
+import { NotFound, ProjectCardsWrapper, ProjectCard } from './components';
 import { getOwnerProjects } from './server-actions';
 
 export const revalidate = 0;
@@ -17,11 +17,15 @@ export default async function ProjectsPage() {
 
   const ownerProjects = await getOwnerProjects(ownerId);
 
+  if (ownerProjects.length === 0) {
+    return <NotFound />;
+  }
+
   return (
-    <>
+    <ProjectCardsWrapper>
       {ownerProjects.map(({ id, ...others }) => (
         <ProjectCard key={id} id={id} {...others} />
       ))}
-    </>
+    </ProjectCardsWrapper>
   );
 }
