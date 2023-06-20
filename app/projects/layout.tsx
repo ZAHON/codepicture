@@ -1,5 +1,11 @@
 import type { ReactNode } from 'react';
-import { Header, SubHeader, ProjectCardsWrapper, ProjectDelateAlertDialog } from './components';
+import {
+  Header,
+  SubHeader,
+  ProjectCardsWrapper,
+  ProjectDelateAlertDialog,
+  ProjectRenameDialog,
+} from './components';
 
 export default function ProjectsPageLayout(props: { children: ReactNode }) {
   const { children } = props;
@@ -10,6 +16,7 @@ export default function ProjectsPageLayout(props: { children: ReactNode }) {
       <SubHeader />
       <ProjectCardsWrapper>{children}</ProjectCardsWrapper>
 
+      <ProjectRenameDialog />
       <ProjectDelateAlertDialog />
     </>
   );

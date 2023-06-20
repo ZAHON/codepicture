@@ -1,6 +1,7 @@
-export { CreateProject } from './create-project';
-export { Header } from './header';
-export { ProjectCard } from './project-card';
-export { ProjectCardsWrapper } from './project-cards-wrapper';
+export * from './create-project';
+export * from './header';
+export * from './project-card';
+export * from './project-cards-wrapper';
 export * from './project-delate-alert-dialog';
-export { SubHeader } from './sub-header';
+export * from './project-renema-dialog';
+export * from './sub-header';
