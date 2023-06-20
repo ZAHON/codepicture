@@ -9,7 +9,7 @@ export type WindowControlsType =
   | 'windows'
   | 'none';
 
-type WindowTabIconSize = 16 | 20 | 24;
+export type WindowTabIconSize = 16 | 20 | 24;
 
 export interface WindowSlice {
   windowBorderRadius: number;
