@@ -1,9 +1,9 @@
 import type { StateCreator } from 'zustand';
 import type { ColorId, GradientId } from '@/data';
 
-type FrameFill = ColorId | GradientId;
-type FrameFillType = 'color' | 'gradient';
-type FramePaddingType = '0' | '16' | '32' | '64' | '128' | 'custom';
+export type FrameFill = ColorId | GradientId;
+export type FrameFillType = 'color' | 'gradient';
+export type FramePaddingType = '0' | '16' | '32' | '64' | '128' | 'custom';
 
 export interface FrameSlice {
   frameFill: FrameFill;
