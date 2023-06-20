@@ -2,6 +2,7 @@ import type { ProjectCardProps } from './project-card.types';
 import Image from 'next/image';
 import { languages } from '@/data';
 import { formatDistanceToNow } from '@/utils';
+import { ProjectCardMenu } from './project-card-menu';
 
 export function ProjectCard(props: ProjectCardProps) {
   const { id, name, createdAt, updatedAt, editorLanguage } = props;
@@ -9,10 +10,16 @@ export function ProjectCard(props: ProjectCardProps) {
   const languageLabel = languages.find(({ id }) => id === editorLanguage)?.label;
 
   return (
-    <li className="rounded-lg border border-neutral-5 bg-panel p-4 drop-shadow-md focus-within:bg-neutral-1 focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-9 hover:bg-neutral-1 motion-safe:transition motion-safe:duration-150 dark:focus-within:bg-neutral-4 dark:hover:bg-neutral-4">
-      <a href={`/project/${id}`} className="flex flex-col gap-y-4 focus:outline-none">
+    <li className="">
+      <a
+        href={`/project/${id}`}
+        className="flex flex-col gap-y-4 rounded-lg border border-neutral-5 bg-white p-4 hover:bg-neutral-1 focus:bg-neutral-1 focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary-9 motion-safe:transition motion-safe:duration-150 dark:bg-neutral-2 dark:hover:bg-neutral-3 dark:focus:bg-neutral-3"
+      >
         <div className="flex flex-col gap-y-2">
-          <h2 className="truncate text-lg font-medium">{name}</h2>
+          <div className="flex items-center justify-between gap-x-4">
+            <h2 className="truncate text-lg font-medium">{name}</h2>
+            <ProjectCardMenu projectId={id} projectName={name} />
+          </div>
           <div className="flex items-center gap-x-2">
             <Image
               src={`/languages-icons/${editorLanguage}.svg`}
