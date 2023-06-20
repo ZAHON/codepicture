@@ -6,3 +6,47 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Project {
+  id        String   @id @default(uuid())
+  ownerId   String
+  name      String   @default("Untitled")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  frameFill              String  @default("gradient-1")
+  frameFillType          String  @default("gradient")
+  frameOpacity           Float   @default(100)
+  framePaddingType       String  @default("64")
+  framePaddingHorizontal Int     @default(64)
+  framePaddingVertical   Int     @default(64)
+  frameVisible           Boolean @default(true)
+
+  windowBorderRadius   Int     @default(12)
+  windowControlsType   String  @default("macos-filled-color")
+  windowHeaderVisible  Boolean @default(true)
+  windowReflection     Boolean @default(false)
+  windowShadow         String  @default("bottom")
+  windowTabAccent      Boolean @default(true)
+  windowTabContent     String  @default("")
+  windowTabVisible     Boolean @default(true)
+  windowTabIconVisible Boolean @default(true)
+  windowTabIconSize    Int     @default(20)
+  windowWatermark      Boolean @default(true)
+
+  editorCode        String  @default("")
+  editorLanguage    String  @default("tsx")
+  editorLineNumbers Boolean @default(true)
+  editorTheme       String  @default("one-dark-pro")
+
+  fontBolds         Boolean @default(true)
+  fontFamily        String  @default("fira-code")
+  fontItalics       Boolean @default(true)
+  fontLetterSpacing Float   @default(0)
+  fontLigatures     Boolean @default(true)
+  fontLineHeight    Int     @default(133)
+  fontSize          Int     @default(14)
+
+  @@unique([id, ownerId])
+  @@index([name, ownerId])
+}
