@@ -67,6 +67,9 @@ dependencies:
   next-themes:
     specifier: ^0.2.1
     version: 0.2.1(next@13.4.3)(react-dom@18.2.0)(react@18.2.0)
+  prisma-exclude:
+    specifier: ^1.0.2
+    version: 1.0.2
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -10532,6 +10535,10 @@ packages:
     resolution: {integrity: sha512-66hKPCr+72mlfiSjlEB1+45IjXSqvVAIy6mocupoww4tBFE9R9IhwwUGoI4G++Tc9Aq+2rxOt0RFU6gPcrte0A==}
     engines: {node: '>= 0.8'}
     dev: true
+
+  /prisma-exclude@1.0.2:
+    resolution: {integrity: sha512-RgyL8i55Fzig49e5qJHJsmKCtgfsy0IvMYu4577B+ZhYA6+n4qo/EgV0H9kzjPhrB1BCtPGmws+/HYsmsz3dgQ==}
+    dev: false
 
   /prisma@4.15.0:
     resolution: {integrity: sha512-iKZZpobPl48gTcSZVawLMQ3lEy6BnXwtoMj7hluoGFYu2kQ6F9LBuBrUyF95zRVnNo8/3KzLXJXJ5TEnLSJFiA==}
