@@ -101,6 +101,7 @@ module.exports = {
         'hide-notification': 'hide-notification 150ms ease-in forwards',
         'show-dialog-overlay': 'show-dialog-overlay 200ms cubic-bezier(0.16, 1, 0.3, 1)',
         'show-dialog-content': 'show-dialog-content 200ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'skeleton-fade': 'skeleton-fade var(--skeleton-animation-duration) linear infinite',
         scroll: 'scroll 100000ms linear infinite',
       },
       keyframes: {
@@ -135,6 +136,11 @@ module.exports = {
         'show-dialog-content': {
           '0%': { opacity: 0, transform: 'translate(-50%, -50%) scale(0.96)' },
           '100%': { opacity: 1, transform: 'translate(-50%, -50%) scale(1)' },
+        },
+        'skeleton-fade': {
+          '0%': { opacity: 0.1 },
+          '50%': { opacity: 1 },
+          '100%': { opacity: 0.1 },
         },
         scroll: {
           '0%': { transform: 'translateX(0)' },

@@ -19,6 +19,7 @@ export * from './segmented-switch';
 export * from './segmented-tabs';
 export * from './select';
 export * from './separator';
+export * from './skeleton';
 export * from './slider';
 export * from './text-input';
 export * from './theme-changer';
