@@ -1,6 +1,6 @@
 'use client';
 import type { SegmentedSwitchProps } from './segmented-switch.types';
-import { forwardRef, useState } from 'react';
+import { forwardRef, useMemo } from 'react';
 import { Root as SwitchRoot } from '@radix-ui/react-switch';
 import { twMerge } from 'tailwind-merge';
 import { applayComponentDefaultProps } from '@/utils';
@@ -34,7 +34,9 @@ export const SegmentedSwitch = forwardRef<HTMLButtonElement, SegmentedSwitchProp
     ...others
   } = applayComponentDefaultProps(defaultProps, props);
 
-  const [_checked, setChecked] = useState(checked ?? defaultChecked);
+  const _checked = useMemo(() => {
+    return checked ?? defaultChecked;
+  }, [checked, defaultChecked]);
 
   const labels = [
     <SegmentedSwitchLabel
@@ -56,8 +58,6 @@ export const SegmentedSwitch = forwardRef<HTMLButtonElement, SegmentedSwitchProp
   ];
 
   function handleCheckedChange(checked: boolean) {
-    setChecked(checked);
-
     if (onCheckedChange) {
       onCheckedChange(checked);
     }

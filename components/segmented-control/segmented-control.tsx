@@ -50,8 +50,6 @@ export const SegmentedControl = forwardRef<HTMLDivElement, SegmentedControlProps
   };
 
   function handleValueChange(value: string) {
-    // setValue(value);
-
     if (onValueChange) {
       onValueChange(value);
     }
