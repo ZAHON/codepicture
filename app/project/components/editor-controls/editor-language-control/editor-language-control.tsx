@@ -2,7 +2,7 @@
 import { useId } from 'react';
 import { useMediaQuery } from '@/hooks';
 import {
-  useStore,
+  useProjectPageStore,
   selectEditorLanguage,
   selectEditorLanguageIsLoading,
   selectSetEditorLanguage,
@@ -19,9 +19,9 @@ const languagesSorted = languages
 export function EditorLanguageControl() {
   const controlId = useId();
   const matches = useMediaQuery('(min-width: 768px)');
-  const editorLanguage = useStore(selectEditorLanguage);
-  const editorLanguageIsLoading = useStore(selectEditorLanguageIsLoading);
-  const setEditorLanguage = useStore(selectSetEditorLanguage);
+  const editorLanguage = useProjectPageStore(selectEditorLanguage);
+  const editorLanguageIsLoading = useProjectPageStore(selectEditorLanguageIsLoading);
+  const setEditorLanguage = useProjectPageStore(selectSetEditorLanguage);
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">

@@ -1,12 +1,16 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectWindowReflection, selectSetWindowReflection } from '@project/store';
+import {
+  useProjectPageStore,
+  selectWindowReflection,
+  selectSetWindowReflection,
+} from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function WindowReflectionControl() {
   const controlId = useId();
-  const windowReflection = useStore(selectWindowReflection);
-  const setWindowReflection = useStore(selectSetWindowReflection);
+  const windowReflection = useProjectPageStore(selectWindowReflection);
+  const setWindowReflection = useProjectPageStore(selectSetWindowReflection);
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">

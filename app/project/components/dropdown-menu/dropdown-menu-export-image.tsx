@@ -1,15 +1,15 @@
 'use client';
 import { IconPhotoDown } from '@tabler/icons-react';
 import {
-  useStore,
+  useProjectPageStore,
   selectExportImageExporting,
   selectSetExportImageDialogOpen,
 } from '@project/store';
 import { MenuItem, Loader } from '@/components';
 
 export function DropdownMenuExportImage() {
-  const exportImageExporting = useStore(selectExportImageExporting);
-  const setExportImageDialogOpen = useStore(selectSetExportImageDialogOpen);
+  const exportImageExporting = useProjectPageStore(selectExportImageExporting);
+  const setExportImageDialogOpen = useProjectPageStore(selectSetExportImageDialogOpen);
 
   function getIcon() {
     if (exportImageExporting) {

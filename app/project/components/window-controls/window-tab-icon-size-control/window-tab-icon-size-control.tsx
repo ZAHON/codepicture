@@ -1,7 +1,7 @@
 'use client';
 import { useId } from 'react';
 import {
-  useStore,
+  useProjectPageStore,
   selectWindowHeaderVisible,
   selectWindowTabIconVisible,
   selectWindowTabIconSize,
@@ -11,10 +11,10 @@ import { LabelAsSpan, SegmentedControl, SegmentedControlItem } from '@/component
 
 export function WindowTabIconSizeControl() {
   const controlId = useId();
-  const windowHeaderVisible = useStore(selectWindowHeaderVisible);
-  const windowTabIconVisible = useStore(selectWindowTabIconVisible);
-  const windowTabIconSize = useStore(selectWindowTabIconSize);
-  const setWindowTabIconSize = useStore(selectSetWindowTabIconSize);
+  const windowHeaderVisible = useProjectPageStore(selectWindowHeaderVisible);
+  const windowTabIconVisible = useProjectPageStore(selectWindowTabIconVisible);
+  const windowTabIconSize = useProjectPageStore(selectWindowTabIconSize);
+  const setWindowTabIconSize = useProjectPageStore(selectSetWindowTabIconSize);
 
   function handleValueChange(value: string) {
     setWindowTabIconSize(parseInt(value, 10) as typeof windowTabIconSize);

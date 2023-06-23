@@ -1,7 +1,7 @@
-import { useStore, selectEditorCode } from '@project/store';
+import { useProjectPageStore, selectEditorCode } from '@project/store';
 
 export function useSandboxEditorLineNumbers() {
-  const editorCode = useStore(selectEditorCode);
+  const editorCode = useProjectPageStore(selectEditorCode);
 
   const codeLines = Array.from(Array(editorCode.split('\n').length).keys());
   const lineNumbers = codeLines.map((el) => el + 1);

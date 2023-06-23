@@ -1,12 +1,16 @@
 'use client';
 import { useId } from 'react';
 import { LabelAsSpan, SegmentedControl, SegmentedControlItem } from '@/components';
-import { useStore, selectExportImageScale, selectSetExportImageScale } from '@project/store';
+import {
+  useProjectPageStore,
+  selectExportImageScale,
+  selectSetExportImageScale,
+} from '@project/store';
 
 export function ExportImageScaleControl() {
   const controlLabelId = useId();
-  const exportImageScale = useStore(selectExportImageScale);
-  const setExportImageScale = useStore(selectSetExportImageScale);
+  const exportImageScale = useProjectPageStore(selectExportImageScale);
+  const setExportImageScale = useProjectPageStore(selectSetExportImageScale);
 
   return (
     <div className="flex flex-col gap-y-1.5">

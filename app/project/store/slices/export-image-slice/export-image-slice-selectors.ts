@@ -1,25 +1,25 @@
-import type { StoreState } from '../../use-store.types';
+import type { ProjectPageState as State } from '../../use-project-page-store.types';
 
 // export image dialog open
-export const selectExportImageDialogOpen = (state: StoreState) => state.exportImageDialogOpen;
-export const selectSetExportImageDialogOpen = (state: StoreState) => state.setExportImageDialogOpen;
+export const selectExportImageDialogOpen = (state: State) => state.exportImageDialogOpen;
+export const selectSetExportImageDialogOpen = (state: State) => state.setExportImageDialogOpen;
 
 // export image exporting
-export const selectExportImageExporting = (state: StoreState) => state.exportImageExporting;
-export const selectSetExportImageExporting = (state: StoreState) => state.setExportImageExporting;
+export const selectExportImageExporting = (state: State) => state.exportImageExporting;
+export const selectSetExportImageExporting = (state: State) => state.setExportImageExporting;
 
 // export image name
-export const selectExportImageName = (state: StoreState) => state.exportImageName;
-export const selectSetExportImageName = (state: StoreState) => state.setExportImageName;
+export const selectExportImageName = (state: State) => state.exportImageName;
+export const selectSetExportImageName = (state: State) => state.setExportImageName;
 
 // export image extension
-export const selectExportImageExtension = (state: StoreState) => state.exportImageExtension;
-export const selectSetExportImageExtension = (state: StoreState) => state.setExportImageExtension;
+export const selectExportImageExtension = (state: State) => state.exportImageExtension;
+export const selectSetExportImageExtension = (state: State) => state.setExportImageExtension;
 
 // export image quality
-export const selectExportImageQuality = (state: StoreState) => state.exportImageQuality;
-export const selectSetExportImageQuality = (state: StoreState) => state.setExportImageQuality;
+export const selectExportImageQuality = (state: State) => state.exportImageQuality;
+export const selectSetExportImageQuality = (state: State) => state.setExportImageQuality;
 
 // export image scale
-export const selectExportImageScale = (state: StoreState) => state.exportImageScale;
-export const selectSetExportImageScale = (state: StoreState) => state.setExportImageScale;
+export const selectExportImageScale = (state: State) => state.exportImageScale;
+export const selectSetExportImageScale = (state: State) => state.setExportImageScale;

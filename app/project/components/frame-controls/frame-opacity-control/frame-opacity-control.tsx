@@ -1,7 +1,7 @@
 'use client';
 import { useId } from 'react';
 import {
-  useStore,
+  useProjectPageStore,
   selectFrameVisible,
   selectFrameOpacity,
   selectSetFrameOpacity,
@@ -10,9 +10,9 @@ import { LabelAsSpan, Slider } from '@/components';
 
 export function FrameOpacityControl() {
   const controlId = useId();
-  const frameVisible = useStore(selectFrameVisible);
-  const frameOpacity = useStore(selectFrameOpacity);
-  const setFrameOpacity = useStore(selectSetFrameOpacity);
+  const frameVisible = useProjectPageStore(selectFrameVisible);
+  const frameOpacity = useProjectPageStore(selectFrameOpacity);
+  const setFrameOpacity = useProjectPageStore(selectSetFrameOpacity);
 
   if (!frameVisible) {
     return null;

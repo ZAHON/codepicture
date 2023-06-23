@@ -1,12 +1,16 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectWindowHeaderVisible, selectSetWindowHeaderVisible } from '@project/store';
+import {
+  useProjectPageStore,
+  selectWindowHeaderVisible,
+  selectSetWindowHeaderVisible,
+} from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function WindowHeaderVisibleVontrol() {
   const controlId = useId();
-  const windowHeaderVisible = useStore(selectWindowHeaderVisible);
-  const setWindowHeaderVisible = useStore(selectSetWindowHeaderVisible);
+  const windowHeaderVisible = useProjectPageStore(selectWindowHeaderVisible);
+  const setWindowHeaderVisible = useProjectPageStore(selectSetWindowHeaderVisible);
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">

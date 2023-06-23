@@ -1,7 +1,7 @@
 'use client';
 import { useId } from 'react';
 import {
-  useStore,
+  useProjectPageStore,
   selectWindowHeaderVisible,
   selectWindowTabIconVisible,
   selectSetWindowTabIconVisible,
@@ -10,9 +10,9 @@ import { Label, SegmentedSwitch } from '@/components';
 
 export function WindowTabIconVisibleControl() {
   const controlId = useId();
-  const windowHeaderVisible = useStore(selectWindowHeaderVisible);
-  const windowTabIconVisible = useStore(selectWindowTabIconVisible);
-  const setWindowTabIconVisible = useStore(selectSetWindowTabIconVisible);
+  const windowHeaderVisible = useProjectPageStore(selectWindowHeaderVisible);
+  const windowTabIconVisible = useProjectPageStore(selectWindowTabIconVisible);
+  const setWindowTabIconVisible = useProjectPageStore(selectSetWindowTabIconVisible);
 
   if (!windowHeaderVisible) {
     return null;

@@ -1,12 +1,16 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectWindowBorderRadius, selectSetWindowBorderRadius } from '@project/store';
+import {
+  useProjectPageStore,
+  selectWindowBorderRadius,
+  selectSetWindowBorderRadius,
+} from '@project/store';
 import { LabelAsSpan, Slider } from '@/components';
 
 export function WindowBorderRadiusControl() {
   const controlId = useId();
-  const windowBorderRadius = useStore(selectWindowBorderRadius);
-  const setWindowBorderRadius = useStore(selectSetWindowBorderRadius);
+  const windowBorderRadius = useProjectPageStore(selectWindowBorderRadius);
+  const setWindowBorderRadius = useProjectPageStore(selectSetWindowBorderRadius);
 
   return (
     <div className="flex flex-col gap-y-0.5 pl-2">

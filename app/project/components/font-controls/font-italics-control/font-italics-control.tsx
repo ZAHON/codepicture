@@ -1,12 +1,12 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFontItalics, selectSetFontItalics } from '@project/store';
+import { useProjectPageStore, selectFontItalics, selectSetFontItalics } from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function FontItalicsControl() {
   const controlId = useId();
-  const fontItalics = useStore(selectFontItalics);
-  const setFontItalics = useStore(selectSetFontItalics);
+  const fontItalics = useProjectPageStore(selectFontItalics);
+  const setFontItalics = useProjectPageStore(selectSetFontItalics);
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">

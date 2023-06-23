@@ -2,7 +2,7 @@
 import AutosizeInput from 'react-input-autosize';
 import { twMerge } from 'tailwind-merge';
 import {
-  useStore,
+  useProjectPageStore,
   selectWindowTabVisible,
   selectWindowTabAccent,
   selectWindowTabContent,
@@ -16,10 +16,10 @@ import {
 import { SandboxWindowTabIcon } from '../sandbox-window-tab-icon';
 
 export function SandboxWindowTab() {
-  const windowTabVisible = useStore(selectWindowTabVisible);
-  const windowTabAccent = useStore(selectWindowTabAccent);
-  const windowTabContent = useStore(selectWindowTabContent);
-  const setWindowTabContent = useStore(selectSetWindowTabContent);
+  const windowTabVisible = useProjectPageStore(selectWindowTabVisible);
+  const windowTabAccent = useProjectPageStore(selectWindowTabAccent);
+  const windowTabContent = useProjectPageStore(selectWindowTabContent);
+  const setWindowTabContent = useProjectPageStore(selectSetWindowTabContent);
 
   if (!windowTabVisible) {
     return null;

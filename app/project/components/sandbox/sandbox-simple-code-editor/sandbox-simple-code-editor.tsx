@@ -8,7 +8,7 @@ import type {
 import { useState, useRef, useEffect } from 'react';
 import { isMac, isWindowsOrLinux } from './utils';
 import {
-  useStore,
+  useProjectPageStore,
   selectEditorCode,
   selectEditorLanguageIsLoading,
   selectEditorThemeIsLoading,
@@ -26,12 +26,12 @@ const ignoreTabKey = false;
 export function SandboxSimpleCodeEditor(props: SandboxSimpleCodeEditorProps) {
   const { children } = props;
 
-  const editorCode = useStore(selectEditorCode);
-  const editorLanguageIsLoading = useStore(selectEditorLanguageIsLoading);
-  const editorThemeIsLoading = useStore(selectEditorThemeIsLoading);
+  const editorCode = useProjectPageStore(selectEditorCode);
+  const editorLanguageIsLoading = useProjectPageStore(selectEditorLanguageIsLoading);
+  const editorThemeIsLoading = useProjectPageStore(selectEditorThemeIsLoading);
   const editorTabSize = 2;
 
-  const setCode = useStore(selectSetEditorCode);
+  const setCode = useProjectPageStore(selectSetEditorCode);
 
   const [capture, setCapture] = useState(true);
   const textareaRef = useRef<HTMLTextAreaElement>(null);

@@ -1,9 +1,9 @@
 'use client';
 import { useHotkeys } from 'react-hotkeys-hook';
-import { useStore, selectSetKeyboardShortcutsDialogOpen } from '@project/store';
+import { useProjectPageStore, selectSetKeyboardShortcutsDialogOpen } from '@project/store';
 
 export function KeyboardShortcutsOpenShortcuts() {
-  const setKeyboardShortcutsDialogOpen = useStore(selectSetKeyboardShortcutsDialogOpen);
+  const setKeyboardShortcutsDialogOpen = useProjectPageStore(selectSetKeyboardShortcutsDialogOpen);
 
   useHotkeys('Shift+?', () => setKeyboardShortcutsDialogOpen(true));
 

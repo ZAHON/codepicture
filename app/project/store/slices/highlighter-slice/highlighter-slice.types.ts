@@ -1,6 +1,6 @@
 import type { StateCreator } from 'zustand';
 import type { Highlighter } from 'shiki';
-import type { EditorSlice } from '../editor-slice';
+import type { ProjectSlice } from '..';
 
 export interface HighlighterSlice {
   highlighter: Highlighter | undefined;
@@ -9,7 +9,7 @@ export interface HighlighterSlice {
 }
 
 export type CreateHighlighterSlice = StateCreator<
-  HighlighterSlice & EditorSlice,
+  HighlighterSlice & ProjectSlice,
   [],
   [],
   HighlighterSlice

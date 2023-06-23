@@ -1,6 +1,6 @@
 'use client';
 import {
-  useStore,
+  useProjectPageStore,
   selectExportImageDialogOpen,
   selectSetExportImageDialogOpen,
 } from '@project/store';
@@ -10,8 +10,8 @@ import { ExportImageDialogBody } from './export-image-dialog-body';
 import { ExportImageDialogFooter } from './export-image-dialog-footer';
 
 export function ExportImageDialog() {
-  const exportImageDialogOpen = useStore(selectExportImageDialogOpen);
-  const setExportImageDialogOpen = useStore(selectSetExportImageDialogOpen);
+  const exportImageDialogOpen = useProjectPageStore(selectExportImageDialogOpen);
+  const setExportImageDialogOpen = useProjectPageStore(selectSetExportImageDialogOpen);
 
   return (
     <Dialog open={exportImageDialogOpen} onOpenChange={setExportImageDialogOpen}>

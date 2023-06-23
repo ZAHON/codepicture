@@ -1,6 +1,6 @@
 import type { SandboxFrameStyle } from '../sandbox-frame.types';
 import {
-  useStore,
+  useProjectPageStore,
   selectFramePaddingHorizontal,
   selectFramePaddingVertical,
   selectFrameVisible,
@@ -10,11 +10,11 @@ import {
 import { getFillValueById } from '@/utils';
 
 export function useSandboxFrameStyle() {
-  const framePaddingHorizontal = useStore(selectFramePaddingHorizontal);
-  const framePaddingVertical = useStore(selectFramePaddingVertical);
-  const frameVisible = useStore(selectFrameVisible);
-  const frameFill = useStore(selectFrameFill);
-  const frameOpacity = useStore(selectFrameOpacity);
+  const framePaddingHorizontal = useProjectPageStore(selectFramePaddingHorizontal);
+  const framePaddingVertical = useProjectPageStore(selectFramePaddingVertical);
+  const frameVisible = useProjectPageStore(selectFrameVisible);
+  const frameFill = useProjectPageStore(selectFrameFill);
+  const frameOpacity = useProjectPageStore(selectFrameOpacity);
 
   const sandboxFrameStyle: SandboxFrameStyle = {
     '--sandbox-frame-padding-inline': `${framePaddingHorizontal / 16}rem`,

@@ -1,9 +1,13 @@
 import type { SandboxWindowHeaderStyle } from '../sandbox-window-header.types';
-import { useStore, selectWindowTabAccent, selectWindowControlsType } from '@project/store';
+import {
+  useProjectPageStore,
+  selectWindowTabAccent,
+  selectWindowControlsType,
+} from '@project/store';
 
 export function useSandboxWindowHeaderStyle() {
-  const windowTabAccent = useStore(selectWindowTabAccent);
-  const windowControlsType = useStore(selectWindowControlsType);
+  const windowTabAccent = useProjectPageStore(selectWindowTabAccent);
+  const windowControlsType = useProjectPageStore(selectWindowControlsType);
 
   const sandboxWindowHeaderStyle: SandboxWindowHeaderStyle = {
     '--sandbox-window-header-fill': windowTabAccent

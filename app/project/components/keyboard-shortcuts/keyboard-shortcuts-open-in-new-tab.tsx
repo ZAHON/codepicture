@@ -1,9 +1,9 @@
 'use client';
 import { useHotkeys } from 'react-hotkeys-hook';
-import { useStore, selectOpenInNewTabPrePrepareLink } from '@project/store';
+import { useProjectPageStore, selectOpenInNewTabPrePrepareLink } from '@project/store';
 
 export function KeyboardShortcutsOpenInNewTab() {
-  const openInNewTabPrePrepareLink = useStore(selectOpenInNewTabPrePrepareLink);
+  const openInNewTabPrePrepareLink = useProjectPageStore(selectOpenInNewTabPrePrepareLink);
 
   useHotkeys('Ctrl+O', (e) => {
     e.preventDefault();

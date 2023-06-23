@@ -1,23 +1,15 @@
 import type {
   CopyToClipboardSlice,
-  EditorSlice,
   ExportImageSlice,
-  FontSlice,
-  FrameSlice,
   HighlighterSlice,
   KeyboardShortcutsSlice,
   OpenInNewTabSlice,
   ProjectSlice,
-  WindowSlice,
 } from './slices';
 
-export type StoreState = CopyToClipboardSlice &
-  EditorSlice &
+export type ProjectPageState = CopyToClipboardSlice &
   ExportImageSlice &
-  FontSlice &
-  FrameSlice &
   HighlighterSlice &
   KeyboardShortcutsSlice &
   OpenInNewTabSlice &
-  ProjectSlice &
-  WindowSlice;
+  ProjectSlice;

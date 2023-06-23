@@ -1,11 +1,15 @@
 'use client';
 import { IconClipboard } from '@tabler/icons-react';
-import { useStore, selectCopyToClipboardCopying, selectCopyToClipboardCopy } from '@project/store';
+import {
+  useProjectPageStore,
+  selectCopyToClipboardCopying,
+  selectCopyToClipboardCopy,
+} from '@project/store';
 import { MenuItem, Loader } from '@/components';
 
 export function DropdownMenuCopyToClipboard() {
-  const copyToClipboardCopying = useStore(selectCopyToClipboardCopying);
-  const copyToClipboardCopy = useStore(selectCopyToClipboardCopy);
+  const copyToClipboardCopying = useProjectPageStore(selectCopyToClipboardCopying);
+  const copyToClipboardCopy = useProjectPageStore(selectCopyToClipboardCopy);
 
   function getIcon() {
     if (copyToClipboardCopying) {

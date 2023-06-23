@@ -1,7 +1,7 @@
 'use client';
 import { useId } from 'react';
 import { useMediaQuery } from '@/hooks';
-import { useStore, selectWindowShadow, selectSetWindowShadow } from '@project/store';
+import { useProjectPageStore, selectWindowShadow, selectSetWindowShadow } from '@project/store';
 import { Label } from '@/components';
 import { shadows } from '@/data';
 import { WindowShadowControlSelect } from './window-shadow-control-select';
@@ -10,8 +10,8 @@ import { WindowShadowControlNativeSelect } from './window-shadow-control-native-
 export function WindowShadowControl() {
   const controlId = useId();
   const matches = useMediaQuery('(min-width: 768px)');
-  const windowShadow = useStore(selectWindowShadow);
-  const setWindowShadow = useStore(selectSetWindowShadow);
+  const windowShadow = useProjectPageStore(selectWindowShadow);
+  const setWindowShadow = useProjectPageStore(selectSetWindowShadow);
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">

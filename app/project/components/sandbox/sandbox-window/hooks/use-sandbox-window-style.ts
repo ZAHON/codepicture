@@ -1,10 +1,10 @@
 import type { SandboxWindowStyle } from '../sandbox-window.types';
-import { useStore, selectWindowBorderRadius, selectWindowShadow } from '@project/store';
+import { useProjectPageStore, selectWindowBorderRadius, selectWindowShadow } from '@project/store';
 import { getShadowValueById } from '@/utils';
 
 export function useSandboxWindowStyle() {
-  const windowBorderRadius = useStore(selectWindowBorderRadius);
-  const windowShadow = useStore(selectWindowShadow);
+  const windowBorderRadius = useProjectPageStore(selectWindowBorderRadius);
+  const windowShadow = useProjectPageStore(selectWindowShadow);
 
   const sandboxWindowStyle: SandboxWindowStyle = {
     '--sandbox-window-border-radius': `${windowBorderRadius / 16}rem`,

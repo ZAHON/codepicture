@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectHighlighterError, selectSetHighlighter } from '@project/store';
+import { useProjectPageStore, selectHighlighterError, selectSetHighlighter } from '@project/store';
 import {
   Button,
   AlertDialog,
@@ -13,8 +13,8 @@ import {
 } from '@/components';
 
 export function LoadingError() {
-  const highlighterError = useStore(selectHighlighterError);
-  const setHighlighterError = useStore(selectSetHighlighter);
+  const highlighterError = useProjectPageStore(selectHighlighterError);
+  const setHighlighterError = useProjectPageStore(selectSetHighlighter);
 
   function handleTryAgain() {
     setHighlighterError();

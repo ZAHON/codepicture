@@ -1,8 +1,8 @@
 'use client';
-import { useStore, selectExportImageScale } from '@project/store';
+import { useProjectPageStore, selectExportImageScale } from '@project/store';
 
 export function ExportImageOutputResolution() {
-  const exportImageScale = useStore(selectExportImageScale);
+  const exportImageScale = useProjectPageStore(selectExportImageScale);
 
   const sandboxFrameElement = document.getElementById('sandbox-frame');
 

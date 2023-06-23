@@ -3,7 +3,7 @@ import { useRef, useEffect } from 'react';
 import { Root as RadioGroup } from '@radix-ui/react-radio-group';
 import { gradients } from '@/data';
 import {
-  useStore,
+  useProjectPageStore,
   selectFrameFill,
   selectFrameFillType,
   selectSetFrameFill,
@@ -12,10 +12,10 @@ import {
 import { FrameFillControlFillSwatch } from './frame-fill-control-fill-swatch';
 
 export function FrameFillControlGradients() {
-  const frameFill = useStore(selectFrameFill);
-  const frameFillType = useStore(selectFrameFillType);
-  const setFrameFill = useStore(selectSetFrameFill);
-  const setFrameFillType = useStore(selectSetFrameFillType);
+  const frameFill = useProjectPageStore(selectFrameFill);
+  const frameFillType = useProjectPageStore(selectFrameFillType);
+  const setFrameFill = useProjectPageStore(selectSetFrameFill);
+  const setFrameFillType = useProjectPageStore(selectSetFrameFillType);
   const swatchesRef = useRef<Map<string, HTMLButtonElement> | null>(null);
   const radioGroupRef = useRef<HTMLDivElement>(null);
 

@@ -1,12 +1,12 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFontLineHeight, selectSetFontLineHeight } from '@project/store';
+import { useProjectPageStore, selectFontLineHeight, selectSetFontLineHeight } from '@project/store';
 import { LabelAsSpan, Slider } from '@/components';
 
 export function FontLineHeightControl() {
   const controlId = useId();
-  const fontLineHeight = useStore(selectFontLineHeight);
-  const setFontLineHeight = useStore(selectSetFontLineHeight);
+  const fontLineHeight = useProjectPageStore(selectFontLineHeight);
+  const setFontLineHeight = useProjectPageStore(selectSetFontLineHeight);
 
   return (
     <div className="flex flex-col gap-y-0.5 pl-2">

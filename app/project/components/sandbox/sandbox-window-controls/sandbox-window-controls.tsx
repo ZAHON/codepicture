@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectWindowControlsType } from '@project/store';
+import { useProjectPageStore, selectWindowControlsType } from '@project/store';
 import {
   MacOSFilledColor,
   MacOSFilledGray,
@@ -10,7 +10,7 @@ import {
 import { sandboxWindowControlsStyles } from './sandbox-window-controls.styles';
 
 export function SandboxWindowControls() {
-  const windowControlsType = useStore(selectWindowControlsType);
+  const windowControlsType = useProjectPageStore(selectWindowControlsType);
 
   function getWindowControls() {
     switch (windowControlsType) {

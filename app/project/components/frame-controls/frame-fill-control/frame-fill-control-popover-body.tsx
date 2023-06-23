@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectFrameFillType, selectSetFrameFillType } from '@project/store';
+import { useProjectPageStore, selectFrameFillType, selectSetFrameFillType } from '@project/store';
 import {
   SegmentedTabs,
   SegmentedTabsList,
@@ -10,8 +10,8 @@ import { FrameFillControlColors } from './frame-fill-control-colors';
 import { FrameFillControlGradients } from './frame-fill-control-gradients';
 
 export function FrameFillControlPopoverBody() {
-  const frameFillType = useStore(selectFrameFillType);
-  const setFrameFillType = useStore(selectSetFrameFillType);
+  const frameFillType = useProjectPageStore(selectFrameFillType);
+  const setFrameFillType = useProjectPageStore(selectSetFrameFillType);
 
   function handleValueChange(value: string) {
     setFrameFillType(value as typeof frameFillType);

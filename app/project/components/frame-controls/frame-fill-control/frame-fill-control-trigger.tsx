@@ -1,14 +1,14 @@
 'use client';
 import type { ButtonHTMLAttributes } from 'react';
 import { forwardRef } from 'react';
-import { useStore, selectFrameFill } from '@project/store';
+import { useProjectPageStore, selectFrameFill } from '@project/store';
 import { getFillValueById } from '@/utils';
 
 type FrameFillControlTriggerProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const FrameFillControlTrigger = forwardRef<HTMLButtonElement, FrameFillControlTriggerProps>(
   (props, ref) => {
-    const frameFill = useStore(selectFrameFill);
+    const frameFill = useProjectPageStore(selectFrameFill);
 
     const frameFillValue = getFillValueById(frameFill);
 

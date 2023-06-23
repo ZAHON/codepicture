@@ -1,7 +1,7 @@
 'use client';
 import { useId } from 'react';
 import { useMediaQuery } from '@/hooks';
-import { useStore, selectFontFamily, selectSetFontFamily } from '@project/store';
+import { useProjectPageStore, selectFontFamily, selectSetFontFamily } from '@project/store';
 import { Label } from '@/components';
 import { fonts } from '@/data';
 import { FontFamilyControlSelect } from './font-family-control-select';
@@ -18,8 +18,8 @@ const fontsWithoutLigatures = fonts
 export function FontFamilyControl() {
   const controlId = useId();
   const matches = useMediaQuery('(min-width: 768px)');
-  const fontFamily = useStore(selectFontFamily);
-  const setFontFamily = useStore(selectSetFontFamily);
+  const fontFamily = useProjectPageStore(selectFontFamily);
+  const setFontFamily = useProjectPageStore(selectSetFontFamily);
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">

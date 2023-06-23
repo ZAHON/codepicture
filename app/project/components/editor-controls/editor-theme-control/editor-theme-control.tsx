@@ -2,7 +2,7 @@
 import { useId } from 'react';
 import { useMediaQuery } from '@/hooks';
 import {
-  useStore,
+  useProjectPageStore,
   selectEditorTheme,
   selectEditorThemeIsLoading,
   selectSetEditorTheme,
@@ -23,9 +23,9 @@ const themesLightSorted = themes
 export function EditorThemeControl() {
   const controlId = useId();
   const matches = useMediaQuery('(min-width: 768px)');
-  const editorTheme = useStore(selectEditorTheme);
-  const editorThemeIsLoading = useStore(selectEditorThemeIsLoading);
-  const setEditorTheme = useStore(selectSetEditorTheme);
+  const editorTheme = useProjectPageStore(selectEditorTheme);
+  const editorThemeIsLoading = useProjectPageStore(selectEditorThemeIsLoading);
+  const setEditorTheme = useProjectPageStore(selectSetEditorTheme);
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">

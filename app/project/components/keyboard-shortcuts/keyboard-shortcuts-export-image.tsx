@@ -1,14 +1,14 @@
 'use client';
 import { useHotkeys } from 'react-hotkeys-hook';
 import {
-  useStore,
+  useProjectPageStore,
   selectSetExportImageDialogOpen,
   selectSetKeyboardShortcutsDialogOpen,
 } from '@project/store';
 
 export function KeyboardShortcutsExportImage() {
-  const setExportImageDialogOpen = useStore(selectSetExportImageDialogOpen);
-  const setKeyboardShortcutsDialogOpen = useStore(selectSetKeyboardShortcutsDialogOpen);
+  const setExportImageDialogOpen = useProjectPageStore(selectSetExportImageDialogOpen);
+  const setKeyboardShortcutsDialogOpen = useProjectPageStore(selectSetKeyboardShortcutsDialogOpen);
 
   useHotkeys('Ctrl+S', (e) => {
     e.preventDefault();

@@ -1,12 +1,16 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectEditorLineNumbers, selectSetEditorLineNumbers } from '@project/store';
+import {
+  useProjectPageStore,
+  selectEditorLineNumbers,
+  selectSetEditorLineNumbers,
+} from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function EditorLineNumbersControl() {
   const controlId = useId();
-  const editorLineNumbers = useStore(selectEditorLineNumbers);
-  const setEditorLineNumbers = useStore(selectSetEditorLineNumbers);
+  const editorLineNumbers = useProjectPageStore(selectEditorLineNumbers);
+  const setEditorLineNumbers = useProjectPageStore(selectSetEditorLineNumbers);
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">

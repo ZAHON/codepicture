@@ -1,13 +1,13 @@
 'use client';
 import type { SandboxWindowHeaderProps } from './sandbox-window-header.types';
-import { useStore, selectWindowHeaderVisible } from '@project/store';
+import { useProjectPageStore, selectWindowHeaderVisible } from '@project/store';
 import { useSandboxWindowHeaderStyle } from './hooks';
 import { sandboxWindowHeaderStyles } from './sandbox-window-header.styles';
 
 export function SandboxWindowHeader(props: SandboxWindowHeaderProps) {
   const { children } = props;
 
-  const windowHeaderVisible = useStore(selectWindowHeaderVisible);
+  const windowHeaderVisible = useProjectPageStore(selectWindowHeaderVisible);
   const sandboxWindowHeaderStyle = useSandboxWindowHeaderStyle();
 
   if (!windowHeaderVisible) {

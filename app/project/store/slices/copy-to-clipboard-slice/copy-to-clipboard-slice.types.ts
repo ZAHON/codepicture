@@ -1,5 +1,5 @@
 import type { StateCreator } from 'zustand';
-import type { WindowSlice } from '..';
+import type { ProjectSlice } from '..';
 
 export interface CopyToClipboardSlice {
   copyToClipboardCopying: boolean;
@@ -8,7 +8,7 @@ export interface CopyToClipboardSlice {
 }
 
 export type CreateCopyToClipboardSlice = StateCreator<
-  CopyToClipboardSlice & WindowSlice,
+  CopyToClipboardSlice & ProjectSlice,
   [],
   [],
   CopyToClipboardSlice

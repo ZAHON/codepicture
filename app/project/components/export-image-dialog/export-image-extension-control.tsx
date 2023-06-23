@@ -2,15 +2,15 @@
 import { useId } from 'react';
 import { LabelAsSpan, SegmentedControl, SegmentedControlItem } from '@/components';
 import {
-  useStore,
+  useProjectPageStore,
   selectExportImageExtension,
   selectSetExportImageExtension,
 } from '@project/store';
 
 export function ExportMenuExtensionControl() {
   const controlLabelId = useId();
-  const exportImageExtension = useStore(selectExportImageExtension);
-  const setExportImageExtension = useStore(selectSetExportImageExtension);
+  const exportImageExtension = useProjectPageStore(selectExportImageExtension);
+  const setExportImageExtension = useProjectPageStore(selectSetExportImageExtension);
 
   return (
     <div className="flex flex-col gap-y-1.5">

@@ -1,5 +1,5 @@
-import type { StoreState } from '../../use-store.types';
+import type { ProjectPageState as State } from '../../use-project-page-store.types';
 
-export const selectCopyToClipboardCopying = (state: StoreState) => state.copyToClipboardCopying;
+export const selectCopyToClipboardCopying = (state: State) => state.copyToClipboardCopying;
 
-export const selectCopyToClipboardCopy = (state: StoreState) => state.copyToClipboardCopy;
+export const selectCopyToClipboardCopy = (state: State) => state.copyToClipboardCopy;

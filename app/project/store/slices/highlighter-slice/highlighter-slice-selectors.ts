@@ -1,8 +1,8 @@
-import type { StoreState } from '../../use-store.types';
+import type { ProjectPageState as State } from '../../use-project-page-store.types';
 
 // highlighter
-export const selectHighlighter = (state: StoreState) => state.highlighter;
-export const selectSetHighlighter = (state: StoreState) => state.setHighlighter;
+export const selectHighlighter = (state: State) => state.highlighter;
+export const selectSetHighlighter = (state: State) => state.setHighlighter;
 
 // highlighterError
-export const selectHighlighterError = (state: StoreState) => state.highlighterError;
+export const selectHighlighterError = (state: State) => state.highlighterError;

@@ -1,16 +1,63 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFramePaddingType, selectSetFramePaddingType } from '@project/store';
+import {
+  useProjectPageStore,
+  selectFramePaddingType,
+  selectSetFramePaddingType,
+  selectSetFramePaddingHorizontal,
+  selectSetFramePaddingVertical,
+} from '@project/store';
 import { IconAdjustmentsAlt } from '@tabler/icons-react';
 import { LabelAsSpan, SegmentedControl, SegmentedControlItem } from '@/components';
 
 export function FramePaddingTypeControl() {
   const controlId = useId();
-  const framePaddingType = useStore(selectFramePaddingType);
-  const setFramePaddingType = useStore(selectSetFramePaddingType);
+  const framePaddingType = useProjectPageStore(selectFramePaddingType);
+  const setFramePaddingType = useProjectPageStore(selectSetFramePaddingType);
+  const setFramePaddingHorizontal = useProjectPageStore(selectSetFramePaddingHorizontal);
+  const setFramePaddingVertical = useProjectPageStore(selectSetFramePaddingVertical);
 
   function handleValueChange(value: string) {
-    setFramePaddingType(value as typeof framePaddingType);
+    const paddingType = value as typeof framePaddingType;
+
+    function setPadding(type: typeof framePaddingType, value?: number) {
+      setFramePaddingType(type);
+
+      if (typeof value === 'number') {
+        setFramePaddingHorizontal(value);
+        setFramePaddingVertical(value);
+      }
+    }
+
+    switch (paddingType) {
+      case '0': {
+        setPadding('0', 0);
+        return;
+      }
+      case '16': {
+        setPadding('16', 16);
+        return;
+      }
+      case '32': {
+        setPadding('32', 32);
+        return;
+      }
+      case '64': {
+        setPadding('64', 64);
+        return;
+      }
+      case '128': {
+        setPadding('128', 128);
+        return;
+      }
+      case 'custom': {
+        setPadding('custom');
+        return;
+      }
+      default: {
+        throw Error(`Unknown framePaddingType: ${framePaddingType}`);
+      }
+    }
   }
 
   return (

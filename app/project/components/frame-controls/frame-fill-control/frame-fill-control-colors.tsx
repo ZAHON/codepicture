@@ -3,7 +3,7 @@ import { useRef, useEffect } from 'react';
 import { Root as RadioGroup } from '@radix-ui/react-radio-group';
 import * as colors from '@/data/colors';
 import {
-  useStore,
+  useProjectPageStore,
   selectFrameFill,
   selectFrameFillType,
   selectSetFrameFill,
@@ -37,10 +37,10 @@ const data = [
 ];
 
 export function FrameFillControlColors() {
-  const frameFill = useStore(selectFrameFill);
-  const frameFillType = useStore(selectFrameFillType);
-  const setFrameFill = useStore(selectSetFrameFill);
-  const setFrameFillType = useStore(selectSetFrameFillType);
+  const frameFill = useProjectPageStore(selectFrameFill);
+  const frameFillType = useProjectPageStore(selectFrameFillType);
+  const setFrameFill = useProjectPageStore(selectSetFrameFill);
+  const setFrameFillType = useProjectPageStore(selectSetFrameFillType);
   const swatchesRef = useRef<Map<string, HTMLButtonElement> | null>(null);
 
   useEffect(() => {

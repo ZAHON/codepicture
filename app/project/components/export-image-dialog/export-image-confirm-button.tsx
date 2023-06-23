@@ -1,6 +1,6 @@
 'use client';
 import {
-  useStore,
+  useProjectPageStore,
   selectExportImageName,
   selectExportImageExtension,
   selectExportImageQuality,
@@ -13,15 +13,15 @@ import { Button } from '@/components';
 import { htmlToImage, notify } from '@/lib-client';
 
 export function ExportImageConfirmButton() {
-  const windowTabContent = useStore(selectWindowTabContent);
+  const windowTabContent = useProjectPageStore(selectWindowTabContent);
 
-  const exportImageName = useStore(selectExportImageName);
-  const exportImageExtension = useStore(selectExportImageExtension);
-  const exportImageQuality = useStore(selectExportImageQuality);
-  const exportImageScale = useStore(selectExportImageScale);
+  const exportImageName = useProjectPageStore(selectExportImageName);
+  const exportImageExtension = useProjectPageStore(selectExportImageExtension);
+  const exportImageQuality = useProjectPageStore(selectExportImageQuality);
+  const exportImageScale = useProjectPageStore(selectExportImageScale);
 
-  const setExportImageDialogOpen = useStore(selectSetExportImageDialogOpen);
-  const setExportImageExporting = useStore(selectSetExportImageExporting);
+  const setExportImageDialogOpen = useProjectPageStore(selectSetExportImageDialogOpen);
+  const setExportImageExporting = useProjectPageStore(selectSetExportImageExporting);
 
   async function handleConfirm() {
     const notificationId = crypto.randomUUID();

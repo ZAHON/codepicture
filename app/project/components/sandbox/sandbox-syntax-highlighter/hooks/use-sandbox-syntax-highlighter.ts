@@ -1,7 +1,7 @@
 import type { IThemedToken } from 'shiki';
 import { useRef, useMemo } from 'react';
 import {
-  useStore,
+  useProjectPageStore,
   selectHighlighter,
   selectEditorCode,
   selectEditorLanguage,
@@ -12,12 +12,12 @@ import {
 import { getThemedTokens } from '../utils';
 
 export function useSandboxSyntaxHighlighter() {
-  const highlighter = useStore(selectHighlighter);
-  const editorCode = useStore(selectEditorCode);
-  const editorLanguage = useStore(selectEditorLanguage);
-  const editorLanguageIsLoading = useStore(selectEditorLanguageIsLoading);
-  const editorTheme = useStore(selectEditorTheme);
-  const editorThemeIsLoading = useStore(selectEditorThemeIsLoading);
+  const highlighter = useProjectPageStore(selectHighlighter);
+  const editorCode = useProjectPageStore(selectEditorCode);
+  const editorLanguage = useProjectPageStore(selectEditorLanguage);
+  const editorLanguageIsLoading = useProjectPageStore(selectEditorLanguageIsLoading);
+  const editorTheme = useProjectPageStore(selectEditorTheme);
+  const editorThemeIsLoading = useProjectPageStore(selectEditorThemeIsLoading);
 
   const prevLinesWithTokens = useRef<IThemedToken[][] | string>('');
 

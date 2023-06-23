@@ -1,15 +1,15 @@
 'use client';
 import { IconExternalLink } from '@tabler/icons-react';
 import {
-  useStore,
+  useProjectPageStore,
   selectOpenInNewTabPrePreparingLink,
   selectOpenInNewTabPrePrepareLink,
 } from '@project/store';
 import { MenuItem, Loader } from '@/components';
 
 export function DropdownMenuOpenInNewTab() {
-  const openInNewTabPrePreparingLink = useStore(selectOpenInNewTabPrePreparingLink);
-  const openInNewTabPrePrepareLink = useStore(selectOpenInNewTabPrePrepareLink);
+  const openInNewTabPrePreparingLink = useProjectPageStore(selectOpenInNewTabPrePreparingLink);
+  const openInNewTabPrePrepareLink = useProjectPageStore(selectOpenInNewTabPrePrepareLink);
 
   function getIcon() {
     if (openInNewTabPrePreparingLink) {

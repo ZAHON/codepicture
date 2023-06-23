@@ -1,12 +1,16 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectWindowWatermark, selectSetWindowWatermark } from '@project/store';
+import {
+  useProjectPageStore,
+  selectWindowWatermark,
+  selectSetWindowWatermark,
+} from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function WindowWatermarkControl() {
   const controlId = useId();
-  const windowWatermark = useStore(selectWindowWatermark);
-  const setWindowWatermark = useStore(selectSetWindowWatermark);
+  const windowWatermark = useProjectPageStore(selectWindowWatermark);
+  const setWindowWatermark = useProjectPageStore(selectSetWindowWatermark);
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">

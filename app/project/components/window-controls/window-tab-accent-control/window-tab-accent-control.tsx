@@ -1,7 +1,7 @@
 'use client';
 import { useId } from 'react';
 import {
-  useStore,
+  useProjectPageStore,
   selectWindowHeaderVisible,
   selectWindowTabVisible,
   selectWindowTabAccent,
@@ -11,10 +11,10 @@ import { Label, SegmentedSwitch } from '@/components';
 
 export function WindowTabAccentControl() {
   const controlId = useId();
-  const windowHeaderVisible = useStore(selectWindowHeaderVisible);
-  const windowTabVisible = useStore(selectWindowTabVisible);
-  const windowTabAccent = useStore(selectWindowTabAccent);
-  const setWindowTabAccent = useStore(selectSetWindowTabAccent);
+  const windowHeaderVisible = useProjectPageStore(selectWindowHeaderVisible);
+  const windowTabVisible = useProjectPageStore(selectWindowTabVisible);
+  const windowTabAccent = useProjectPageStore(selectWindowTabAccent);
+  const setWindowTabAccent = useProjectPageStore(selectSetWindowTabAccent);
 
   if (!windowHeaderVisible || !windowTabVisible) {
     return null;

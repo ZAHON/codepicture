@@ -1,12 +1,12 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFrameVisible, selectSetFrameVisible } from '@project/store';
+import { useProjectPageStore, selectFrameVisible, selectSetFrameVisible } from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function FrameVisibleControl() {
   const controlId = useId();
-  const frameVisible = useStore(selectFrameVisible);
-  const setFrameVisible = useStore(selectSetFrameVisible);
+  const frameVisible = useProjectPageStore(selectFrameVisible);
+  const setFrameVisible = useProjectPageStore(selectSetFrameVisible);
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">

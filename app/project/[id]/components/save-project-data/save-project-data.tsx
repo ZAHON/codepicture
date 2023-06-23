@@ -1,22 +1,20 @@
 'use client';
-import type { SaveProjectDataArgs } from '../../server-actions';
+import type { SaveProjectDataArgs } from '@project/[id]/server-actions';
 import { useRef, useEffect, useTransition } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
-import { saveProjectData } from '../../server-actions';
-import { useStore, selectProjectId, selectProjectName } from '@project/store';
+import { saveProjectData } from '@project/[id]/server-actions';
 import { notify } from '@/lib-client';
-import { useFrameState, useWindowState, useEditorState, useFontState } from './hooks';
+import { useProjectState } from './hooks';
 
 const notificationId = crypto.randomUUID();
 
 export function SaveProjectData() {
   const didMount = useRef(false);
-  const [isPending, startTransition] = useTransition();
-
-  const projectId = useStore(selectProjectId);
-  const projectName = useStore(selectProjectName);
+  const [, startTransition] = useTransition();
 
   const {
+    projectId,
+    projectName,
     frameFill,
     frameFillType,
     frameOpacity,
@@ -24,9 +22,6 @@ export function SaveProjectData() {
     framePaddingHorizontal,
     framePaddingVertical,
     frameVisible,
-  } = useFrameState();
-
-  const {
     windowBorderRadius,
     windowControlsType,
     windowHeaderVisible,
@@ -38,11 +33,10 @@ export function SaveProjectData() {
     windowTabIconVisible,
     windowTabIconSize,
     windowWatermark,
-  } = useWindowState();
-
-  const { editorCode, editorLanguage, editorLineNumbers, editorTheme } = useEditorState();
-
-  const {
+    editorCode,
+    editorLanguage,
+    editorLineNumbers,
+    editorTheme,
     fontBolds,
     fontFamily,
     fontItalics,
@@ -50,16 +44,24 @@ export function SaveProjectData() {
     fontLigatures,
     fontLineHeight,
     fontSize,
-  } = useFontState();
+  } = useProjectState();
 
   const debounced = useDebouncedCallback((data: SaveProjectDataArgs) => {
     if (didMount.current) {
-      startTransition(() => saveProjectData(data));
-
       notify.show({
         id: notificationId,
         type: 'loading',
         message: 'Saving project data',
+      });
+
+      startTransition(async () => {
+        await saveProjectData(data);
+
+        notify.show({
+          id: notificationId,
+          type: 'success',
+          message: 'Successfully saved project data',
+        });
       });
     } else {
       didMount.current = true;
@@ -101,6 +103,7 @@ export function SaveProjectData() {
       fontSize,
     });
   }, [
+    debounced,
     projectId,
     projectName,
     frameFill,
@@ -133,12 +136,6 @@ export function SaveProjectData() {
     fontLineHeight,
     fontSize,
   ]);
-
-  useEffect(() => {
-    if (!isPending) {
-      notify.dismiss(notificationId);
-    }
-  }, [isPending]);
 
   return null;
 }

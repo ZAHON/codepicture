@@ -2,7 +2,7 @@
 import { useId } from 'react';
 import { LabelAsSpan, Slider } from '@/components';
 import {
-  useStore,
+  useProjectPageStore,
   selectExportImageExtension,
   selectExportImageQuality,
   selectSetExportImageQuality,
@@ -10,9 +10,9 @@ import {
 
 export function ExportImageQualityControl() {
   const controlLabelId = useId();
-  const exportImageExtension = useStore(selectExportImageExtension);
-  const exportImageQuality = useStore(selectExportImageQuality);
-  const setExportImageQuality = useStore(selectSetExportImageQuality);
+  const exportImageExtension = useProjectPageStore(selectExportImageExtension);
+  const exportImageQuality = useProjectPageStore(selectExportImageQuality);
+  const setExportImageQuality = useProjectPageStore(selectSetExportImageQuality);
 
   if (exportImageExtension !== 'jpeg') {
     return null;

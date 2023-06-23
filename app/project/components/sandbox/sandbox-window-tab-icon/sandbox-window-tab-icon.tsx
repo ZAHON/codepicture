@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import {
-  useStore,
+  useProjectPageStore,
   selectWindowTabIconVisible,
   selectWindowTabIconSize,
   selectEditorLanguage,
@@ -11,10 +11,10 @@ import { Loader } from '@/components';
 import { sandboxWindowTabIconStyles } from './sandbox-window-tab-icon.styles';
 
 export function SandboxWindowTabIcon() {
-  const windowTabIconVisible = useStore(selectWindowTabIconVisible);
-  const windowTabIconSize = useStore(selectWindowTabIconSize);
-  const editorLanguage = useStore(selectEditorLanguage);
-  const editorLanguageIsLoading = useStore(selectEditorLanguageIsLoading);
+  const windowTabIconVisible = useProjectPageStore(selectWindowTabIconVisible);
+  const windowTabIconSize = useProjectPageStore(selectWindowTabIconSize);
+  const editorLanguage = useProjectPageStore(selectEditorLanguage);
+  const editorLanguageIsLoading = useProjectPageStore(selectEditorLanguageIsLoading);
 
   if (!windowTabIconVisible) {
     return null;

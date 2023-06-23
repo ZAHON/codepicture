@@ -2,7 +2,7 @@
 import { useId } from 'react';
 import { useMediaQuery } from '@/hooks';
 import {
-  useStore,
+  useProjectPageStore,
   selectWindowControlsType,
   selectWindowHeaderVisible,
   selectSetWindowControlsType,
@@ -14,9 +14,9 @@ import { WindowControlsTypeControlNativeSelect } from './window-controls-type-co
 export function WindowControlsTypeControl() {
   const controlId = useId();
   const matches = useMediaQuery('(min-width: 768px)');
-  const windowHeaderVisible = useStore(selectWindowHeaderVisible);
-  const windowControlsType = useStore(selectWindowControlsType);
-  const setWindowControlsType = useStore(selectSetWindowControlsType);
+  const windowHeaderVisible = useProjectPageStore(selectWindowHeaderVisible);
+  const windowControlsType = useProjectPageStore(selectWindowControlsType);
+  const setWindowControlsType = useProjectPageStore(selectSetWindowControlsType);
 
   if (!windowHeaderVisible) {
     return null;

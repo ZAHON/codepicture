@@ -1,7 +1,7 @@
-import type { StoreState } from '../../use-store.types';
+import type { ProjectPageState as State } from '../../use-project-page-store.types';
 
-export const selectKeyboardShortcutsDialogOpen = (state: StoreState) =>
+export const selectKeyboardShortcutsDialogOpen = (state: State) =>
   state.keyboardShortcutsDialogOpen;
 
-export const selectSetKeyboardShortcutsDialogOpen = (state: StoreState) =>
+export const selectSetKeyboardShortcutsDialogOpen = (state: State) =>
   state.setKeyboardShortcutsDialogOpen;

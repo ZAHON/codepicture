@@ -1,5 +1,5 @@
 import type { StateCreator } from 'zustand';
-import type { WindowSlice } from '..';
+import type { ProjectSlice } from '..';
 
 export interface OpenInNewTabSlice {
   openInNewTabPrePreparingLink: boolean;
@@ -8,7 +8,7 @@ export interface OpenInNewTabSlice {
 }
 
 export type CreateOpenInNewTabSlice = StateCreator<
-  OpenInNewTabSlice & WindowSlice,
+  OpenInNewTabSlice & ProjectSlice,
   [],
   [],
   OpenInNewTabSlice

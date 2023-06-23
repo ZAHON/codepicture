@@ -1,12 +1,12 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFontLigatures, selectSetFontLigatures } from '@project/store';
+import { useProjectPageStore, selectFontLigatures, selectSetFontLigatures } from '@project/store';
 import { Label, SegmentedSwitch } from '@/components';
 
 export function FontLigaturesControl() {
   const controlId = useId();
-  const fontLigatures = useStore(selectFontLigatures);
-  const setFontLigatures = useStore(selectSetFontLigatures);
+  const fontLigatures = useProjectPageStore(selectFontLigatures);
+  const setFontLigatures = useProjectPageStore(selectSetFontLigatures);
 
   return (
     <div className="grid grid-cols-3 items-center pl-2">

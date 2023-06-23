@@ -1,12 +1,12 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFontSize, selectSetFontSize } from '@project/store';
+import { useProjectPageStore, selectFontSize, selectSetFontSize } from '@project/store';
 import { LabelAsSpan, Slider } from '@/components';
 
 export function FontSizeControl() {
   const controlId = useId();
-  const fontSize = useStore(selectFontSize);
-  const setFontSize = useStore(selectSetFontSize);
+  const fontSize = useProjectPageStore(selectFontSize);
+  const setFontSize = useProjectPageStore(selectSetFontSize);
 
   return (
     <div className="flex flex-col gap-y-0.5 pl-2">

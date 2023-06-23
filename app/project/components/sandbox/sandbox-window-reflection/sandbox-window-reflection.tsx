@@ -1,6 +1,6 @@
 'use client';
 import type { SandboxWindowReflectionProps } from './sandbox-window-reflection.types';
-import { useStore, selectEditorTheme, selectWindowReflection } from '@project/store';
+import { useProjectPageStore, selectEditorTheme, selectWindowReflection } from '@project/store';
 import { twMerge } from 'tailwind-merge';
 import { getThemeTypeById } from '@/utils';
 import { sandboxWindowReflectionStyles } from './sandbox-window-reflection.styles';
@@ -8,8 +8,8 @@ import { sandboxWindowReflectionStyles } from './sandbox-window-reflection.style
 export function SandboxWindowReflection(props: SandboxWindowReflectionProps) {
   const { children } = props;
 
-  const editorTheme = useStore(selectEditorTheme);
-  const windowReflection = useStore(selectWindowReflection);
+  const editorTheme = useProjectPageStore(selectEditorTheme);
+  const windowReflection = useProjectPageStore(selectWindowReflection);
 
   const themeType = getThemeTypeById(editorTheme);
 

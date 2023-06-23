@@ -1,12 +1,16 @@
 'use client';
 import { useId } from 'react';
-import { useStore, selectFontLetterSpacing, selectSetFontLetterSpacing } from '@project/store';
+import {
+  useProjectPageStore,
+  selectFontLetterSpacing,
+  selectSetFontLetterSpacing,
+} from '@project/store';
 import { LabelAsSpan, Slider } from '@/components';
 
 export function FontLetterSpacingControl() {
   const controlId = useId();
-  const fontLetterSpacing = useStore(selectFontLetterSpacing);
-  const setFontLetterSpacing = useStore(selectSetFontLetterSpacing);
+  const fontLetterSpacing = useProjectPageStore(selectFontLetterSpacing);
+  const setFontLetterSpacing = useProjectPageStore(selectSetFontLetterSpacing);
 
   return (
     <div className="flex flex-col gap-y-0.5 pl-2">

@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectEditorLineNumbers } from '@project/store';
+import { useProjectPageStore, selectEditorLineNumbers } from '@project/store';
 import { useSandboxEditorLineNumbers } from './hooks';
 import {
   sandboxEditorLineNumbersStyles,
@@ -8,7 +8,7 @@ import {
 } from './sandbox-editor-line-numbers.styles';
 
 export function SandboxEditorLineNumbers() {
-  const editorLineNumbers = useStore(selectEditorLineNumbers);
+  const editorLineNumbers = useProjectPageStore(selectEditorLineNumbers);
   const lineNumbers = useSandboxEditorLineNumbers();
 
   if (!editorLineNumbers) {

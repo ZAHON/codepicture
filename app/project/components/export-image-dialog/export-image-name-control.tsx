@@ -1,12 +1,16 @@
 'use client';
 import { useId } from 'react';
 import { Label, TextInput } from '@/components';
-import { useStore, selectExportImageName, selectSetExportImageName } from '@project/store';
+import {
+  useProjectPageStore,
+  selectExportImageName,
+  selectSetExportImageName,
+} from '@project/store';
 
 export function ExportMenuFileNameControl() {
   const controlId = useId();
-  const exportImageName = useStore(selectExportImageName);
-  const setExportImageName = useStore(selectSetExportImageName);
+  const exportImageName = useProjectPageStore(selectExportImageName);
+  const setExportImageName = useProjectPageStore(selectSetExportImageName);
 
   return (
     <div className="flex flex-col gap-y-1.5">

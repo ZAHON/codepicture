@@ -1,11 +1,11 @@
 'use client';
 import { useEffect } from 'react';
-import { useStore, selectHighlighter, selectSetHighlighter } from '@project/store';
+import { useProjectPageStore, selectHighlighter, selectSetHighlighter } from '@project/store';
 import { Logo } from '@/svgs';
 
 export function LoadingOverlay() {
-  const highlighter = useStore(selectHighlighter);
-  const setHighlighter = useStore(selectSetHighlighter);
+  const highlighter = useProjectPageStore(selectHighlighter);
+  const setHighlighter = useProjectPageStore(selectSetHighlighter);
 
   useEffect(() => {
     if (!highlighter) {

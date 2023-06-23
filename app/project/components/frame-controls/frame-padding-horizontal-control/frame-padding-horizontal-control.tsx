@@ -1,7 +1,7 @@
 'use client';
 import { useId } from 'react';
 import {
-  useStore,
+  useProjectPageStore,
   selectFramePaddingType,
   selectFramePaddingHorizontal,
   selectSetFramePaddingHorizontal,
@@ -10,9 +10,9 @@ import { LabelAsSpan, Slider } from '@/components';
 
 export function FramePaddingHorizontalControl() {
   const controlId = useId();
-  const framePaddingType = useStore(selectFramePaddingType);
-  const framePaddingHorizontal = useStore(selectFramePaddingHorizontal);
-  const setFramePaddingHorizontal = useStore(selectSetFramePaddingHorizontal);
+  const framePaddingType = useProjectPageStore(selectFramePaddingType);
+  const framePaddingHorizontal = useProjectPageStore(selectFramePaddingHorizontal);
+  const setFramePaddingHorizontal = useProjectPageStore(selectSetFramePaddingHorizontal);
 
   if (framePaddingType !== 'custom') {
     return null;

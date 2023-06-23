@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectFontBolds, selectFontItalics } from '@project/store';
+import { useProjectPageStore, selectFontBolds, selectFontItalics } from '@project/store';
 import { useSandboxSyntaxHighlighter } from './hooks';
 import { getTokenStyle, getLineKey, getTokenKey } from './utils';
 import {
@@ -9,8 +9,8 @@ import {
 } from './sandbox-syntax-highlighter.styles';
 
 export function SandboxSyntaxHighlighter() {
-  const fontBolds = useStore(selectFontBolds);
-  const fontItalics = useStore(selectFontItalics);
+  const fontBolds = useProjectPageStore(selectFontBolds);
+  const fontItalics = useProjectPageStore(selectFontItalics);
   const linesWithTokens = useSandboxSyntaxHighlighter();
 
   if (typeof linesWithTokens === 'string') {

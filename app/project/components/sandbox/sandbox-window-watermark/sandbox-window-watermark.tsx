@@ -1,10 +1,10 @@
 'use client';
-import { useStore, selectWindowWatermark } from '@project/store';
+import { useProjectPageStore, selectWindowWatermark } from '@project/store';
 import { Logo } from '@/svgs';
 import { sandboxWindowWatermarkStyles } from './sandbox-window-watermark.styles';
 
 export function SandboxWindowWatermark() {
-  const windowWatermark = useStore(selectWindowWatermark);
+  const windowWatermark = useProjectPageStore(selectWindowWatermark);
 
   if (!windowWatermark) {
     return null;

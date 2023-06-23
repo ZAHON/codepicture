@@ -1,5 +1,5 @@
 'use client';
-import { useStore, selectHighlighter } from '@project/store';
+import { useProjectPageStore, selectHighlighter } from '@project/store';
 
 import { SandboxOverlay } from './sandbox-overlay';
 import { SandboxFrame } from './sandbox-frame';
@@ -16,7 +16,7 @@ import { SandboxSimpleCodeEditor } from './sandbox-simple-code-editor';
 import { SandboxSyntaxHighlighter } from './sandbox-syntax-highlighter';
 
 export function Sandbox() {
-  const highlighter = useStore(selectHighlighter);
+  const highlighter = useProjectPageStore(selectHighlighter);
 
   if (!highlighter) {
     return null;

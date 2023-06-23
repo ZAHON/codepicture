@@ -1,7 +1,7 @@
 'use client';
 import { Dialog, DialogPortal, DialogOverlay, DialogContent } from '@/components';
 import {
-  useStore,
+  useProjectPageStore,
   selectKeyboardShortcutsDialogOpen,
   selectSetKeyboardShortcutsDialogOpen,
 } from '@project/store';
@@ -9,8 +9,8 @@ import { KeyboardShortcutsDialogHeader } from './keyboard-shortcuts-dialog-heade
 import { KeyboardShortcutsDialogBody } from './keyboard-shortcuts-dialog-body';
 
 export function KeyboardShortcutsDialog() {
-  const keyboardShortcutsDialogOpen = useStore(selectKeyboardShortcutsDialogOpen);
-  const setKeyboardShortcutsDialogOpen = useStore(selectSetKeyboardShortcutsDialogOpen);
+  const keyboardShortcutsDialogOpen = useProjectPageStore(selectKeyboardShortcutsDialogOpen);
+  const setKeyboardShortcutsDialogOpen = useProjectPageStore(selectSetKeyboardShortcutsDialogOpen);
 
   return (
     <Dialog open={keyboardShortcutsDialogOpen} onOpenChange={setKeyboardShortcutsDialogOpen}>

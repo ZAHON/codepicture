@@ -1,6 +1,6 @@
 import type { SandboxEditorStyle } from '../sandbox-editor.types';
 import {
-  useStore,
+  useProjectPageStore,
   selectEditorLineNumbers,
   selectFontFamily,
   selectFontSize,
@@ -11,13 +11,13 @@ import {
 import { getFontFamilyCssVariableById } from '@/utils';
 
 export function useSandboxEditorStyle() {
-  const editorLineNumbers = useStore(selectEditorLineNumbers);
+  const editorLineNumbers = useProjectPageStore(selectEditorLineNumbers);
 
-  const fontFamily = useStore(selectFontFamily);
-  const fontLigatures = useStore(selectFontLigatures);
-  const fontSize = useStore(selectFontSize);
-  const fontLineHeight = useStore(selectFontLineHeight);
-  const fontLetterSpacing = useStore(selectFontLetterSpacing);
+  const fontFamily = useProjectPageStore(selectFontFamily);
+  const fontLigatures = useProjectPageStore(selectFontLigatures);
+  const fontSize = useProjectPageStore(selectFontSize);
+  const fontLineHeight = useProjectPageStore(selectFontLineHeight);
+  const fontLetterSpacing = useProjectPageStore(selectFontLetterSpacing);
 
   const sandboxEditorStyle: SandboxEditorStyle = {
     '--sandbox-editor-font-family': getFontFamilyCssVariableById(fontFamily),
