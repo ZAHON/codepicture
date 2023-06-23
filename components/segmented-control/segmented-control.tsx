@@ -1,6 +1,6 @@
 'use client';
 import type { SegmentedControlProps, SegmentedControlStyle } from './segmented-control.types';
-import { forwardRef, useState } from 'react';
+import { forwardRef, useMemo } from 'react';
 import { Root as RadioGroupRoot } from '@radix-ui/react-radio-group';
 import { twMerge } from 'tailwind-merge';
 import { applayComponentDefaultProps, getValidChildren } from '@/utils';
@@ -28,16 +28,20 @@ export const SegmentedControl = forwardRef<HTMLDivElement, SegmentedControlProps
     ...others
   } = applayComponentDefaultProps(defaultProps, props);
 
-  const [_value, setValue] = useState(value ?? defaultValue);
+  const { itemsCount, checkedItemIndex } = useMemo(() => {
+    const _value = value ?? defaultValue;
 
-  const validChildren = getValidChildren(children);
+    const validChildren = getValidChildren(children);
 
-  const itemsCount = validChildren.length;
-  const checkedItemIndex = validChildren.findIndex((child) => {
-    const { props } = child;
+    const itemsCount = validChildren.length;
+    const checkedItemIndex = validChildren.findIndex((child) => {
+      const { props } = child;
 
-    return props && 'value' in props ? props.value === _value : -1;
-  });
+      return props && 'value' in props ? props.value === _value : -1;
+    });
+
+    return { itemsCount, checkedItemIndex };
+  }, [value, defaultValue, children]);
 
   const segmentedControlStyle: SegmentedControlStyle = {
     '--segmented-control-items-count': itemsCount,
@@ -46,7 +50,7 @@ export const SegmentedControl = forwardRef<HTMLDivElement, SegmentedControlProps
   };
 
   function handleValueChange(value: string) {
-    setValue(value);
+    // setValue(value);
 
     if (onValueChange) {
       onValueChange(value);
