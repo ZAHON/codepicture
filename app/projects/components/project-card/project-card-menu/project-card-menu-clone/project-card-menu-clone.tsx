@@ -4,18 +4,36 @@ import { useTransition } from 'react';
 import { IconCopy } from '@tabler/icons-react';
 import { MenuItem } from '@/components';
 import { notify } from '@/lib-client';
-import { useProjectsPageStore, selectSetProjectCloneId } from '@projects/store';
+import {
+  useProjectsPageStore,
+  selectProjectsCount,
+  selectSetProjectCloneId,
+} from '@projects/store';
 import { cloneProject } from '@projects/server-actions';
+
+const notificationId = crypto.randomUUID();
 
 export function ProjectCardMenuClone(props: ProjectCardMenuCloneProps) {
   const { projectId, projectName } = props;
 
   const [isPending, startTransition] = useTransition();
 
+  const projectsCount = useProjectsPageStore(selectProjectsCount);
   const setProjectCloneId = useProjectsPageStore(selectSetProjectCloneId);
 
+  const projectsLimt = projectsCount && projectsCount >= 50 ? true : false;
+
   function handleCloneProject() {
-    const notificationId = crypto.randomUUID();
+    if (projectsLimt) {
+      notify.show({
+        id: notificationId,
+        position: 'bottom-right',
+        type: 'error',
+        message: 'You have reached projects limit',
+      });
+
+      return;
+    }
 
     startTransition(async () => {
       try {

@@ -1,8 +1,8 @@
 import { redirect } from 'next/navigation';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/lib-server/auth';
-import { NotFound, ProjectCardsWrapper, ProjectCard } from './components';
-import { getOwnerProjects } from './server-actions';
+import { NotFound, InitStore, ProjectCardsWrapper, ProjectCard } from './components';
+import { getProjects } from './server-actions';
 
 export const revalidate = 0;
 export const dynamic = 'force-dynamic';
@@ -19,20 +19,23 @@ export default async function ProjectsPage(props: { searchParams: { search?: str
     redirect('/');
   }
 
-  const ownerProjects = await getOwnerProjects({
+  const projects = await getProjects({
     ownerId,
     projectName: search,
   });
 
-  if (ownerProjects.length === 0) {
+  if (projects.length === 0) {
     return <NotFound />;
   }
 
   return (
-    <ProjectCardsWrapper>
-      {ownerProjects.map(({ id, ...others }) => (
-        <ProjectCard key={id} id={id} {...others} />
-      ))}
-    </ProjectCardsWrapper>
+    <>
+      <InitStore projectsCount={projects.length} />
+      <ProjectCardsWrapper>
+        {projects.map(({ id, ...others }) => (
+          <ProjectCard key={id} id={id} {...others} />
+        ))}
+      </ProjectCardsWrapper>
+    </>
   );
 }

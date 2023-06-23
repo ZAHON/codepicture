@@ -1,8 +1,8 @@
 'use server';
-import { GetOwnerProjectsArgs } from './get-owner-projects.types';
+import { GetProjectsArgs } from './get-projects.types';
 import prisma from '@/lib-server/prisma';
 
-export async function getOwnerProjects(args: GetOwnerProjectsArgs) {
+export async function getProjects(args: GetProjectsArgs) {
   const { ownerId, projectName } = args;
 
   const ownerProjects = await prisma.project.findMany({

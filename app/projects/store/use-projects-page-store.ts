@@ -6,4 +6,5 @@ export const useProjectsPageStore = create<ProjectsPageState>()((...a) => ({
   ...slices.createProjectCloneSlice(...a),
   ...slices.createProjectDelateSlice(...a),
   ...slices.createProjectRenameSlice(...a),
+  ...slices.createProjectsCountSlice(...a),
 }));

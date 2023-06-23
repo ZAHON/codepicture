@@ -1,5 +1,6 @@
 export * from './create-project';
 export * from './header';
+export * from './init-store';
 export * from './not-found';
 export * from './project-card';
 export * from './project-card-skeleton';
