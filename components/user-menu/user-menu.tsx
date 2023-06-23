@@ -1,5 +1,5 @@
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '@/lib-client/auth';
+import { authOptions } from '@/lib-server/auth';
 import { UserMenuInner } from './user-menu-inner';
 
 export async function UserMenu() {
