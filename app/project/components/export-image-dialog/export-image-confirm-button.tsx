@@ -10,7 +10,7 @@ import {
   selectSetExportImageExporting,
 } from '@project/store';
 import { Button } from '@/components';
-import { htmlToImage, notify } from '@/lib';
+import { htmlToImage, notify } from '@/lib-client';
 
 export function ExportImageConfirmButton() {
   const windowTabContent = useStore(selectWindowTabContent);

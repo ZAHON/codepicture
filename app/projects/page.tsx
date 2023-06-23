@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '@/lib/auth';
+import { authOptions } from '@/lib-client/auth';
 import { NotFound, ProjectCardsWrapper, ProjectCard } from './components';
 import { getOwnerProjects } from './server-actions';
 

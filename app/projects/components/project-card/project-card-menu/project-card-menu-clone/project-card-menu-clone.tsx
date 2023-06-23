@@ -3,7 +3,7 @@ import type { ProjectCardMenuCloneProps } from './project-card-menu-clone.types'
 import { useTransition } from 'react';
 import { IconCopy } from '@tabler/icons-react';
 import { MenuItem } from '@/components';
-import { notify } from '@/lib';
+import { notify } from '@/lib-client';
 import { useProjectsPageStore, selectSetProjectCloneId } from '@projects/store';
 import { cloneProject } from '@projects/server-actions';
 

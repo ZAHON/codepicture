@@ -3,7 +3,7 @@ import { useTransition } from 'react';
 import { IconPlus } from '@tabler/icons-react';
 import { useSession } from 'next-auth/react';
 import { Button } from '@/components';
-import { notify } from '@/lib';
+import { notify } from '@/lib-client';
 import { createProject } from '@projects/server-actions';
 
 export function CreateProject() {

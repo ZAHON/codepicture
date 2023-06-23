@@ -1,5 +1,5 @@
 import type { CreateOpenInNewTabSlice } from './open-in-new-tab-slice.types';
-import { htmlToImage, notify } from '@/lib';
+import { htmlToImage, notify } from '@/lib-client';
 
 export const createOpenInNewTabSlice: CreateOpenInNewTabSlice = (set, get) => ({
   openInNewTabPrePreparingLink: false,

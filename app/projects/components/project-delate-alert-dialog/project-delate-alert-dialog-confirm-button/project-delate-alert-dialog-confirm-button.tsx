@@ -7,7 +7,7 @@ import {
   selectProjectDelateName,
   selectCloseProjectDelateAlertDialog,
 } from '@projects/store';
-import { notify } from '@/lib';
+import { notify } from '@/lib-client';
 import { delateProject } from '@projects/server-actions';
 
 export function ProjectDelateAlertDialogConfirmButton() {

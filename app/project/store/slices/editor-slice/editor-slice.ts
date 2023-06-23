@@ -2,7 +2,7 @@ import type { Theme } from 'shiki';
 import type { CreateEditorSlice } from './editor-slice.types';
 import { editorCodePlaceholder } from './editor-code-placeholder';
 import { LanguageId, languages, themes } from '@/data';
-import { notify } from '@/lib';
+import { notify } from '@/lib-client';
 
 export const createEditorSlice: CreateEditorSlice = (set, get) => ({
   editorCode: editorCodePlaceholder,

@@ -4,7 +4,7 @@ import { useRef, useEffect, useTransition } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
 import { saveProjectData } from '../../server-actions';
 import { useStore, selectProjectId, selectProjectName } from '@project/store';
-import { notify } from '@/lib';
+import { notify } from '@/lib-client';
 import { useFrameState, useWindowState, useEditorState, useFontState } from './hooks';
 
 const notificationId = crypto.randomUUID();

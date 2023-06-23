@@ -1,5 +1,5 @@
 import type { CreateCopyToClipboardSlice } from './copy-to-clipboard-slice.types';
-import { htmlToImage, notify } from '@/lib';
+import { htmlToImage, notify } from '@/lib-client';
 
 export const createCopyToClipboardSlice: CreateCopyToClipboardSlice = (set, get) => ({
   copyToClipboardCopying: false,

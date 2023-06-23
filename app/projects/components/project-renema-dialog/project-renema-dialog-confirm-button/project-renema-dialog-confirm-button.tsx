@@ -8,7 +8,7 @@ import {
   selectCloseProjectRenameDialog,
 } from '@projects/store';
 import { Button } from '@/components';
-import { notify } from '@/lib';
+import { notify } from '@/lib-client';
 import { renameProject } from '@projects/server-actions';
 
 export function ProjectRenemaDialogConfirmButton() {
