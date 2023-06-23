@@ -5,6 +5,7 @@ const meta: Meta<typeof TextInput> = {
   title: 'UI/TextInput',
   component: TextInput,
   args: {
+    variant: 'filled',
     size: 'md',
     placeholder: 'Text Input',
     disabled: false,
@@ -12,6 +13,7 @@ const meta: Meta<typeof TextInput> = {
     required: false,
   },
   argTypes: {
+    variant: { control: 'select' },
     size: { control: 'select' },
   },
 };
@@ -30,6 +32,18 @@ export const Disabled: Story = {
 export const Invalid: Story = {
   args: {
     invalid: true,
+  },
+};
+
+export const FilledVariant: Story = {
+  args: {
+    variant: 'filled',
+  },
+};
+
+export const UnderlinedVariant: Story = {
+  args: {
+    variant: 'underlined',
   },
 };
 

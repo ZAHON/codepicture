@@ -5,6 +5,12 @@ type HTMLAttributesToOmit = 'size';
 export interface TextInputProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, HTMLAttributesToOmit> {
   /**
+   * The variant of the text input.
+   * @default "filled"
+   */
+  variant?: 'filled' | 'underlined';
+
+  /**
    * The size of the text input.
    * @default "md"
    */

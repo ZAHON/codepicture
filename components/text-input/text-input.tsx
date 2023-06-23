@@ -5,14 +5,13 @@ import { applayComponentDefaultProps } from '@/utils';
 import { textInputStyles } from './text-input.styles';
 
 const defaultProps: Partial<TextInputProps> = {
+  variant: 'filled',
   size: 'md',
 };
 
 export const TextInput = forwardRef<HTMLInputElement, TextInputProps>((props, ref) => {
-  const { size, disabled, invalid, required, className, ...others } = applayComponentDefaultProps(
-    defaultProps,
-    props
-  );
+  const { variant, size, disabled, invalid, required, className, ...others } =
+    applayComponentDefaultProps(defaultProps, props);
 
   return (
     <input
@@ -23,7 +22,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>((props, re
       aria-invalid={invalid ? true : undefined}
       data-disabled={disabled ? '' : undefined}
       data-invalid={invalid ? '' : undefined}
-      className={twMerge(textInputStyles({ size }), className)}
+      className={twMerge(textInputStyles({ variant, size }), className)}
       {...others}
     />
   );

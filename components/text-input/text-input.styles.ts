@@ -6,10 +6,6 @@ export const textInputStyles = cva(
     'flex',
     'justify-between',
     'items-center',
-    'rounded-lg',
-    'bg-neutral-6',
-    'border-2',
-    'border-neutral-6',
     'select-none',
     'appearance-none',
 
@@ -28,6 +24,10 @@ export const textInputStyles = cva(
   ],
   {
     variants: {
+      variant: {
+        filled: ['rounded-lg', 'bg-neutral-6', 'border-2', 'border-neutral-6'],
+        underlined: ['bg-transparent', 'border-b-2', 'border-b-neutral-6'],
+      },
       size: {
         sm: ['h-8', 'px-2', 'text-xs'],
         md: ['h-9', 'px-3', 'text-sm'],
