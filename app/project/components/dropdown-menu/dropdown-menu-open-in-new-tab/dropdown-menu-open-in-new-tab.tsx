@@ -16,21 +16,15 @@ export function DropdownMenuOpenInNewTab() {
       return <Loader />;
     }
 
-    return (
-      <IconExternalLink
-        aria-hidden="true"
-        focusable="false"
-        className="h-4 w-4 md:h-[0.875rem] md:w-[0.875rem]"
-      />
-    );
+    return <IconExternalLink size="1rem" aria-hidden="true" focusable="false" />;
+  }
+
+  function handleSelect() {
+    openInNewTabPrePrepareLink();
   }
 
   return (
-    <MenuItem
-      disabled={openInNewTabPrePreparingLink}
-      icon={getIcon()}
-      onSelect={openInNewTabPrePrepareLink}
-    >
+    <MenuItem onSelect={handleSelect} disabled={openInNewTabPrePreparingLink} icon={getIcon()}>
       {openInNewTabPrePreparingLink ? 'Preparing link...' : 'Open in new tab'}
     </MenuItem>
   );

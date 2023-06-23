@@ -1,21 +1,19 @@
 'use client';
 import { IconCommand } from '@tabler/icons-react';
-import { useMediaQuery } from '@/hooks';
 import { MenuItem } from '@/components';
 import { useProjectPageStore, selectSetKeyboardShortcutsDialogOpen } from '@project/store';
 
 export function DropdownMenuKeyboardShortcuts() {
   const keyboardShortcutsDialogOpen = useProjectPageStore(selectSetKeyboardShortcutsDialogOpen);
-  const matches = useMediaQuery('(min-width: 768px)');
 
-  if (!matches) {
-    return null;
+  function handleSelect() {
+    keyboardShortcutsDialogOpen(true);
   }
 
   return (
     <MenuItem
-      icon={<IconCommand size="0.875rem" aria-hidden="true" focusable="false" />}
-      onSelect={() => keyboardShortcutsDialogOpen(true)}
+      onSelect={handleSelect}
+      icon={<IconCommand size="1rem" aria-hidden="true" focusable="false" />}
     >
       Keyboard shortcuts
     </MenuItem>

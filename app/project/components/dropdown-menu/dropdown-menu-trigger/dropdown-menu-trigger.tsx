@@ -1,10 +1,7 @@
 'use client';
+import type { DropdownMenuTriggerProps } from './dropdown-menu-trigger.types';
 import { IconMenu2 } from '@tabler/icons-react';
 import { MenuTrigger, IconButton } from '@/components';
-
-interface DropdownMenuTriggerProps {
-  state: boolean;
-}
 
 export function DropdownMenuTrigger(props: DropdownMenuTriggerProps) {
   const { state } = props;
