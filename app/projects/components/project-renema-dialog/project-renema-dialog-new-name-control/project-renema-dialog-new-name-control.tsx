@@ -2,15 +2,15 @@
 import { useId } from 'react';
 import { Label, TextInput } from '@/components';
 import {
-  useProjectRenameDialogStore,
+  useProjectsPageStore,
   selectProjectRenameNewName,
   selectSetProjectRenameNewName,
-} from '../project-renema-dialog-store';
+} from '@projects/store';
 
 export function ProjectRenemaDialogNewNameControl() {
   const controlId = useId();
-  const projectRenameNewName = useProjectRenameDialogStore(selectProjectRenameNewName);
-  const setProjectRenameNewName = useProjectRenameDialogStore(selectSetProjectRenameNewName);
+  const projectRenameNewName = useProjectsPageStore(selectProjectRenameNewName);
+  const setProjectRenameNewName = useProjectsPageStore(selectSetProjectRenameNewName);
 
   return (
     <div className="flex flex-col gap-y-1.5">

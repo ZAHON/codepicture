@@ -4,18 +4,15 @@ import { useTransition } from 'react';
 import { IconCopy } from '@tabler/icons-react';
 import { MenuItem } from '@/components';
 import { notify } from '@/lib';
-import {
-  useProjectCardMenuCloneStore,
-  selectSetProjectCloneId,
-} from './project-card-menu-clone-store';
-import { cloneProject } from '../../../../server-actions';
+import { useProjectsPageStore, selectSetProjectCloneId } from '@projects/store';
+import { cloneProject } from '@projects/server-actions';
 
 export function ProjectCardMenuClone(props: ProjectCardMenuCloneProps) {
   const { projectId, projectName } = props;
 
   const [isPending, startTransition] = useTransition();
 
-  const setProjectCloneId = useProjectCardMenuCloneStore(selectSetProjectCloneId);
+  const setProjectCloneId = useProjectsPageStore(selectSetProjectCloneId);
 
   function handleCloneProject() {
     const notificationId = crypto.randomUUID();

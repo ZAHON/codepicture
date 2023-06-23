@@ -1,4 +1,4 @@
-import type { ProjectRenameDialogState as State } from './project-renema-dialog-store.types';
+import type { ProjectsPageState as State } from '../../use-projects-page-store.types';
 
 // project rename id
 export const selectProjectRenameId = (state: State) => state.projectRenameId;

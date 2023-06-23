@@ -1,24 +1,24 @@
 'use client';
 import { useTransition } from 'react';
 import {
-  useProjectRenameDialogStore,
+  useProjectsPageStore,
   selectProjectRenameId,
   selectProjectRenameName,
   selectProjectRenameNewName,
   selectCloseProjectRenameDialog,
-} from '../project-renema-dialog-store';
+} from '@projects/store';
 import { Button } from '@/components';
 import { notify } from '@/lib';
-import { renameProject } from '../../../server-actions';
+import { renameProject } from '@projects/server-actions';
 
 export function ProjectRenemaDialogConfirmButton() {
   const [isPending, startTransition] = useTransition();
 
-  const projectRenameId = useProjectRenameDialogStore(selectProjectRenameId);
-  const projectRenameName = useProjectRenameDialogStore(selectProjectRenameName);
-  const projectRenameNewName = useProjectRenameDialogStore(selectProjectRenameNewName);
+  const projectRenameId = useProjectsPageStore(selectProjectRenameId);
+  const projectRenameName = useProjectsPageStore(selectProjectRenameName);
+  const projectRenameNewName = useProjectsPageStore(selectProjectRenameNewName);
 
-  const closeProjectRenameDialog = useProjectRenameDialogStore(selectCloseProjectRenameDialog);
+  const closeProjectRenameDialog = useProjectsPageStore(selectCloseProjectRenameDialog);
 
   function handleRenameProject() {
     const notificationId = crypto.randomUUID();

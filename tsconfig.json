@@ -22,7 +22,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@project/*": ["./app/project/*"]
+      "@project/*": ["./app/project/*"],
+      "@projects/*": ["./app/projects/*"]
     }
   },
   "types": ["vitest/globals", "node", "@types/testing-library__jest-dom"],

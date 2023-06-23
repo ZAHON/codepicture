@@ -1,4 +1,4 @@
-import type { ProjectCardMenuCloneState as State } from './project-card-menu-clone-store.types';
+import type { ProjectsPageState as State } from '../../use-projects-page-store.types';
 
 // project clone id
 export const selectProjectCloneId = (state: State) => state.projectCloneId;

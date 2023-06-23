@@ -1,16 +1,11 @@
 'use client';
-import { useTransition } from 'react';
 import {
-  useProjectDelateAlertDialogStore as useStore,
-  selectProjectId,
-  selectProjectName,
-  selectAlertDialogOpen,
-  selectSetAlertDialogOpen,
-  selectSetProjectId,
-  selectSetProjectName,
-} from './project-delate-alert-dialog-store';
+  useProjectsPageStore,
+  selectProjectDelateAlertDialogOpen,
+  selectSetProjectDelateAlertDialogOpen,
+  selectCloseProjectDelateAlertDialog,
+} from '@projects/store';
 import {
-  Button,
   AlertDialog,
   AlertDialogPortal,
   AlertDialogOverlay,
@@ -19,76 +14,26 @@ import {
   AlertDialogTitle,
   AlertDialogDescription,
   AlertDialogFooter,
-  AlertDialogCancel,
-  AlertDialogAction,
 } from '@/components';
-import { notify } from '@/lib';
-import { delateProject } from '../../server-actions';
+import { ProjectDelateAlertDialogCancelButton } from './project-delate-alert-dialog-cancel-button';
+import { ProjectDelateAlertDialogConfirmButton } from './project-delate-alert-dialog-confirm-button';
 
 export function ProjectDelateAlertDialog() {
-  const [isPending, startTransition] = useTransition();
+  const projectDelateAlertDialogOpen = useProjectsPageStore(selectProjectDelateAlertDialogOpen);
 
-  const projectId = useStore(selectProjectId);
-  const projectName = useStore(selectProjectName);
-  const alertDialogOpen = useStore(selectAlertDialogOpen);
-
-  const setProjectId = useStore(selectSetProjectId);
-  const setProjectName = useStore(selectSetProjectName);
-  const setAlertDialogOpen = useStore(selectSetAlertDialogOpen);
-
-  function handleDelateProject() {
-    const notificationId = crypto.randomUUID();
-
-    if (projectId && projectName) {
-      startTransition(async () => {
-        try {
-          notify.show({
-            id: notificationId,
-            position: 'bottom-right',
-            type: 'loading',
-            message: `Project ${projectName} is being deleted`,
-          });
-
-          await delateProject(projectId);
-
-          notify.show({
-            id: notificationId,
-            position: 'bottom-right',
-            type: 'success',
-            message: `Project ${projectName} has been deleted`,
-          });
-        } catch {
-          notify.show({
-            id: notificationId,
-            position: 'bottom-right',
-            type: 'error',
-            message: `Failed to delete project ${projectName}`,
-          });
-        } finally {
-          setProjectId(undefined);
-          setProjectName(undefined);
-        }
-      });
-    } else {
-      notify.show({
-        id: notificationId,
-        position: 'bottom-right',
-        type: 'error',
-        message: 'An error occurred while deleting the project',
-      });
-    }
-  }
-
-  function handleCloseDelateAlertDialog() {
-    setProjectId(undefined);
-    setProjectName(undefined);
-  }
+  const setProjectDelateAlertDialogOpen = useProjectsPageStore(
+    selectSetProjectDelateAlertDialogOpen
+  );
+  const closeProjectDelateAlertDialog = useProjectsPageStore(selectCloseProjectDelateAlertDialog);
 
   return (
-    <AlertDialog open={alertDialogOpen} onOpenChange={setAlertDialogOpen}>
+    <AlertDialog open={projectDelateAlertDialogOpen} onOpenChange={setProjectDelateAlertDialogOpen}>
       <AlertDialogPortal>
         <AlertDialogOverlay blur />
-        <AlertDialogContent className="max-w-md p-0">
+        <AlertDialogContent
+          onEscapeKeyDown={closeProjectDelateAlertDialog}
+          className="max-w-md p-0"
+        >
           <AlertDialogHeader>
             <AlertDialogTitle className="border-b border-b-neutral-5 px-6 py-4">
               Delete project
@@ -98,21 +43,8 @@ export function ProjectDelateAlertDialog() {
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter className="px-6 py-3">
-            <AlertDialogCancel>
-              <Button onClick={handleCloseDelateAlertDialog} color="neutral" variant="light">
-                Cancel
-              </Button>
-            </AlertDialogCancel>
-            <AlertDialogAction>
-              <Button
-                onClick={handleDelateProject}
-                disabled={isPending}
-                color="error"
-                variant="light"
-              >
-                Confirm
-              </Button>
-            </AlertDialogAction>
+            <ProjectDelateAlertDialogCancelButton />
+            <ProjectDelateAlertDialogConfirmButton />
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialogPortal>

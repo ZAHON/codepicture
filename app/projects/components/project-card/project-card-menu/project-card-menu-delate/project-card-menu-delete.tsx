@@ -2,24 +2,18 @@
 import type { ProjectCardMenuDeleteProps } from './project-card-menu-delate.types';
 import { IconTrash } from '@tabler/icons-react';
 import { MenuItem } from '@/components';
-import {
-  useProjectDelateAlertDialogStore as useStore,
-  selectSetAlertDialogOpen,
-  selectSetProjectId,
-  selectSetProjectName,
-} from '../../..';
+import { useProjectsPageStore, selectOpenProjectDelateAlertDialog } from '@projects/store';
 
 export function ProjectCardMenuDelete(props: ProjectCardMenuDeleteProps) {
   const { projectId, projectName } = props;
 
-  const setAlertDialogOpen = useStore(selectSetAlertDialogOpen);
-  const setProjectId = useStore(selectSetProjectId);
-  const setProjectName = useStore(selectSetProjectName);
+  const openProjectDelateAlertDialog = useProjectsPageStore(selectOpenProjectDelateAlertDialog);
 
   function handleSelect() {
-    setAlertDialogOpen(true);
-    setProjectId(projectId);
-    setProjectName(projectName);
+    openProjectDelateAlertDialog({
+      projectDelateId: projectId,
+      projectDelateName: projectName,
+    });
   }
 
   return (

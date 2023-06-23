@@ -2,15 +2,12 @@
 import type { ProjectCardMenuRenameProps } from './project-card-menu-rename.types';
 import { IconPencil } from '@tabler/icons-react';
 import { MenuItem } from '@/components';
-import {
-  useProjectRenameDialogStore,
-  selectOpenProjectRenameDialog,
-} from '../../../project-renema-dialog/project-renema-dialog-store';
+import { useProjectsPageStore, selectOpenProjectRenameDialog } from '@projects/store';
 
 export function ProjectCardMenuRename(props: ProjectCardMenuRenameProps) {
   const { projectId, projectName } = props;
 
-  const openProjectRenameDialog = useProjectRenameDialogStore(selectOpenProjectRenameDialog);
+  const openProjectRenameDialog = useProjectsPageStore(selectOpenProjectRenameDialog);
 
   function handleOpenProjectRenameDialog() {
     openProjectRenameDialog({

@@ -1,10 +1,10 @@
 'use client';
 import {
-  useProjectRenameDialogStore,
+  useProjectsPageStore,
   selectProjectRenameDialogOpen,
   selectSetProjectRenameDialogOpen,
   selectCloseProjectRenameDialog,
-} from './project-renema-dialog-store';
+} from '@projects/store';
 import {
   Dialog,
   DialogPortal,
@@ -21,9 +21,9 @@ import { ProjectRenemaDialogCloseButton } from './project-renema-dialog-close-bu
 import { ProjectRenemaDialogConfirmButton } from './project-renema-dialog-confirm-button';
 
 export function ProjectRenameDialog() {
-  const projectRenameDialogOpen = useProjectRenameDialogStore(selectProjectRenameDialogOpen);
-  const setProjectRenameDialogOpen = useProjectRenameDialogStore(selectSetProjectRenameDialogOpen);
-  const closeProjectRenameDialog = useProjectRenameDialogStore(selectCloseProjectRenameDialog);
+  const projectRenameDialogOpen = useProjectsPageStore(selectProjectRenameDialogOpen);
+  const setProjectRenameDialogOpen = useProjectsPageStore(selectSetProjectRenameDialogOpen);
+  const closeProjectRenameDialog = useProjectsPageStore(selectCloseProjectRenameDialog);
 
   return (
     <Dialog open={projectRenameDialogOpen} onOpenChange={setProjectRenameDialogOpen}>

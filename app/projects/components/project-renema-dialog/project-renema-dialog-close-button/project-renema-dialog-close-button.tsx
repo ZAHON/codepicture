@@ -1,12 +1,9 @@
 'use client';
-import {
-  useProjectRenameDialogStore,
-  selectCloseProjectRenameDialog,
-} from '../project-renema-dialog-store';
+import { useProjectsPageStore, selectCloseProjectRenameDialog } from '@projects/store';
 import { Button } from '@/components';
 
 export function ProjectRenemaDialogCloseButton() {
-  const closeProjectRenameDialog = useProjectRenameDialogStore(selectCloseProjectRenameDialog);
+  const closeProjectRenameDialog = useProjectsPageStore(selectCloseProjectRenameDialog);
 
   return (
     <Button onClick={closeProjectRenameDialog} color="neutral">

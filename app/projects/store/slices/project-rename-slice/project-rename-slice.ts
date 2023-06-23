@@ -1,7 +1,6 @@
-import { create } from 'zustand';
-import type { ProjectRenameDialogState } from './project-renema-dialog-store.types';
+import type { CreateProjectRenameSlice } from './project-rename-slice.types';
 
-export const useProjectRenameDialogStore = create<ProjectRenameDialogState>()((set) => ({
+export const createProjectRenameSlice: CreateProjectRenameSlice = (set) => ({
   projectRenameId: undefined,
   projectRenameName: undefined,
   projectRenameNewName: undefined,
@@ -30,4 +29,4 @@ export const useProjectRenameDialogStore = create<ProjectRenameDialogState>()((s
       projectRenameNewName: undefined,
       projectRenameDialogOpen: false,
     })),
-}));
+});
