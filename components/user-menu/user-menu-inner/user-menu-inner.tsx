@@ -6,6 +6,7 @@ import { IconUser } from '@tabler/icons-react';
 import { Skeleton, IconButton, Menu, MenuTrigger, MenuSeparator } from '@/components';
 import { UserMenuInnerContent } from './user-menu-inner-content';
 import { UserMenuInnerProjects } from './user-menu-inner-projects';
+import { UserMenuInnerThemeChanger } from './user-menu-inner-theme-changer';
 import { UserMenuInnerLogout } from './user-menu-inner-logout';
 
 export function UserMenuInner(props: UserMenuInnerProps) {
@@ -43,6 +44,8 @@ export function UserMenuInner(props: UserMenuInnerProps) {
       </MenuTrigger>
       <UserMenuInnerContent>
         <UserMenuInnerProjects />
+        <MenuSeparator />
+        <UserMenuInnerThemeChanger />
         <MenuSeparator />
         <UserMenuInnerLogout />
       </UserMenuInnerContent>
