@@ -7,7 +7,11 @@ import { getOwnerProjects } from './server-actions';
 export const revalidate = 0;
 export const dynamic = 'force-dynamic';
 
-export default async function ProjectsPage() {
+export default async function ProjectsPage(props: { searchParams: { search?: string } }) {
+  const { searchParams } = props;
+
+  const search = searchParams?.search;
+
   const session = await getServerSession(authOptions);
   const ownerId = session?.user?.id;
 
@@ -15,7 +19,10 @@ export default async function ProjectsPage() {
     redirect('/');
   }
 
-  const ownerProjects = await getOwnerProjects(ownerId);
+  const ownerProjects = await getOwnerProjects({
+    ownerId,
+    projectName: search,
+  });
 
   if (ownerProjects.length === 0) {
     return <NotFound />;

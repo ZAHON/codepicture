@@ -6,4 +6,5 @@ export * from './project-card-skeleton';
 export * from './project-cards-wrapper';
 export * from './project-delate-alert-dialog';
 export * from './project-renema-dialog';
+export * from './search-input';
 export * from './sub-header';

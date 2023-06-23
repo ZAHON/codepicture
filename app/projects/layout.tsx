@@ -8,7 +8,7 @@ export default function ProjectsPageLayout(props: { children: ReactNode }) {
     <>
       <Header />
       <SubHeader />
-      <main className="scrollable h-[calc(100vh-7.8125rem)] overflow-y-auto overflow-x-hidden p-4 lg:mx-auto lg:max-w-7xl">
+      <main className="scrollable h-[calc(100vh-11.0625rem)] overflow-y-auto overflow-x-hidden p-4 lg:mx-auto lg:max-w-7xl">
         {children}
       </main>
 
