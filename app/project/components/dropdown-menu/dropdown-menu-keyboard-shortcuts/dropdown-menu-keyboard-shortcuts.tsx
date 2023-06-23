@@ -13,7 +13,13 @@ export function DropdownMenuKeyboardShortcuts() {
   return (
     <MenuItem
       onSelect={handleSelect}
-      icon={<IconCommand size="1rem" aria-hidden="true" focusable="false" />}
+      icon={
+        <IconCommand
+          aria-hidden="true"
+          focusable="false"
+          className="h-4 w-4 md:h-[0.875rem] md:w-[0.875rem]"
+        />
+      }
     >
       Keyboard shortcuts
     </MenuItem>

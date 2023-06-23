@@ -18,7 +18,7 @@ export function DropdownMenu() {
     <Menu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger state={open} />
       <MenuContent
-        size="md"
+        size={matches ? 'sm' : 'md'}
         align="end"
         sideOffset={matches ? 15 : 10}
         className="w-screen rounded-none border-x-0 border-t-0 md:w-auto md:rounded-lg md:border md:border-neutral-5"
@@ -33,7 +33,10 @@ export function DropdownMenu() {
         <MenuGroup>
           <DropdownMenuGithubLink />
         </MenuGroup>
-        <DropdownMenuThemeChanger />
+        <MenuSeparator />
+        <MenuGroup>
+          <DropdownMenuThemeChanger />
+        </MenuGroup>
       </MenuContent>
     </Menu>
   );

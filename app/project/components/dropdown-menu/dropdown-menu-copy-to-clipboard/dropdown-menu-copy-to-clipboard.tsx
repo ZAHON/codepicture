@@ -16,7 +16,13 @@ export function DropdownMenuCopyToClipboard() {
       return <Loader />;
     }
 
-    return <IconClipboard size="1rem" aria-hidden="true" focusable="false" />;
+    return (
+      <IconClipboard
+        aria-hidden="true"
+        focusable="false"
+        className="h-4 w-4 md:h-[0.875rem] md:w-[0.875rem]"
+      />
+    );
   }
 
   function handleSelect() {

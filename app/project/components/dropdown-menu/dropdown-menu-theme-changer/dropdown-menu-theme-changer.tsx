@@ -1,21 +1,31 @@
 'use client';
-import { useSession } from 'next-auth/react';
 import { IconSunHigh, IconMoon } from '@tabler/icons-react';
 import { useTheme } from '@/hooks';
-import { MenuSeparator, MenuGroup, MenuItem } from '@/components';
+import { MenuItem } from '@/components';
 
 export function DropdownMenuThemeChanger() {
-  const { data: session } = useSession();
   const { theme, toggleTheme } = useTheme();
 
   const label = `${theme === 'dark' ? 'Light' : 'Dark'} theme`;
 
   function getIcon() {
     if (theme === 'dark') {
-      return <IconSunHigh size="1rem" aria-hidden="true" focusable="false" />;
+      return (
+        <IconSunHigh
+          aria-hidden="true"
+          focusable="false"
+          className="h-4 w-4 md:h-[0.875rem] md:w-[0.875rem]"
+        />
+      );
     }
 
-    return <IconMoon size="1rem" aria-hidden="true" focusable="false" />;
+    return (
+      <IconMoon
+        aria-hidden="true"
+        focusable="false"
+        className="h-4 w-4 md:h-[0.875rem] md:w-[0.875rem]"
+      />
+    );
   }
 
   function handleToggleTheme(e: Event) {
@@ -25,18 +35,9 @@ export function DropdownMenuThemeChanger() {
     }
   }
 
-  if (!theme || session) {
-    return null;
-  }
-
   return (
-    <>
-      <MenuSeparator />
-      <MenuGroup>
-        <MenuItem icon={getIcon()} onSelect={handleToggleTheme}>
-          {label}
-        </MenuItem>
-      </MenuGroup>
-    </>
+    <MenuItem icon={getIcon()} onSelect={handleToggleTheme}>
+      {label}
+    </MenuItem>
   );
 }
