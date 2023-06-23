@@ -10,7 +10,7 @@ export function UserMenuInnerContent(props: UserMenuInnerContentProps) {
 
   return (
     <MenuContent
-      size="md"
+      size={matches ? 'sm' : 'md'}
       align="end"
       sideOffset={matches ? 15 : 10}
       className="w-screen rounded-none border-x-0 border-t-0 md:w-auto md:rounded-lg md:border md:border-neutral-5"
