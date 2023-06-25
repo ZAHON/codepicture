@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useMediaQuery } from '@/hooks';
 import { Menu, MenuContent, MenuSeparator, MenuGroup } from '@/components';
 import { DropdownMenuTrigger } from './dropdown-menu-trigger';
+import { DropdownMenuRenameProject } from './dropdown-menu-rename-project';
 import { DropdownMenuExportImage } from './dropdown-menu-export-image';
 import { DropdownMenuOpenInNewTab } from './dropdown-menu-open-in-new-tab';
 import { DropdownMenuCopyToClipboard } from './dropdown-menu-copy-to-clipboard';
@@ -23,6 +24,7 @@ export function DropdownMenu() {
         sideOffset={matches ? 15 : 10}
         className="w-screen rounded-none border-x-0 border-t-0 md:w-auto md:rounded-lg md:border md:border-neutral-5"
       >
+        <DropdownMenuRenameProject />
         <MenuGroup>
           <DropdownMenuExportImage />
           <DropdownMenuOpenInNewTab />

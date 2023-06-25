@@ -9,5 +9,6 @@ export * from './keyboard-shortcuts';
 export * from './loading-error';
 export * from './loading-overlay';
 export * from './menu';
+export * from './rename-project-dialog';
 export * from './sandbox';
 export * from './window-controls';
