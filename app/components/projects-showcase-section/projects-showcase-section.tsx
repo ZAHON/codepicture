@@ -1,4 +1,4 @@
-import { LinkAsButton } from '@/components';
+import { GettingStartedLink } from '..';
 
 export function ProjectsShowcaseSection() {
   return (
@@ -8,9 +8,8 @@ export function ProjectsShowcaseSection() {
         <p className="text-center text-lg">
           You want to keep track of your snippets, and have a safe place to save them.
         </p>
-        <LinkAsButton href="/project" size="lg" className="w-fit">
-          Getting started
-        </LinkAsButton>
+        {/* @ts-expect-error Server Component */}
+        <GettingStartedLink size="lg" className="w-fit" />
         <p className="text-center text-neutral-11">
           *You must be authenticated to save your snippets remotely.
         </p>

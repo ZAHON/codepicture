@@ -1,5 +1,4 @@
-import { LinkAsButton } from '@/components';
-import { InfiniteAutoplayCarousel } from '..';
+import { GettingStartedLink, InfiniteAutoplayCarousel } from '..';
 
 export function HeroSection() {
   return (
@@ -11,9 +10,8 @@ export function HeroSection() {
         <br />
         <span className="text-primary-11">source code</span>
       </h1>
-      <LinkAsButton href="/project" size="lg" className="w-fit">
-        Getting started
-      </LinkAsButton>
+      {/* @ts-expect-error Server Component */}
+      <GettingStartedLink size="lg" className="w-fit" />
       <InfiniteAutoplayCarousel />
     </section>
   );
