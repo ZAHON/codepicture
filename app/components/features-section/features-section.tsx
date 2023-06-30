@@ -12,8 +12,8 @@ export function FeaturesSection() {
       <h2 className="text-center text-5xl font-bold">
         Start now to <span className="text-primary-11">beautify</span> your snippets
       </h2>
-      <ul className="flex flex-col gap-4 py-4 md:flex-row">
-        <li className="flex flex-col gap-y-2 rounded-lg border border-neutral-5 bg-panel p-4 drop-shadow-md md:flex-1">
+      <ul role="list" className="flex flex-col gap-4 py-4 md:flex-row">
+        <li className="flex flex-col gap-y-2 rounded-lg border border-neutral-5 bg-neutral-1 p-4 drop-shadow-md dark:bg-neutral-2 md:flex-1">
           <div className="flex items-center gap-x-4">
             <IconLanguage size="1.5rem" aria-hidden="true" focusable="false" />
             <h3 className="text-xl font-bold">Languages</h3>
@@ -21,7 +21,7 @@ export function FeaturesSection() {
           <Separator />
           <p>60+ Languages. Multi-language code highlighting.</p>
         </li>
-        <li className="flex flex-col gap-y-2 rounded-lg border border-neutral-5 bg-panel p-4 drop-shadow-md md:flex-1">
+        <li className="flex flex-col gap-y-2 rounded-lg border border-neutral-5 bg-neutral-1 p-4 drop-shadow-md dark:bg-neutral-2 md:flex-1">
           <div className="flex items-center gap-x-4">
             <IconColorSwatch size="1.5rem" aria-hidden="true" focusable="false" />
             <h3 className="text-xl font-bold">Themes</h3>
@@ -29,7 +29,7 @@ export function FeaturesSection() {
           <Separator />
           <p>50+ Themes. Variety of styles both light and dark.</p>
         </li>
-        <li className="flex flex-col gap-y-2 rounded-lg border border-neutral-5 bg-panel p-4 drop-shadow-md md:flex-1">
+        <li className="flex flex-col gap-y-2 rounded-lg border border-neutral-5 bg-neutral-1 p-4 drop-shadow-md dark:bg-neutral-2 md:flex-1">
           <div className="flex items-center gap-x-4">
             <IconTypography size="1.5rem" aria-hidden="true" focusable="false" />
             <h3 className="text-xl font-bold">Fonts</h3>
@@ -37,7 +37,7 @@ export function FeaturesSection() {
           <Separator />
           <p>30+ Fonts. Variety of styles both with ligatures and without.</p>
         </li>
-        <li className="flex flex-col gap-y-2 rounded-lg border border-neutral-5 bg-panel p-4 drop-shadow-md md:flex-1">
+        <li className="flex flex-col gap-y-2 rounded-lg border border-neutral-5 bg-neutral-1 p-4 drop-shadow-md dark:bg-neutral-2 md:flex-1">
           <div className="flex items-center gap-x-4">
             <IconBrightnessHalf size="1.5rem" aria-hidden="true" focusable="false" />
             <h3 className="text-xl font-bold">Dark Mode</h3>
